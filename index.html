@@ -68,19 +68,19 @@
           <li>
             <div>
               <h3>Promises you made, before they cost you.</h3>
-              <p>Purser reads the mail you sent yourself for the commitments in it — “I’ll send that by Friday” — and brings back the ones that are coming due with the sentence you wrote them in. You confirm each one before Purser tracks it.</p>
+              <p>Purser reads the mail you sent yourself for the commitments in it — “I’ll send that by Friday” — and brings back the ones that are due with the sentence you wrote them in. When it is not sure a sentence is a promise, it asks you first.</p>
             </div>
           </li>
           <li>
             <div>
               <h3>A calendar that pushes back.</h3>
-              <p>Purser tells the meetings you chose apart from the meetings booked onto you, and drafts the decline or the request to move it for you to review and send.</p>
+              <p>Purser tells the meetings you chose apart from the meetings booked onto you, and drafts the decline or the request to move it, for you to review and send from your mail app.</p>
             </div>
           </li>
           <li>
             <div>
               <h3>Three things, with consequences.</h3>
-              <p>Each morning, a shortlist of what needs you today and what happens if you skip it. Not a summary of your day. When nothing needs you, Purser says so and stays quiet.</p>
+              <p>Open Purser in the morning and you get a shortlist of what needs you today, and what happens if you skip it. Not a summary of your day. When nothing needs you, Purser says so and stays quiet.</p>
             </div>
           </li>
         </ol>
@@ -103,7 +103,7 @@
         <div class="feature flip">
           <div class="feature-text">
             <h3>Ask what needs you.</h3>
-            <p>The assistant answers from your own calendar, reminders and mail, and every answer links back to the item it came from, so you can check it rather than trust it.</p>
+            <p>The assistant answers from your own calendar, reminders and mail, and its answers link back to the items they came from, so you can check them rather than trust them.</p>
           </div>
           <figure>
             <div class="phone">
@@ -118,8 +118,8 @@
         <div class="feature">
           <div class="feature-text">
             <h3>Quiet by default, and under your control.</h3>
-            <p>Choose how much a notification reveals on your Lock Screen, set quiet hours, and decide how Purser acts: suggest first, or take care of reversible things like adding a reminder, with an undo.</p>
-            <p>Anything that leaves your phone as a message — a reply, a decline — is only ever sent by you.</p>
+            <p>Choose how much a notification reveals on your Lock Screen, and decide how Purser acts: suggest everything first, or let it take care of reversible things like adding a reminder, and tell you so you can undo it.</p>
+            <p>Purser never sends mail. A draft opens in your own mail app, and you send it.</p>
           </div>
           <figure>
             <div class="phone">
@@ -150,28 +150,28 @@
             <tr>
               <td data-label="Permission"><span class="scope-name">Basic profile</span><code>openid</code> <code>email</code> <code>profile</code></td>
               <td data-label="What it is for">Knowing which Google account you connected, and signing you in if you choose Sign in with Google.</td>
-              <td data-label="What Purser keeps">The account identifier, email address and name.</td>
+              <td data-label="What Purser keeps">The account identifier and email address, and your name if you sign in with Google.</td>
             </tr>
             <tr>
               <td data-label="Permission"><span class="scope-name">Google Calendar, read-only</span><code>calendar.readonly</code></td>
               <td data-label="What it is for">Showing your Google Calendar meetings in the timeline and preparing briefs for them.</td>
-              <td data-label="What Purser keeps">Details of events in the calendars you select. Purser cannot create, change or delete events.</td>
+              <td data-label="What Purser keeps">Your calendars’ names, and for the ones you select: each event’s title, description, times, organiser, attendees and link. Purser cannot create, change or delete events.</td>
             </tr>
             <tr>
               <td data-label="Permission"><span class="scope-name">Gmail metadata</span><code>gmail.metadata</code></td>
               <td data-label="What it is for">Noticing conversations where someone is waiting on you, or you are waiting on them.</td>
-              <td data-label="What Purser keeps">A summary per conversation built from message headers: who wrote last and when. No subjects, no message text.</td>
+              <td data-label="What Purser keeps">A summary per conversation: the addresses involved, who wrote last and when, and the follow-up cards built from it. No subjects, no message text.</td>
             </tr>
             <tr>
               <td data-label="Permission"><span class="scope-name">Gmail read-only</span><code>gmail.readonly</code></td>
-              <td data-label="What it is for">Finding the promises in mail you sent yourself, so you are reminded before they are overdue. Used only for your own sent messages.</td>
-              <td data-label="What Purser keeps">The promise: the sentence you wrote, the person it was to and the due date. The message itself is never stored.</td>
+              <td data-label="What it is for">Finding the promises in mail you sent yourself, so you are reminded before they are overdue. Used only for messages you sent, at most 25 per sync.</td>
+              <td data-label="What Purser keeps">The promise, the sentence it came from, who it was to, the due date and a link back to the message. The message itself is never stored.</td>
             </tr>
           </tbody>
         </table>
 
         <div class="never">
-          <p><strong>What Purser never does.</strong> It never sends, deletes, labels or changes anything in your Google account. It never reads mail you received to look for promises. It never uses your data for advertising, never sells it, and never uses it to train AI models. Purser’s use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. The details, including how long each kind of data is kept, are in the <a href="privacy.html#google">privacy policy</a>.</p>
+          <p><strong>What Purser never does.</strong> It never sends, deletes, labels or changes anything in your Google account. It never reads mail you received to look for promises. It never uses your data for advertising, never sells it, and does not use it to train AI models. Purser’s use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. The details, including how long each kind of data is kept, are in the <a href="privacy.html#google">privacy policy</a>.</p>
         </div>
       </div>
     </section>
@@ -185,7 +185,7 @@
         <div class="principles">
           <div class="principle">
             <h3>Only what the feature needs</h3>
-            <p>Each permission maps to one feature you can see. Decline one and only that feature stops.</p>
+            <p>Every permission maps to a feature you can see, and the app explains each one before Google’s consent screen.</p>
           </div>
           <div class="principle">
             <h3>Messages are read, not kept</h3>
@@ -193,19 +193,19 @@
           </div>
           <div class="principle">
             <h3>AI in the EU, never trained on you</h3>
-            <p>AI runs on Google Cloud in Belgium (europe-west1). Your data is not used to train any model.</p>
+            <p>AI runs on Google Cloud in Belgium (europe-west1), is not used to train models, and can be switched off.</p>
           </div>
           <div class="principle">
             <h3>Export or delete, from the app</h3>
-            <p>Download everything Purser holds about you, or delete your account and all of it, from Settings.</p>
+            <p>Download a copy of your data, or delete your account, from Settings. The policy lists exactly what each covers.</p>
           </div>
           <div class="principle">
             <h3>Your Lock Screen, your rules</h3>
-            <p>Notifications can show everything, a discreet summary, or nothing but that something needs you.</p>
+            <p>Notifications from your phone show full details, a discreet summary, or only that Purser has something.</p>
           </div>
           <div class="principle">
             <h3>You send, Purser drafts</h3>
-            <p>Drafted replies and declines wait for your review. Nothing goes out in your name without your tap.</p>
+            <p>Purser has no permission to send anything. Drafts open in your mail app for you to review and send.</p>
           </div>
         </div>
       </div>

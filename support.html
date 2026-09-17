@@ -37,13 +37,13 @@
         <dd>While Purser is in beta, Google shows this warning to everyone who connects, because Google’s verification of the app is still in progress. You can continue by choosing <em>Advanced</em>, then <em>Go to Purser</em>. The permissions Purser asks for, and what it does with each, are listed on the <a href="./#google-data">home page</a> and in the <a href="privacy.html#google">privacy policy</a>.</dd>
 
         <dt>Why does Purser ask me to reconnect Google about once a week?</dt>
-        <dd>Until Google’s verification is complete, Google ends an app’s access to Gmail and Calendar seven days after you grant it. When that happens, Purser stops syncing and asks you to reconnect in Settings › Connected accounts. Nothing is lost; the next sync picks up where the last one stopped. This goes away once verification is complete.</dd>
+        <dd>Until Google’s verification is complete, Google ends an app’s access to Gmail and Calendar seven days after you grant it. When that happens, Purser stops syncing and asks you to reconnect in Settings › Integrations › Connected accounts. Nothing is lost; the next sync picks up where the last one stopped. This goes away once verification is complete.</dd>
       </dl>
 
       <h2 id="accounts">Connected accounts</h2>
       <dl class="faq">
         <dt>How do I connect or disconnect Google or Slack?</dt>
-        <dd>In the app, open Settings › Connected accounts. Disconnecting deletes Purser’s access to that account immediately and removes what was imported from it.</dd>
+        <dd>In the app, open Settings › Integrations › Connected accounts. Disconnecting destroys Purser’s access immediately, deletes that account’s mail conversation summaries and the promises found in it, and hides its calendar events and follow-up cards at once. Hidden events are erased by a daily job once they are more than 90 days past; hidden cards when you delete your account. The <a href="privacy.html#deletion">privacy policy</a> spells this out.</dd>
 
         <dt>Can I revoke Purser’s access from Google directly?</dt>
         <dd>Yes. Visit <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, choose Purser and remove access. Purser will show the account as needing to reconnect.</dd>
@@ -52,13 +52,13 @@
       <h2 id="data">Your data</h2>
       <dl class="faq">
         <dt>How do I export my data?</dt>
-        <dd>In the app, open Settings › Privacy &amp; data and choose to export. Purser prepares a file with everything it holds about you and lets you save it.</dd>
+        <dd>In the app, open Settings › Privacy › Privacy &amp; data › Export my data. You get one JSON file with your profile, settings, connected accounts, consent history, events, cards, feedback, commitments, briefings and drafts. It does not yet include assistant conversations, mail conversation summaries or the quoted sentences behind your promises — <a href="mailto:hello@neurotech-ai.de?subject=Privacy%20request">ask us</a> and we will send those too.</dd>
 
         <dt>How do I delete my account?</dt>
-        <dd>In the app, open Settings › Privacy &amp; data and choose to delete your account. This signs you out everywhere, disconnects every connected account and permanently deletes your data. The <a href="privacy.html#deletion">privacy policy</a> describes exactly what is removed and when.</dd>
+        <dd>In the app, open Settings › Privacy › Privacy &amp; data › Delete account and type DELETE. This signs you out everywhere, disconnects every connected account and permanently deletes your data. A few records survive for compliance or age out shortly after; the <a href="privacy.html#deletion">privacy policy</a> lists every one of them. Deleting your account does not cancel an App Store subscription.</dd>
 
         <dt>Can Purser work without AI?</dt>
-        <dd>Yes. The AI features can be switched off in the app’s privacy settings. Purser’s decisions about what needs you are made by fixed rules, not by a model, so the core of the app keeps working.</dd>
+        <dd>Yes. In Settings › Privacy › Privacy &amp; data you can switch AI off entirely, or switch off one source at a time: email, calendar or assistant conversations. What needs your attention is decided by fixed rules rather than a model, so that keeps working either way.</dd>
       </dl>
 
       <h2 id="subscription">Subscription</h2>
