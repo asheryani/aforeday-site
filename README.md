@@ -33,6 +33,15 @@ meeting-reminder records that survive account deletion, draft copies kept in
 duplicate-request records, briefs and briefings with no retention rule, and an
 export that omits assistant conversations and the sentences behind commitments.
 
+**Version 1.1 runs ahead of production — publish it with the API, not before.**
+The 18 September 2026 edits describe three fixes that are still an open pull
+request in `orbit`: the AI consent check moved ahead of the Gmail fetch, the
+unused Slack `search:read` permission removed, and commitment extraction no
+longer adding anything without your confirmation. Until that PR is deployed,
+these three passages describe the app as it will behave rather than as it does,
+which is exactly what the policy's own opening sentence promises not to do.
+Publish this site after the deploy, or revert those three passages.
+
 **Four things to settle before this goes public:**
 
 1. **Fix or accept the disclosures.** Tasks are queued in the `orbit` repository

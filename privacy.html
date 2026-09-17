@@ -26,7 +26,7 @@
   <main id="main" class="doc">
     <div class="wrap">
       <h1>Privacy policy</h1>
-      <p class="meta">For the Purser AI iPhone app and this website. Effective 17 September 2026, version 1.0. It describes the app as it actually works today, not as we intend it to work.</p>
+      <p class="meta">For the Purser AI iPhone app and this website. Effective 18 September 2026, version 1.1. It describes the app as it actually works today, not as we intend it to work.</p>
 
       <div class="summary">
         <h2>The short version</h2>
@@ -34,7 +34,7 @@
           <li>Purser reads what you connect: your iPhone’s calendar and reminders, and optionally Gmail, Google Calendar and Slack.</li>
           <li>Of your mail, only the messages <em>you sent</em> are read as text, to find promises in them. The message is never stored — the promise, the sentence it came from, the person and the due date are.</li>
           <li>For other mail, only who wrote to whom and when. Never subjects, never the text.</li>
-          <li>AI runs on Google Cloud in the EU. Nothing is used to train models. You can switch AI off.</li>
+          <li>AI runs on Google Cloud in the EU. Nothing is used to train models. You can switch AI off, and nothing the AI finds is added to your commitments until you confirm it.</li>
           <li>Purser never sends anything from your accounts. Drafts open in your mail app for you to send.</li>
           <li>No advertising, no tracking, no data brokers, no third-party analytics.</li>
           <li>You can export your data or delete your account from inside the app.</li>
@@ -104,20 +104,20 @@
         <li><strong>Which messages.</strong> Only messages labelled Sent <em>and</em> sent from the connected address, newest first, at most 25 per synchronisation.</li>
         <li><strong>What is read.</strong> The text of one part of the message, limited to the first 8,000 characters after lines that quote earlier messages are removed. Quoting inside HTML formatting is not always recognised, so an HTML-only message may be used as it is.</li>
         <li><strong>What is never done with it.</strong> Purser does not use this permission to read the text of mail you received, attachments or drafts. It does not touch Drive, Contacts or any other Google service, and it holds no permission to send, delete, label or change anything.</li>
-        <li><strong>What happens to the text.</strong> It exists in memory for one analysis and is never written to our database or our logs. If you have switched AI processing off, or opted email out of it, the text is discarded without being analysed at all.</li>
+        <li><strong>What happens to the text.</strong> It exists in memory for one analysis and is never written to our database or our logs. If you have switched AI processing off, or opted email out of it, the message is not fetched at all: Purser checks your setting before it asks Google for anything, so the permission is simply not used.</li>
         <li><strong>What is stored.</strong> For each promise found: a short description of it, the exact sentence it came from, who it was to, the due date, how confident the model was, whether it is still open, a link to the message, and the reminder card that quotes the sentence. If you mark a sentence “not a promise”, we keep that sentence so it is not suggested again.</li>
-        <li><strong>One thing to know.</strong> When the model is highly confident a sentence is a promise, it is added to your open commitments without asking you first. Everything less confident waits for you to confirm it.</li>
+        <li><strong>Nothing is added without you.</strong> However confident the model is, a promise it finds waits for you. It appears in the app as a card quoting the sentence, with Confirm, Edit and “Not a promise”, one at a time and never as a notification. Only your confirmation starts the reminders. Before 18 September 2026, sentences the model was highly confident about were added to your open commitments without asking; that is no longer the case.</li>
       </ul>
 
       <h2 id="slack">4. Slack</h2>
-      <p>If you connect Slack, Purser reads your direct-message conversations — up to 200 of them, the 15 most recent messages in each — and the display names of the people in them. It stores, per conversation, the channel identifier, who spoke last and when, the other person’s Slack identifier and display name, and whether you had replied before. Message text is not stored. Your own direct messages from the last 7 days (up to 25 per synchronisation, up to 8,000 characters) are analysed for promises in the same way as your sent mail. Purser requests the ability to search your messages but does not use it; we are removing that permission.</p>
+      <p>If you connect Slack, Purser reads your direct-message conversations — up to 200 of them, the 15 most recent messages in each — and the display names of the people in them. It stores, per conversation, the channel identifier, who spoke last and when, the other person’s Slack identifier and display name, and whether you had replied before. Message text is not stored. Your own direct messages from the last 7 days (up to 25 per synchronisation, up to 8,000 characters) are analysed for promises in the same way as your sent mail — and not read for promises at all if you have switched AI off or opted email out of it. Purser no longer asks for permission to search your messages. If you connected Slack before 18 September 2026, the access you already granted still carries that permission until you disconnect and reconnect, because Slack offers no way to hand a single permission back.</p>
 
       <h2 id="ai">5. AI processing</h2>
       <p>Purser uses Google’s Gemini 2.5 Flash model through Google Cloud Vertex AI, in Google’s <code>europe-west1</code> region (Belgium). It is used for six things: finding promises in messages you sent, writing meeting briefs and daily briefings, answering you in the assistant, and writing reply drafts and meeting decline or reschedule notes you ask for.</p>
       <p>What is sent is limited to what the feature needs: one message; or a meeting with up to ten earlier meetings involving the same people, related mail counterparts and open promises; or short titles of your open items and upcoming events. Never your whole mailbox or calendar. Before anything is sent, common signature endings and tracking links are removed, the length is capped, and pattern filters replace common secret formats — labelled passwords and tokens, API keys, one-time codes, card- and IBAN-shaped numbers — with placeholders. Requests that exceed the limits are refused rather than trimmed.</p>
       <p>Prompts and responses are not written to our logs. We keep a technical record of each AI call — the task, the model and prompt versions, token counts, cost, how long it took and whether it succeeded — with no content and no link to you.</p>
       <p>Under our agreement with Google, this data is processed by Google as our service provider and is not used to train Google’s models. We do not use it to train any model of our own, and no part of our code trains or fine-tunes a model.</p>
-      <p>You can switch AI off entirely in Settings › Privacy › Privacy &amp; data, or switch off individual sources: email content, calendar content, or assistant conversations. With AI off, Purser falls back to its fixed rules, which is how it decides what needs your attention in any case. Note that switching AI off does not stop the mail and Slack synchronisation itself: the text of your sent messages is still fetched, and then discarded without being analysed.</p>
+      <p>You can switch AI off entirely in Settings › Privacy › Privacy &amp; data, or switch off individual sources: email content, calendar content, or assistant conversations. With AI off, Purser falls back to its fixed rules, which is how it decides what needs your attention in any case. Switching AI off does not stop the mail and Slack synchronisation itself — that is what tells you who is waiting on a reply — but with AI off that synchronisation runs on senders, recipients and timings only: the text of your sent messages is never fetched, and no direct message is read for promises.</p>
 
       <h2 id="purposes">6. Why, and on what legal basis</h2>
       <ul>
