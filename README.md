@@ -25,15 +25,40 @@ Then open http://127.0.0.1:4173.
 
 ## Before publishing
 
-- **Legal review.** Have counsel read `privacy.html` and `terms.html`. The privacy
-  policy was written against the code deployed on 17 September 2026 (API commit
-  `6282a17`); any later change to what the app collects or keeps must update it.
-- **The name.** `purser.app` belongs to an unrelated UK payments company. Get a
-  view on the "Purser" name before the site and the Google consent screen go public
-  under it, and pick the domain with that in mind.
-- **Contact addresses.** The site uses `hello@neurotech-ai.de`; the app's
-  Settings › feedback link uses `support@neurotech-ai.de`. Once the new domain has
-  mailboxes, switch both to the same address in one change.
+The privacy policy was written from a code audit of the API commit deployed on
+17 September 2026 (`6282a17`), fact by fact. It therefore describes the product
+as it **actually behaves**, including four places where data outlives what a
+reader would expect. Those disclosures are in the retention table and section 10:
+meeting-reminder records that survive account deletion, draft copies kept in
+duplicate-request records, briefs and briefings with no retention rule, and an
+export that omits assistant conversations and the sentences behind commitments.
+
+**Four things to settle before this goes public:**
+
+1. **Fix or accept the disclosures.** Tasks are queued in the `orbit` repository
+   to close all four. When they land, delete the matching rows and sentences here
+   — the policy gets shorter and stronger. Publishing first is possible; it just
+   means publishing those admissions.
+2. **Legal review.** Counsel should read `privacy.html` and `terms.html`. Two
+   sentences need their confirmation in particular: that Google does not use
+   Vertex AI input to train its models (section 5 — this states our contractual
+   position with Google, not something the code can prove), and the liability
+   clause in the terms.
+3. **Back the access claim in section 11.** It says we do not read your mail or
+   calendar except in narrow cases. That is a promise the company must be able to
+   evidence: the IAM review and written access policy are still open in
+   `docs/security/SECRETS_MANAGEMENT.md` and the CASA package.
+4. **The name.** `purser.app` belongs to an unrelated UK payments company. Get a
+   view on the "Purser" name before the site and the Google consent screen go
+   public under it, and choose the domain with that in mind.
+
+Also note, unrelated to this site but blocking the store listing it links to:
+`APPLE_ROOT_CERTS_BASE64` is unset in production, so every StoreKit transaction
+is rejected and no subscription can grant an entitlement (M-12).
+
+**Contact addresses.** The site uses `hello@neurotech-ai.de`; the app's
+Settings › feedback link uses `support@neurotech-ai.de`. Once the new domain has
+mailboxes, switch both to the same address in one change.
 
 ## Publish on GitHub Pages with the new domain
 
