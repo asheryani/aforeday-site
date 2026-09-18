@@ -27,15 +27,16 @@ Then open http://127.0.0.1:4173.
 
 The privacy policy was written from a code audit of the API commit deployed on
 17 September 2026 (`6282a17`), fact by fact. It therefore describes the product
-as it **actually behaves**, including three places where data outlives what a
-reader would expect. Those disclosures are in the retention table and section 10:
-meeting-reminder records that survive account deletion, draft copies kept in
-duplicate-request records, and briefs and briefings with no retention rule.
-(A fourth — an export that omitted assistant conversations and the sentences
-behind commitments — is fixed; see below.)
+as it **actually behaves**. It used to carry four places where data outlived
+what a reader would expect — meeting-reminder records that survive account
+deletion, draft copies kept in duplicate-request records, briefs and briefings
+with no retention rule, and an export that omitted assistant conversations and
+the sentences behind commitments. **All four are closed** (`orbit` PRs #42 and
+#43), and the retention table and section 10 no longer disclose any of them.
+What is left is not a disclosure problem but a timing one; see below.
 
 **Version 1.1 runs ahead of production — publish it with the API, not before.**
-The 18 September 2026 edits describe four fixes that production does not have:
+The 18 September 2026 edits describe five fixes that production does not have:
 
 - Three still open as a pull request in `orbit`: the AI consent check moved
   ahead of the Gmail fetch, the unused Slack `search:read` permission removed,
@@ -47,19 +48,33 @@ The 18 September 2026 edits describe four fixes that production does not have:
   gap or offer to send those by email. **The export a user can download today
   is still the old one**, so publishing before the deploy would withdraw a
   fallback that is still the only way to get that data.
+- One merged but not deployed — `orbit` PR #43: meeting reminders are deleted
+  with the account and purged 30 days after firing, draft copies in the
+  duplicate-request records are purged at 24 hours, briefs and briefings have
+  their retention enforced, a tombstoned card loses its title and quoted
+  sentence 30 days on, and the deletion and export records carry a random
+  identifier instead of your former account id. The risk here runs the other
+  way from #42's: **production still keeps all of it**, so publishing these
+  rows before the deploy would have the policy claim shorter retention than
+  the running code enforces — the one direction a retention table must never
+  be wrong in.
 
-Until all four are deployed, these passages describe the app as it will behave
+Until all five are deployed, these passages describe the app as it will behave
 rather than as it does, which is exactly what the policy's own opening sentence
 promises not to do. Publish this site after the deploy, or revert those
 passages.
 
 **Four things to settle before this goes public:**
 
-1. **Fix or accept the disclosures.** Tasks are queued in the `orbit` repository
-   to close the remaining three. When they land, delete the matching rows and
-   sentences here — the policy gets shorter and stronger, as it already did when
-   the export was fixed. Publishing first is possible; it just means publishing
-   those admissions.
+1. **Deploy before publishing.** There is nothing left to accept: all four of
+   the admissions above are closed in code and their rows and sentences are
+   gone. (Section 10 still says account deletion does not withdraw your Sign
+   in with Apple grant — that one is open, and needs the M-01 Apple client
+   secret before it can be closed.) What remains is timing: two of the fixes
+   (#42, #43) are merged and not deployed, three are still an open pull
+   request. Publishing first is no longer a matter of admitting something — it
+   would mean describing retention and an export that the running API does not
+   yet provide.
 2. **Legal review.** Counsel should read `privacy.html` and `terms.html`. Two
    sentences need their confirmation in particular: that Google does not use
    Vertex AI input to train its models (section 5 — this states our contractual
