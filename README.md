@@ -35,34 +35,27 @@ the sentences behind commitments. **All four are closed** (`orbit` PRs #42 and
 #43), and the retention table and section 10 no longer disclose any of them.
 What is left is not a disclosure problem but a timing one; see below.
 
-**Version 1.1 runs ahead of production — publish it with the API, not before.**
-The 18 September 2026 edits describe five fixes that production does not have:
+**Version 1.1 no longer runs entirely ahead of production.** Two of the five
+fixes the 18 September 2026 edits describe went live at 13:15Z that day
+(`api:32e369a`, revision `purser-api-dev-00055-jjt`): `orbit` PR #42's export
+and PR #43's retention rules, plus PR #50, which erases Slack conversation
+state at account deletion and at disconnect. `curl /v1/health/version` returns
+the deployed commit, so this is checkable rather than assumed.
 
-- Three still open as a pull request in `orbit`: the AI consent check moved
-  ahead of the Gmail fetch, the unused Slack `search:read` permission removed,
-  and commitment extraction no longer adding anything without your confirmation.
-- One merged but not deployed — `orbit` PR #42: the export now contains
-  assistant conversations, mail and Slack summaries, the sentence behind each
-  commitment, devices, sign-in methods, subscription, meeting reminders and
-  sign-in history. Section 10 and the support answer no longer disclose the
-  gap or offer to send those by email. **The export a user can download today
-  is still the old one**, so publishing before the deploy would withdraw a
-  fallback that is still the only way to get that data.
-- One merged but not deployed — `orbit` PR #43: meeting reminders are deleted
-  with the account and purged 30 days after firing, draft copies in the
-  duplicate-request records are purged at 24 hours, briefs and briefings have
-  their retention enforced, a tombstoned card loses its title and quoted
-  sentence 30 days on, and the deletion and export records carry a random
-  identifier instead of your former account id. The risk here runs the other
-  way from #42's: **production still keeps all of it**, so publishing these
-  rows before the deploy would have the policy claim shorter retention than
-  the running code enforces — the one direction a retention table must never
-  be wrong in.
+Three are still open as a pull request in `orbit` and production does **not**
+have them: the AI consent check moved ahead of the Gmail fetch, the unused
+Slack `search:read` permission removed, and commitment extraction no longer
+adding anything without your confirmation. Until those are deployed, the
+passages describing them say how the app will behave rather than how it does,
+which is exactly what the policy's own opening sentence promises not to do.
+Publish after that deploy, or revert those three passages.
 
-Until all five are deployed, these passages describe the app as it will behave
-rather than as it does, which is exactly what the policy's own opening sentence
-promises not to do. Publish this site after the deploy, or revert those
-passages.
+One passage now errs in the opposite direction and should be fixed before
+publishing, though it is not a reason to delay: sections 9 and 10 still say
+Slack conversation summaries are never deleted at disconnect or account
+deletion and merely age out after 72 hours. Since PR #50 they are deleted with
+the account and at disconnect, so the policy currently claims we keep more than
+we do.
 
 **Four things to settle before this goes public:**
 
@@ -70,11 +63,10 @@ passages.
    the admissions above are closed in code and their rows and sentences are
    gone. (Section 10 still says account deletion does not withdraw your Sign
    in with Apple grant — that one is open, and needs the M-01 Apple client
-   secret before it can be closed.) What remains is timing: two of the fixes
-   (#42, #43) are merged and not deployed, three are still an open pull
-   request. Publishing first is no longer a matter of admitting something — it
-   would mean describing retention and an export that the running API does not
-   yet provide.
+   secret before it can be closed.) What remains is timing, and less of it
+   than before: #42, #43 and #50 are deployed as of 18 September 13:15Z, and
+   three fixes are still an open pull request. Publishing now would mean
+   describing those three as done when the running API has not got them.
 2. **Legal review.** Counsel should read `privacy.html` and `terms.html`. Two
    sentences need their confirmation in particular: that Google does not use
    Vertex AI input to train its models (section 5 — this states our contractual
