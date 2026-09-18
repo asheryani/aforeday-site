@@ -27,27 +27,39 @@ Then open http://127.0.0.1:4173.
 
 The privacy policy was written from a code audit of the API commit deployed on
 17 September 2026 (`6282a17`), fact by fact. It therefore describes the product
-as it **actually behaves**, including four places where data outlives what a
+as it **actually behaves**, including three places where data outlives what a
 reader would expect. Those disclosures are in the retention table and section 10:
 meeting-reminder records that survive account deletion, draft copies kept in
-duplicate-request records, briefs and briefings with no retention rule, and an
-export that omits assistant conversations and the sentences behind commitments.
+duplicate-request records, and briefs and briefings with no retention rule.
+(A fourth — an export that omitted assistant conversations and the sentences
+behind commitments — is fixed; see below.)
 
 **Version 1.1 runs ahead of production — publish it with the API, not before.**
-The 18 September 2026 edits describe three fixes that are still an open pull
-request in `orbit`: the AI consent check moved ahead of the Gmail fetch, the
-unused Slack `search:read` permission removed, and commitment extraction no
-longer adding anything without your confirmation. Until that PR is deployed,
-these three passages describe the app as it will behave rather than as it does,
-which is exactly what the policy's own opening sentence promises not to do.
-Publish this site after the deploy, or revert those three passages.
+The 18 September 2026 edits describe four fixes that production does not have:
+
+- Three still open as a pull request in `orbit`: the AI consent check moved
+  ahead of the Gmail fetch, the unused Slack `search:read` permission removed,
+  and commitment extraction no longer adding anything without your confirmation.
+- One merged but not deployed — `orbit` PR #42: the export now contains
+  assistant conversations, mail and Slack summaries, the sentence behind each
+  commitment, devices, sign-in methods, subscription, meeting reminders and
+  sign-in history. Section 10 and the support answer no longer disclose the
+  gap or offer to send those by email. **The export a user can download today
+  is still the old one**, so publishing before the deploy would withdraw a
+  fallback that is still the only way to get that data.
+
+Until all four are deployed, these passages describe the app as it will behave
+rather than as it does, which is exactly what the policy's own opening sentence
+promises not to do. Publish this site after the deploy, or revert those
+passages.
 
 **Four things to settle before this goes public:**
 
 1. **Fix or accept the disclosures.** Tasks are queued in the `orbit` repository
-   to close all four. When they land, delete the matching rows and sentences here
-   — the policy gets shorter and stronger. Publishing first is possible; it just
-   means publishing those admissions.
+   to close the remaining three. When they land, delete the matching rows and
+   sentences here — the policy gets shorter and stronger, as it already did when
+   the export was fixed. Publishing first is possible; it just means publishing
+   those admissions.
 2. **Legal review.** Counsel should read `privacy.html` and `terms.html`. Two
    sentences need their confirmation in particular: that Google does not use
    Vertex AI input to train its models (section 5 — this states our contractual
