@@ -42,13 +42,17 @@ and PR #43's retention rules, plus PR #50, which erases Slack conversation
 state at account deletion and at disconnect. `curl /v1/health/version` returns
 the deployed commit, so this is checkable rather than assumed.
 
-Three are still open as a pull request in `orbit` and production does **not**
-have them: the AI consent check moved ahead of the Gmail fetch, the unused
-Slack `search:read` permission removed, and commitment extraction no longer
-adding anything without your confirmation. Until those are deployed, the
-passages describing them say how the app will behave rather than how it does,
-which is exactly what the policy's own opening sentence promises not to do.
-Publish after that deploy, or revert those three passages.
+**Those last three are deployed too, as of 19 September 2026.** `orbit` PR #44
+merged and shipped as `api:7d4eb8d` (`/v1/health/version` confirms the running
+commit): the AI consent check now runs ahead of the Gmail fetch, the unused
+Slack `search:read` permission is out of the request set — and removed from the
+app at api.slack.com the same day, after the deploy — and commitment extraction
+no longer adds anything without your confirmation.
+
+**So version 1.1 no longer describes anything that is not live.** Every
+statement in it is true of production today, and the accuracy objection to
+publishing is gone. What remains is the list below, which is about readiness
+rather than truthfulness.
 
 One passage now errs in the opposite direction and should be fixed before
 publishing, though it is not a reason to delay: sections 9 and 10 still say
