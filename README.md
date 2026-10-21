@@ -35,13 +35,7 @@ agent with approvals and the undo window, a paid-only subscription through
 Apple, and no connected accounts (Google, Microsoft, Slack, Telegram and
 WhatsApp are listed under "Not available yet").
 
-**The accuracy gate is the production deploy of the rename.** The site says
-"Aforeday" everywhere; the API and the app still say "Purser" until the rename
-pull request in `orbit` is merged and deployed. Publish this site only after
-that deploy is live (`curl /v1/health/version` on `purser-api-prod` returns the
-deployed commit; the API commit will be known when the rename lands). Publishing
-earlier would put a privacy policy and support page online for an app that
-does not yet carry the name on it.
+**The accuracy gate was met on 2026-10-21.** The rename (`orbit` PR #113, commit `6947545`) is deployed on `purser-api-prod` as revision `purser-api-prod-00004-vxl` since 16:39Z, so the API, the app (TestFlight build 64) and this site all say "Aforeday". Publish freely; the usual rule stays: a site edit that describes an API change goes live only after that change is deployed (`curl /v1/health/version` on `purser-api-prod` returns the deployed commit).
 
 Two things to settle before it goes public:
 
