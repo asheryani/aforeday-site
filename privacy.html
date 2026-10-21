@@ -8,24 +8,32 @@
   <link rel="canonical" href="https://aforeday.com/privacy.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/instrument-sans-variable-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="./" aria-label="Aforeday home"><img src="assets/favicon.svg" alt="" width="32" height="32"><span>Aforeday</span></a>
+      <a class="brand" href="./" aria-label="Aforeday home">
+        <img class="brand-icon" src="assets/favicon.svg" alt="" width="32" height="32">
+        <span>Aforeday</span>
+      </a>
       <nav class="nav" aria-label="Main">
-        <a href="./#how">How it works</a>
-        <a href="./#reads">What it reads</a>
+        <a href="./#how" data-anchor>What it does</a>
+        <a href="./#approval" data-anchor>Approval</a>
         <a href="privacy.html" aria-current="page">Privacy</a>
-        <a href="support.html">Support</a>
+        <a href="support.html" data-secondary>Support</a>
+        <a class="nav-cta" href="https://apps.apple.com/app/id6804468993">Get the app</a>
       </nav>
     </div>
   </header>
 
   <main id="main" class="doc">
     <div class="wrap">
+      <div class="doc-body">
       <h1>Privacy policy</h1>
       <p class="meta">For the Aforeday iPhone app and this website. Effective 21 October 2026, version 2.0. It describes the app as it actually works today, not as we intend it to work.</p>
 
@@ -42,7 +50,7 @@
         </ul>
       </div>
 
-      <ul class="toc">
+      <ul class="toc-inline" aria-label="Contents">
         <li><a href="#controller">1. Who is responsible</a></li>
         <li><a href="#sources">2. What Aforeday processes</a></li>
         <li><a href="#agent">3. The agent and your approvals</a></li>
@@ -179,12 +187,40 @@
 
       <h2 id="changes">15. Changes</h2>
       <p>If Aforeday starts collecting something new, or uses what it has for a new purpose, we update this policy first. The app then shows everyone whose account predates the new version a notice once, and records when you have seen it. This page shows its effective date and version at the top.</p>
+      </div>
+      <aside class="doc-aside">
+        <nav aria-label="On this page">
+          <h2>On this page</h2>
+          <ol>
+          <li><a href="#controller">1. Who is responsible</a></li>
+          <li><a href="#sources">2. What Aforeday processes</a></li>
+          <li><a href="#agent">3. The agent and your approvals</a></li>
+          <li><a href="#ai">4. AI processing</a></li>
+          <li><a href="#not-yet">5. Not available yet</a></li>
+          <li><a href="#purposes">6. Why, and on what legal basis</a></li>
+          <li><a href="#recipients">7. Who else sees it</a></li>
+          <li><a href="#location">8. Where it is processed</a></li>
+          <li><a href="#retention">9. How long it is kept</a></li>
+          <li><a href="#deletion">10. Exporting and deleting</a></li>
+          <li><a href="#security">11. Security</a></li>
+          <li><a href="#rights">12. Your rights</a></li>
+          <li><a href="#children">13. Children</a></li>
+          <li><a href="#website">14. This website</a></li>
+          <li><a href="#changes">15. Changes</a></li>
+          </ol>
+        </nav>
+      </aside>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <span>© 2026 Neurotech AI Solutions GmbH, Berlin</span>
+      <div>
+        <a class="brand" href="./" aria-label="Aforeday home"><img class="brand-icon" src="assets/favicon.svg" alt="" width="32" height="32"><span>Aforeday</span></a>
+        <p>Your day, thought through before it starts. Made in Berlin by Neurotech AI Solutions GmbH.</p>
+        <p>This site sets no cookies, runs no analytics and loads nothing from anyone else.</p>
+        <p>© 2026 Neurotech AI Solutions GmbH</p>
+      </div>
       <nav aria-label="Legal">
         <a href="privacy.html" aria-current="page">Privacy policy</a>
         <a href="terms.html">Terms of use</a>
@@ -193,5 +229,6 @@
       </nav>
     </div>
   </footer>
+  <script src="assets/site.js" defer></script>
 </body>
 </html>

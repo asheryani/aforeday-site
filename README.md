@@ -1,8 +1,12 @@
 # aforeday-site
 
 The public website for **Aforeday**: home page, privacy policy, terms of use,
-support and imprint. Plain static HTML and one stylesheet, with no build step,
-no scripts, no web fonts and no third-party requests.
+support and imprint. Plain static HTML, one stylesheet and one small script,
+with no build step and no third-party requests of any kind: the two typefaces
+(Instrument Serif and Instrument Sans, SIL Open Font License) are served from
+`assets/fonts/`, the icons are inline SVG, and `assets/site.js` only adds
+reveal-on-scroll, the approval stepper and the document sidebar marker; every
+page reads fully with JavaScript off. No cookies, no storage, no analytics.
 
 It has one job beyond explaining the product: the **App Store listing**. Apple
 requires a privacy policy URL, a support URL and, for auto-renewable
@@ -45,10 +49,10 @@ Two things to settle before it goes public:
    `PRIVACY_POLICY_EFFECTIVE_AT=2026-10-21T00:00:00Z` on `purser-api-prod`
    (`docs/LAUNCH_CONFIG.md` §3), so accounts created before that date see the
    in-app notice once. Set them after the site is live, not before.
-2. **Screenshots.** `assets/screens/*.webp` were captured from the app while it
-   was still called Purser and show the old name on screen. Recapture them from
-   a build carrying the new name and replace the files; the `<img>` elements
-   and their alt text already describe Aforeday.
+2. **Screenshots.** `assets/screens/*.webp` are the 6.9-inch App Store
+   captures from `orbit` `docs/product/screenshots/6.9-inch/` (build 64, carrying
+   the Aforeday name), resized to 660 and 1320 pixels wide with `cwebp`. When
+   the captures change, regenerate both sizes from the same source files.
 
 Legal review (counsel on `privacy.html` and `terms.html`) was waived as a
 launch gate by the owner (D-120); the trademark screen of the new name (M-65)

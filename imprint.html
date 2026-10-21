@@ -8,24 +8,32 @@
   <link rel="canonical" href="https://aforeday.com/imprint.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/instrument-sans-variable-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="./" aria-label="Aforeday home"><img src="assets/favicon.svg" alt="" width="32" height="32"><span>Aforeday</span></a>
+      <a class="brand" href="./" aria-label="Aforeday home">
+        <img class="brand-icon" src="assets/favicon.svg" alt="" width="32" height="32">
+        <span>Aforeday</span>
+      </a>
       <nav class="nav" aria-label="Main">
-        <a href="./#how">How it works</a>
-        <a href="./#reads">What it reads</a>
+        <a href="./#how" data-anchor>What it does</a>
+        <a href="./#approval" data-anchor>Approval</a>
         <a href="privacy.html">Privacy</a>
-        <a href="support.html">Support</a>
+        <a href="support.html" data-secondary>Support</a>
+        <a class="nav-cta" href="https://apps.apple.com/app/id6804468993">Get the app</a>
       </nav>
     </div>
   </header>
 
-  <main id="main" class="doc">
+  <main id="main" class="doc doc-narrow">
     <div class="wrap">
+      <div class="doc-body">
       <h1>Imprint</h1>
       <p class="meta">Legal notice under § 5 DDG (Digitale-Dienste-Gesetz). German version below.</p>
 
@@ -67,12 +75,18 @@
         <p><strong>EU-Streitschlichtung</strong><br>
         Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit: <a href="https://ec.europa.eu/consumers/odr">ec.europa.eu/consumers/odr</a>. Wir sind weder verpflichtet noch bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
       </div>
+      </div>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <span>© 2026 Neurotech AI Solutions GmbH, Berlin</span>
+      <div>
+        <a class="brand" href="./" aria-label="Aforeday home"><img class="brand-icon" src="assets/favicon.svg" alt="" width="32" height="32"><span>Aforeday</span></a>
+        <p>Your day, thought through before it starts. Made in Berlin by Neurotech AI Solutions GmbH.</p>
+        <p>This site sets no cookies, runs no analytics and loads nothing from anyone else.</p>
+        <p>© 2026 Neurotech AI Solutions GmbH</p>
+      </div>
       <nav aria-label="Legal">
         <a href="privacy.html">Privacy policy</a>
         <a href="terms.html">Terms of use</a>
@@ -81,5 +95,6 @@
       </nav>
     </div>
   </footer>
+  <script src="assets/site.js" defer></script>
 </body>
 </html>

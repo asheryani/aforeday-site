@@ -8,24 +8,32 @@
   <link rel="canonical" href="https://aforeday.com/terms.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/instrument-sans-variable-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="./" aria-label="Aforeday home"><img src="assets/favicon.svg" alt="" width="32" height="32"><span>Aforeday</span></a>
+      <a class="brand" href="./" aria-label="Aforeday home">
+        <img class="brand-icon" src="assets/favicon.svg" alt="" width="32" height="32">
+        <span>Aforeday</span>
+      </a>
       <nav class="nav" aria-label="Main">
-        <a href="./#how">How it works</a>
-        <a href="./#reads">What it reads</a>
+        <a href="./#how" data-anchor>What it does</a>
+        <a href="./#approval" data-anchor>Approval</a>
         <a href="privacy.html">Privacy</a>
-        <a href="support.html">Support</a>
+        <a href="support.html" data-secondary>Support</a>
+        <a class="nav-cta" href="https://apps.apple.com/app/id6804468993">Get the app</a>
       </nav>
     </div>
   </header>
 
   <main id="main" class="doc">
     <div class="wrap">
+      <div class="doc-body">
       <h1>Terms of use</h1>
       <p class="meta">Effective 21 October 2026</p>
 
@@ -38,6 +46,21 @@
           <li>You can stop using Aforeday and delete your account and data at any time, from the app.</li>
         </ul>
       </div>
+
+      <ul class="toc-inline" aria-label="Contents">
+        <li><a href="#provider">1. Who provides Aforeday</a></li>
+        <li><a href="#eula">2. These terms and Apple’s licence</a></li>
+        <li><a href="#service">3. What Aforeday does, and what it does not</a></li>
+        <li><a href="#account">4. Your account</a></li>
+        <li><a href="#sources">5. What you let Aforeday read</a></li>
+        <li><a href="#acceptable-use">6. Acceptable use</a></li>
+        <li><a href="#subscriptions">7. Subscription and payment</a></li>
+        <li><a href="#content">8. Your content</a></li>
+        <li><a href="#ending">9. Ending your use</a></li>
+        <li><a href="#liability">10. Liability</a></li>
+        <li><a href="#changes">11. Changes to these terms</a></li>
+        <li><a href="#law">12. Law and disputes</a></li>
+      </ul>
 
       <h2 id="provider">1. Who provides Aforeday</h2>
       <p>Aforeday (“the app”) is provided by Neurotech AI Solutions GmbH, Lückstraße 24, 10317 Berlin, Germany, registered with the Amtsgericht Charlottenburg under HRB 270776 B (“we”, “us”). You can reach us at <a href="mailto:contact@aforeday.com">contact@aforeday.com</a>. These terms apply to your use of the app and the services behind it.</p>
@@ -75,12 +98,37 @@
 
       <h2 id="law">12. Law and disputes</h2>
       <p>These terms are governed by the law of the Federal Republic of Germany, excluding the UN Convention on Contracts for the International Sale of Goods. If you are a consumer, this does not deprive you of the protection of the mandatory law of the country where you live. We are neither obliged nor willing to take part in dispute resolution proceedings before a consumer arbitration board.</p>
+      </div>
+      <aside class="doc-aside">
+        <nav aria-label="On this page">
+          <h2>On this page</h2>
+          <ol>
+          <li><a href="#provider">1. Who provides Aforeday</a></li>
+          <li><a href="#eula">2. These terms and Apple’s licence</a></li>
+          <li><a href="#service">3. What Aforeday does, and what it does not</a></li>
+          <li><a href="#account">4. Your account</a></li>
+          <li><a href="#sources">5. What you let Aforeday read</a></li>
+          <li><a href="#acceptable-use">6. Acceptable use</a></li>
+          <li><a href="#subscriptions">7. Subscription and payment</a></li>
+          <li><a href="#content">8. Your content</a></li>
+          <li><a href="#ending">9. Ending your use</a></li>
+          <li><a href="#liability">10. Liability</a></li>
+          <li><a href="#changes">11. Changes to these terms</a></li>
+          <li><a href="#law">12. Law and disputes</a></li>
+          </ol>
+        </nav>
+      </aside>
     </div>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <span>© 2026 Neurotech AI Solutions GmbH, Berlin</span>
+      <div>
+        <a class="brand" href="./" aria-label="Aforeday home"><img class="brand-icon" src="assets/favicon.svg" alt="" width="32" height="32"><span>Aforeday</span></a>
+        <p>Your day, thought through before it starts. Made in Berlin by Neurotech AI Solutions GmbH.</p>
+        <p>This site sets no cookies, runs no analytics and loads nothing from anyone else.</p>
+        <p>© 2026 Neurotech AI Solutions GmbH</p>
+      </div>
       <nav aria-label="Legal">
         <a href="privacy.html">Privacy policy</a>
         <a href="terms.html" aria-current="page">Terms of use</a>
@@ -89,5 +137,6 @@
       </nav>
     </div>
   </footer>
+  <script src="assets/site.js" defer></script>
 </body>
 </html>
