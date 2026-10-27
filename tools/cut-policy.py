@@ -40,9 +40,11 @@ privacy = cut(open("privacy.html").read())
 off_connectors = [label for key, label in CONNECTORS if key not in KEEP]
 if off_connectors:
     listed = "; ".join(off_connectors)
-    privacy = privacy.replace(
-        "no data from any of them is read, received or stored: Gmail, by any route; Google Calendar;",
-        f"no data from any of them is read, received or stored: Gmail, by any route; Google Calendar; {listed};")
+    # Google Calendar's entry reads ", until Google has reviewed it (…)" since 27 October 2026.
+    privacy, n = re.subn(
+        r"(no data from any of them is read, received or stored: Gmail, by any route; Google Calendar[^;]*;)",
+        lambda m: f"{m.group(1)} {listed};", privacy, count=1)
+    assert n == 1, "the list of switched-off connectors was not found"
 if not any(key in KEEP for key, _ in CONNECTORS):
     privacy = privacy.replace(
         "<p>In Settings › Connected accounts you can connect accounts you hold with other services.",
