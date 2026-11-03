@@ -10,10 +10,9 @@ page reads fully with JavaScript off. No cookies, no storage, no analytics.
 
 It has one job beyond explaining the product: the **App Store listing**. Apple
 requires a privacy policy URL, a support URL and, for auto-renewable
-subscriptions, a terms of use (EULA) URL. (Google OAuth verification used to be
-the second job; Google sign-in, Calendar and Gmail are off in production and the
-Google sections are gone from the site until they return, each with its own
-`DECISION_LOG` entry in `orbit`.)
+subscriptions, a terms of use (EULA) URL. Sign in with Google is live. Gmail
+and Google Calendar connectors are built and switched off in production, so the
+site describes them as unavailable.
 
 ## Preview locally
 
@@ -25,22 +24,26 @@ Then open http://127.0.0.1:4173.
 
 ## Before publishing
 
-The privacy policy (version 2.0, effective 21 October 2026) was rewritten on
-20 October 2026 from the frozen launch configuration (`orbit`
-`docs/LAUNCH_CONFIG.md`, D-120), the privacy label (`docs/privacy/PRIVACY_LABELS.md`),
-the GDPR readiness document, the App Review notes, ADR-019 and the code under
-`apps/api/src`. It describes the product as it **actually behaves** in
-production: Sign in with Apple only, iPhone calendars and reminders, the acting
-agent with approvals and the undo window, a paid-only subscription through
-Apple, and no connected accounts (Google, Microsoft, Slack, Telegram and
-WhatsApp are listed under "Not available yet").
+The privacy policy (version 3.1, effective 3 November 2026) describes the
+product as it **actually behaves** in production: Sign in with Apple or Google,
+iPhone calendars and reminders, optional when-in-use location for leave-by
+times (the position stays on the phone), the acting agent with approvals and
+the undo window, a paid-only subscription through Apple, and no connected
+accounts. Gmail, Google Calendar and the other connectors are listed under
+"Not available yet". Hosting is Amazon Web Services in Frankfurt
+(`eu-central-1`): ECS, RDS for PostgreSQL, ElastiCache and Secrets Manager.
+AI is Amazon Nova 2 Lite on Amazon Bedrock, called from Frankfurt through the
+EU cross-region inference profile (`eu.amazon.nova-2-lite-v1:0`). A source
+comment in `privacy.html` marks the Bedrock data-processing terms for counsel;
+that comment is not shown on the page.
 
-**The accuracy gate was met on 2026-10-21.** The rename (`orbit` PR #113, commit `6947545`) is deployed on `purser-api-prod` as revision `purser-api-prod-00004-vxl` since 16:39Z, so the API, the app (TestFlight build 64) and this site all say "Aforeday". Publish freely; the usual rule stays: a site edit that describes an API change goes live only after that change is deployed (`curl /v1/health/version` on `purser-api-prod` returns the deployed commit).
+The usual rule stays: a site edit that describes an API change goes live only
+after that change is deployed.
 
 Two things to settle before it goes public:
 
-1. **Set the policy version on the service.** `PRIVACY_POLICY_VERSION=2.0` and
-   `PRIVACY_POLICY_EFFECTIVE_AT=2026-10-21T00:00:00Z` on `purser-api-prod`
+1. **Set the policy version on the service.** `PRIVACY_POLICY_VERSION=3.1` and
+   `PRIVACY_POLICY_EFFECTIVE_AT=2026-11-03T00:00:00Z` on the production API
    (`docs/LAUNCH_CONFIG.md` §3), so accounts created before that date see the
    in-app notice once. Set them after the site is live, not before.
 2. **Screenshots.** `assets/screens/*.webp` are the 6.9-inch App Store
@@ -48,9 +51,10 @@ Two things to settle before it goes public:
    the Aforeday name), resized to 660 and 1320 pixels wide with `cwebp`. When
    the captures change, regenerate both sizes from the same source files.
 
-Legal review (counsel on `privacy.html` and `terms.html`) was waived as a
-launch gate by the owner (D-120); the trademark screen of the new name (M-65)
-is the one legal item kept.
+Legal review of the launch policy was waived as a launch gate by the owner
+(D-120); the trademark screen of the new name (M-65) is the one legal item that
+waiver kept. That waiver does not cover Amazon Bedrock’s data-processing terms.
+The reminder is an HTML comment in `privacy.html`, not text on the page.
 
 **Contact address.** The site uses `contact@aforeday.com` everywhere. The app's
 Settings › feedback link and the API's policy URL must point at the same
@@ -85,6 +89,6 @@ address and at `https://aforeday.com/privacy.html` in the rename pull request.
    pull request (`docs/research/2026-10-20-aforeday-rename-plan.md`).
 3. **Production**: `PRIVACY_POLICY_VERSION` and `PRIVACY_POLICY_EFFECTIVE_AT`
    as above.
-4. When Google sign-in or Calendar return: Google Search Console verification of
-   `aforeday.com`, Google Auth Platform branding with the home, privacy and
-   terms URLs above, and the Google sections back on the site first (D-108).
+4. Google sign-in is already described on the site. When Gmail or Google
+   Calendar is switched on in production, update this site first so it names
+   exactly what is read and kept.

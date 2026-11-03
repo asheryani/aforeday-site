@@ -205,7 +205,7 @@
             <p class="posture-note">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8V6a2 2 0 0 1 2-2h2"/><path d="M16 4h2a2 2 0 0 1 2 2v2"/><path d="M4 16v2a2 2 0 0 0 2 2h2"/><path d="M16 20h2a2 2 0 0 0 2-2v-2"/><path d="M9 9.5v1"/><path d="M15 9.5v1"/><path d="M12 9.5v4h-1"/><path d="M9 15.5a4 4 0 0 0 6 0"/></svg>
               <span class="for-ask">The default. Every kind of action asks you first; the setting is yours, and the AI never sees or changes it.</span>
-              <span class="for-act">Set per kind of action, with Face ID or your passcode. A first message to someone you have never written to always asks you in the app, whatever the setting.</span>
+              <span class="for-act">Set per kind of action, with Face ID or your passcode. Today a draft leaves the app only when you send it yourself.</span>
             </p>
           </div>
         </div>
@@ -277,7 +277,7 @@
         <div class="section-head reveal">
           <span class="eyebrow"><svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="3.4"/><rect x="3" y="12.4" width="18" height="1.6"/><rect x="3" y="15.8" width="18" height="1.6"/></svg>Your data</span>
           <h2 id="reads-title">What Aforeday reads, <em>and what it keeps.</em></h2>
-          <p class="lede">Aforeday works from what is already on your iPhone. It asks for calendar and reminder access, explains each request before iOS shows it, and you choose which calendars and lists count. There is no account to connect today: mail and chat accounts are not yet available.</p>
+          <p class="lede">Aforeday works from what is already on your iPhone. It asks for calendar and reminder access, explains each request before iOS shows it, and you choose which calendars and lists count. You sign in with Apple or Google. That sign-in does not connect Gmail or Google Calendar, and no mail or chat account can be connected today.</p>
         </div>
 
         <div class="keeps">
@@ -318,7 +318,7 @@
 
         <div class="never reveal">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
-          <p><strong>What Aforeday never does.</strong> It never sends anything without your approval. It never asks for your location, contacts, photos or health data. Your voice is transcribed on your phone and the audio never leaves it; Face ID is checked by iOS and never leaves it either. It never uses your data for advertising, never sells it, and does not use it to train AI models. The details, including how long each kind of data is kept, are in the <a href="privacy.html">privacy policy</a>.</p>
+          <p><strong>What Aforeday never does.</strong> It never sends anything without your approval, and today it does not send messages for you: you send a draft yourself. It never asks for your contacts, photos or health data. It asks for your location only if you turn on “Use my location for leave-by”, and then only while you use the app, so it can work out when to leave for a meeting. Your position stays on your iPhone and is sent from it only to Apple Maps, not to us. Your voice is transcribed on your phone and the audio never leaves it; Face ID is checked by iOS and never leaves it either. It never uses your data for advertising, never sells it, and we do not use it to train AI models. The details, including how long each kind of data is kept, are in the <a href="privacy.html">privacy policy</a>.</p>
         </div>
       </div>
     </section>
@@ -345,8 +345,8 @@
           </div>
           <div class="principle reveal" style="--delay: 120ms">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.5-8 5.5 5.5 0 0 1 10.6 1.2A3.5 3.5 0 0 1 17 18H7z"/></svg>
-            <h3>AI in the EU, never trained on you</h3>
-            <p>AI runs on Google Cloud in Belgium (europe-west1), is not used to train models, and can be switched off.</p>
+            <h3>AI in the EU</h3>
+            <p>AI runs on Amazon Bedrock in the European Union (Amazon Nova 2 Lite, via the EU cross-region inference profile, called from Frankfurt). We do not use it to train models, and you can switch it off.</p>
           </div>
           <div class="principle reveal" style="--delay: 180ms">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v10"/><path d="M8 10l4 4 4-4"/><path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
@@ -361,7 +361,7 @@
           <div class="principle reveal" style="--delay: 300ms">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8V6a2 2 0 0 1 2-2h2"/><path d="M16 4h2a2 2 0 0 1 2 2v2"/><path d="M4 16v2a2 2 0 0 0 2 2h2"/><path d="M16 20h2a2 2 0 0 0 2-2v-2"/><path d="M9 9.5v1"/><path d="M15 9.5v1"/><path d="M12 9.5v4h-1"/><path d="M9 15.5a4 4 0 0 0 6 0"/></svg>
             <h3>You approve, Aforeday acts</h3>
-            <p>Ask-first is the default for every kind of action. Standing approval needs Face ID, and every send has an undo window.</p>
+            <p>Ask-first is the default for every kind of action. Standing approval needs Face ID or your passcode. A draft leaves the app only when you send it yourself.</p>
           </div>
         </div>
       </div>
@@ -382,7 +382,7 @@
             <p class="plan-name">Aforeday Pro</p>
             <p class="plan-price">The price and billing period are shown in the app and on the App Store before you subscribe.</p>
             <ul>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Sign in with Apple is the only sign-in. No password to make, no account to set up elsewhere.</span></li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Sign in with Apple or Google. No password to make.</span></li>
               <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Renews automatically unless you cancel at least 24 hours before the end of the current period; cancel in your iPhone’s Settings and keep access until the period ends.</span></li>
               <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Restore Purchases brings a subscription you already own to a new iPhone.</span></li>
               <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Available worldwide on the App Store.</span></li>
@@ -402,7 +402,7 @@
           <div class="section-head reveal">
             <span class="eyebrow">Tomorrow, before it starts</span>
             <h2 id="download-title">Start tomorrow <em>with a plan.</em></h2>
-            <p class="lede">Aforeday is on the App Store. Sign in with Apple, allow calendar access, and your first briefing is ready within one refresh.</p>
+            <p class="lede">Aforeday is on the App Store. Sign in with Apple or Google, allow calendar access, and your first briefing is ready within one refresh.</p>
             <div class="actions">
               <a class="btn btn-store" href="https://apps.apple.com/app/id6804468993">
                 <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/><g class="tray-arrow"><path d="M12 3v11"/><path d="M8 10l4 4 4-4"/></g></svg>
