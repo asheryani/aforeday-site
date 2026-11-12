@@ -4,29 +4,40 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Terms of use · Aforeday</title>
-  <meta name="description" content="Terms of use for the Aforeday iPhone app, provided by Neurotech AI Solutions GmbH, Berlin.">
+  <meta name="description" content="Terms of use for the Aforeday iPhone app, provided by Neurotech AI Solutions GmbH, Berlin. Last updated 12 November 2026.">
+  <meta name="theme-color" content="#070B16">
+  <meta property="og:title" content="Terms of use · Aforeday">
+  <meta property="og:url" content="https://aforeday.com/terms.html">
+  <meta property="og:image" content="https://aforeday.com/assets/og.jpg">
   <link rel="canonical" href="https://aforeday.com/terms.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="preload" href="assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/instrument-sans-variable-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+  <svg class="defs" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="horizon-arc" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#E06A3C"/>
+        <stop offset="0.5" stop-color="#FFC48A"/>
+        <stop offset="1" stop-color="#E06A3C"/>
+      </linearGradient>
+    </defs>
+  </svg>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="./" aria-label="Aforeday home">
-        <img class="brand-icon" src="assets/favicon.svg" alt="" width="32" height="32">
-        <span>Aforeday</span>
+      <a class="brand" href="./" aria-label="aforeday home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 21Q16 8 27 21" fill="none" stroke="url(#horizon-arc)" stroke-width="2.6" stroke-linecap="round"/></svg>
+        <span>aforeday</span>
       </a>
       <nav class="nav" aria-label="Main">
-        <a href="./#how" data-anchor>What it does</a>
-        <a href="./#approval" data-anchor>Approval</a>
+        <a href="./#features" data-quiet>Features</a>
         <a href="privacy.html">Privacy</a>
-        <a href="support.html" data-secondary>Support</a>
-        <a class="nav-cta" href="https://apps.apple.com/app/id6804468993">Get the app</a>
+        <a href="./#pricing" data-quiet>Pricing</a>
+        <a class="nav-cta" href="https://apps.apple.com/app/id6804468993">App Store</a>
       </nav>
     </div>
   </header>
@@ -34,77 +45,21 @@
   <main id="main" class="doc">
     <div class="wrap">
       <div class="doc-body">
-      <h1>Terms of use</h1>
-      <p class="meta">Effective 3 November 2026</p>
+        <h1>Terms of use</h1>
+        <p class="meta"><time datetime="2026-11-12">Last updated 12 November 2026</time>. These terms replace the version dated 3 November 2026.</p>
 
-      <div class="summary">
-        <h2>In short</h2>
-        <ul>
-          <li>Aforeday helps you plan your day and keep track of what needs you. It does not make decisions for you, and what it suggests can be wrong.</li>
-          <li>Aforeday proposes; you approve. Where you let it act on its own, it tells you and gives you time to undo.</li>
-          <li>Aforeday is a paid subscription sold through Apple. Apple handles billing, renewals, cancellation and refunds.</li>
-          <li>You choose what Aforeday may read, and you can change that at any time.</li>
-          <li>You can stop using Aforeday and delete your account and data at any time, from the app.</li>
-        </ul>
-      </div>
+        <div class="summary">
+          <h2>In short</h2>
+          <ul>
+            <li>Aforeday is a voice-first daily assistant. You talk to it. Text is optional. It does not make decisions for you, and what it suggests can be wrong.</li>
+            <li>It prepares drafts for your approval. You remain responsible for anything you send.</li>
+            <li>Aforeday Pro is Pro Monthly or Pro Annual, sold through Apple. There is no free trial. Apple handles billing, renewal, cancellation, and refunds.</li>
+            <li>You choose which calendars and reminders Aforeday may read, and you can change that.</li>
+            <li>You can stop using Aforeday and delete your account from the app. How your data is handled is in the <a href="privacy.html">privacy policy</a>.</li>
+          </ul>
+        </div>
 
-      <ul class="toc-inline" aria-label="Contents">
-        <li><a href="#provider">1. Who provides Aforeday</a></li>
-        <li><a href="#eula">2. These terms and Apple’s licence</a></li>
-        <li><a href="#service">3. What Aforeday does, and what it does not</a></li>
-        <li><a href="#account">4. Your account</a></li>
-        <li><a href="#sources">5. What you let Aforeday read</a></li>
-        <li><a href="#acceptable-use">6. Acceptable use</a></li>
-        <li><a href="#subscriptions">7. Subscription and payment</a></li>
-        <li><a href="#content">8. Your content</a></li>
-        <li><a href="#ending">9. Ending your use</a></li>
-        <li><a href="#liability">10. Liability</a></li>
-        <li><a href="#changes">11. Changes to these terms</a></li>
-        <li><a href="#law">12. Law and disputes</a></li>
-      </ul>
-
-      <h2 id="provider">1. Who provides Aforeday</h2>
-      <p>Aforeday (“the app”) is provided by Neurotech AI Solutions GmbH, Lückstraße 24, 10317 Berlin, Germany, registered with the Amtsgericht Charlottenburg under HRB 270776 B (“we”, “us”). You can reach us at <a href="mailto:contact@aforeday.com">contact@aforeday.com</a>. These terms apply to your use of the app and the services behind it.</p>
-
-      <h2 id="eula">2. These terms and Apple’s licence</h2>
-      <p>You get Aforeday from Apple’s App Store. Your licence to use the app is governed by Apple’s <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed Application End User License Agreement</a>. These terms add to that agreement; where they conflict on the licence itself, Apple’s agreement applies. Apple is not responsible for Aforeday or its content, and has no obligation to provide maintenance or support for it.</p>
-
-      <h2 id="service">3. What Aforeday does, and what it does not</h2>
-      <p>Aforeday reads the calendars and reminder lists you choose on your iPhone and uses them to show what needs your attention: your meetings, your open items, who is waiting on you, and a short daily list of priorities. Some features use AI to write briefs, answer your questions and draft text.</p>
-      <p>Aforeday is an aid to your own judgement. Its suggestions, drafts, briefs and proposals can be incomplete or wrong, and you remain responsible for your decisions and for anything you send. Today Aforeday does not send messages for you: a draft leaves the app only when you copy it or open it in your own mail app and send it. If a connected account that can send is made available later, a message Aforeday then sends through it is sent as you and counts as sent by you. Aforeday acts only after your approval, or under a standing “Act and tell me” choice you make per kind of action; in that case it tells you what it is about to do and, for anything that leaves your phone, waits for an undo window first. The <a href="privacy.html#agent">privacy policy</a> describes exactly how this works.</p>
-
-      <h2 id="account">4. Your account</h2>
-      <p>You need to be at least 18 years old to use Aforeday. You sign in with Apple or Google, and you are responsible for keeping access to your device and to the account you sign in with secure. Tell us promptly if you believe someone else has used your account.</p>
-
-      <h2 id="sources">5. What you let Aforeday read</h2>
-      <p>You choose which calendars and reminder lists Aforeday may read, and you can change that at any time in the app or in your iPhone’s Settings.</p>
-      <p>No account with another service can be connected today. Gmail and Google Calendar are built and switched off, and signing in with Google does not connect them. If connecting is made available, it will be your choice: before you are handed to the other service, the app shows what Aforeday will ask it for, and you can disconnect at any time in Settings › Connected accounts. Connect only accounts you are entitled to use in this way; for an account that your employer or a client provides, that may mean checking their rules first. Each of these services is provided by someone else under its own terms, which continue to apply to your use of it. We are not responsible for that service, for its availability, or for a change it makes that stops Aforeday from reading it. The <a href="privacy.html#sources">privacy policy</a> describes exactly what Aforeday reads from each service and what it keeps.</p>
-
-      <h2 id="acceptable-use">6. Acceptable use</h2>
-      <p>Do not use Aforeday to break the law or anyone’s rights, to access data you are not authorised to use, to interfere with or overload the service, or to attempt to reverse-engineer, copy or resell it except where the law allows.</p>
-
-      <h2 id="subscriptions">7. Subscription and payment</h2>
-      <p>Aforeday requires an Aforeday Pro subscription, bought through Apple’s App Store; there is no free tier and no free trial. The price and billing period are shown in the app and on the App Store before you subscribe. Subscriptions renew automatically unless you cancel at least 24 hours before the end of the current period. Payment is charged to your Apple account, and Apple handles renewals, cancellation and refunds under its own terms. You can manage or cancel your subscription in your iPhone’s Settings, under your name › Subscriptions; cancelling stops the next renewal, and you keep access until the end of the period you paid for. Refunds are requested from Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. Restore Purchases, in the app, brings a subscription you already own to a new device.</p>
-
-      <h2 id="content">8. Your content</h2>
-      <p>You keep all rights in your content: your events, reminders, conversations, what Aforeday reads from the accounts you connect, and anything you write in the app. You allow us to process it only as needed to provide Aforeday to you, as described in the <a href="privacy.html">privacy policy</a>. We do not use your content to train AI models.</p>
-
-      <h2 id="ending">9. Ending your use</h2>
-      <p>You can stop using Aforeday at any time and delete your account from Settings › Privacy &amp; data. We may suspend or end your access if you seriously or repeatedly breach these terms, or if we stop offering Aforeday; where we stop offering it, we will give you reasonable notice and the opportunity to export your data first.</p>
-
-      <h2 id="liability">10. Liability</h2>
-      <p>We are liable without limitation for intent and gross negligence, for injury to life, body or health, under the German Product Liability Act, and where we have given a guarantee. For slight negligence, we are liable only for breach of an obligation essential to providing Aforeday, and then only for damage that was typical and foreseeable when you started using it. Otherwise our liability for slight negligence is excluded. These limits also apply to our employees and agents. Nothing in these terms limits rights you have as a consumer that cannot be limited by contract.</p>
-
-      <h2 id="changes">11. Changes to these terms</h2>
-      <p>We may update these terms, for example when Aforeday gains new features or the law changes. We will tell you about material changes in the app before they take effect. If you do not agree, you can stop using Aforeday and delete your account.</p>
-
-      <h2 id="law">12. Law and disputes</h2>
-      <p>These terms are governed by the law of the Federal Republic of Germany, excluding the UN Convention on Contracts for the International Sale of Goods. If you are a consumer, this does not deprive you of the protection of the mandatory law of the country where you live. We are neither obliged nor willing to take part in dispute resolution proceedings before a consumer arbitration board.</p>
-      </div>
-      <aside class="doc-aside">
-        <nav aria-label="On this page">
-          <h2>On this page</h2>
-          <ol>
+        <ul class="toc-inline" aria-label="Contents">
           <li><a href="#provider">1. Who provides Aforeday</a></li>
           <li><a href="#eula">2. These terms and Apple’s licence</a></li>
           <li><a href="#service">3. What Aforeday does, and what it does not</a></li>
@@ -117,6 +72,63 @@
           <li><a href="#liability">10. Liability</a></li>
           <li><a href="#changes">11. Changes to these terms</a></li>
           <li><a href="#law">12. Law and disputes</a></li>
+        </ul>
+
+        <h2 id="provider">1. Who provides Aforeday</h2>
+        <p>Aforeday (“the app”) is provided by Neurotech AI Solutions GmbH, Lückstraße 24, 10317 Berlin, Germany, registered with the Amtsgericht Charlottenburg under HRB 270776 B (“we”, “us”). You can reach us at <a href="mailto:contact@aforeday.com">contact@aforeday.com</a>. These terms apply to your use of the app and the services behind it.</p>
+
+        <h2 id="eula">2. These terms and Apple’s licence</h2>
+        <p>You get Aforeday from Apple’s App Store. Your licence to use the app is governed by Apple’s <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed Application End User License Agreement</a>. These terms add to that agreement. Where they conflict on the licence itself, Apple’s agreement applies. Apple is not responsible for Aforeday or its content, and has no obligation to provide maintenance or support for it.</p>
+
+        <h2 id="service">3. What Aforeday does, and what it does not</h2>
+        <p>Aforeday is a voice-first daily assistant for iPhone. You talk to it, and you can type instead. With your permission it reads calendars and reminders through Apple EventKit, uses location for place-based reminders and suggestions, and can show time-sensitive information in the Dynamic Island and in Live Activities. It includes focus sessions, an evening close-out, and a share extension. Some answers and drafts are written with AI on Amazon Bedrock. A spoken reply’s text may be sent to Amazon Polly so it can be spoken. The <a href="privacy.html">privacy policy</a> describes what stays on the iPhone, what is sent, and what is still marked for review.</p>
+        <p>Aforeday is an aid to your own judgement. Its suggestions, drafts, and spoken replies can be incomplete or wrong. You remain responsible for your decisions and for anything you send. Aforeday prepares drafts for your approval. The app tells you when nothing is sent until you approve.</p>
+        <p class="review-todo"><strong>TODO for review (Ash):</strong> The privacy policy’s draft section asks you to confirm that the app does not send messages itself, and whether a standing approval mode still exists. Adjust this section to match that answer before publication.</p>
+
+        <h2 id="account">4. Your account</h2>
+        <p>You need to be at least 18 years old to use Aforeday. You sign in with Apple or Google. Google is asked only for openid, email, and profile. You are responsible for keeping access to your device, and to the account you sign in with, secure. Tell us promptly if you believe someone else has used your account.</p>
+
+        <h2 id="sources">5. What you let Aforeday read</h2>
+        <p>You choose which calendars and reminder lists Aforeday may read, and you can change that in the app or in your iPhone’s Settings. Location is used for place-based reminders and suggestions, as the privacy policy describes. Signing in with Google does not grant access to Gmail or Google Calendar.</p>
+        <p class="review-todo"><strong>TODO for review (Ash):</strong> If any other account can be connected, describe that choice here. Version 3.1 said no other account could be connected.</p>
+
+        <h2 id="acceptable-use">6. Acceptable use</h2>
+        <p>Do not use Aforeday to break the law or anyone’s rights, to access data you are not allowed to use, to interfere with or overload the service, or to attempt to reverse-engineer, copy, or resell it except where the law allows.</p>
+
+        <h2 id="subscriptions">7. Subscription and payment</h2>
+        <p>Aforeday requires an Aforeday Pro subscription, bought through Apple’s App Store, as <strong>Pro Monthly</strong> or <strong>Pro Annual</strong>. There is no free tier and no free trial. The price is shown in the app and on the App Store before you subscribe. We do not state a price on this website. Payment is charged to your Apple account. Subscriptions renew automatically unless you cancel at least 24 hours before the end of the current period. You manage or cancel in your iPhone’s Settings, under your name, then Subscriptions. Cancelling stops the next renewal, and you keep access until the end of the period you paid for. Refunds are requested from Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. Restore Purchases, in the app, brings a subscription you already have to another device. Apple handles payment, renewal, cancellation, and refunds. We never see your card.</p>
+
+        <h2 id="content">8. Your content</h2>
+        <p>You keep all rights in the content you provide: your events, reminders, what you say or type, and the drafts you approve or edit. You allow us to process it only as needed to provide Aforeday to you, as the <a href="privacy.html">privacy policy</a> describes. We do not use your content to train models of our own.</p>
+
+        <h2 id="ending">9. Ending your use</h2>
+        <p>You can stop using Aforeday at any time and delete your account from the app. We may suspend or end your access if you seriously or repeatedly breach these terms, or if we stop offering Aforeday. If we stop offering it, we will give you reasonable notice and a chance to export your data first. Deleting the account does not cancel the App Store subscription.</p>
+
+        <h2 id="liability">10. Liability</h2>
+        <p>We are liable without limitation for intent and gross negligence, for injury to life, body, or health, under the German Product Liability Act, and where we have given a guarantee. For slight negligence we are liable only for breach of an obligation essential to providing Aforeday, and then only for damage that was typical and foreseeable when you started using it. Otherwise our liability for slight negligence is excluded. These limits also apply to our employees and agents. Nothing in these terms limits rights you have as a consumer that cannot be limited by contract.</p>
+
+        <h2 id="changes">11. Changes to these terms</h2>
+        <p>We may update these terms, for example when Aforeday gains features or the law changes. We will tell you about material changes in the app before they take effect, and we will change the date at the top of this page. If you do not agree, you can stop using Aforeday and delete your account.</p>
+
+        <h2 id="law">12. Law and disputes</h2>
+        <p>These terms are governed by the law of the Federal Republic of Germany, excluding the UN Convention on Contracts for the International Sale of Goods. If you are a consumer, this does not take away the protection of the mandatory law of the country where you live. We are neither obliged nor willing to take part in dispute resolution before a consumer arbitration board.</p>
+      </div>
+      <aside class="doc-aside">
+        <nav aria-label="On this page">
+          <h2>On this page</h2>
+          <ol>
+            <li><a href="#provider">1. Who provides Aforeday</a></li>
+            <li><a href="#eula">2. These terms and Apple’s licence</a></li>
+            <li><a href="#service">3. What Aforeday does, and what it does not</a></li>
+            <li><a href="#account">4. Your account</a></li>
+            <li><a href="#sources">5. What you let Aforeday read</a></li>
+            <li><a href="#acceptable-use">6. Acceptable use</a></li>
+            <li><a href="#subscriptions">7. Subscription and payment</a></li>
+            <li><a href="#content">8. Your content</a></li>
+            <li><a href="#ending">9. Ending your use</a></li>
+            <li><a href="#liability">10. Liability</a></li>
+            <li><a href="#changes">11. Changes to these terms</a></li>
+            <li><a href="#law">12. Law and disputes</a></li>
           </ol>
         </nav>
       </aside>
@@ -126,9 +138,12 @@
   <footer class="site-footer">
     <div class="wrap">
       <div>
-        <a class="brand" href="./" aria-label="Aforeday home"><img class="brand-icon" src="assets/favicon.svg" alt="" width="32" height="32"><span>Aforeday</span></a>
-        <p>Your day, thought through before it starts. Made in Berlin by Neurotech AI Solutions GmbH.</p>
-        <p>This site sets no cookies, runs no analytics and loads nothing from anyone else.</p>
+        <a class="brand" href="./" aria-label="aforeday home">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 21Q16 8 27 21" fill="none" stroke="url(#horizon-arc)" stroke-width="2.6" stroke-linecap="round"/></svg>
+          <span>aforeday</span>
+        </a>
+        <p>Neurotech AI Solutions GmbH, Berlin.</p>
+        <p>This site sets no cookies, runs no analytics, and loads nothing from anyone else.</p>
         <p>© 2026 Neurotech AI Solutions GmbH</p>
       </div>
       <nav aria-label="Legal">

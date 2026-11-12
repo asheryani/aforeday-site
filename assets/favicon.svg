@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#132037"/><stop offset="1" stop-color="#0E182C"/></linearGradient></defs><rect width="1024" height="1024" rx="228" fill="url(#g)"/><g fill="#C9A96A"><rect x="232" y="428" width="560" height="76"/><rect x="232" y="542" width="560" height="34"/><rect x="232" y="614" width="560" height="34"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="8" fill="#070B16"/>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E06A3C"/>
+      <stop offset="0.5" stop-color="#FFC48A"/>
+      <stop offset="1" stop-color="#E06A3C"/>
+    </linearGradient>
+  </defs>
+  <!-- Approximate horizon arc. Exact path lives in Horizon.swift. -->
+  <path d="M6 20.5Q16 9.5 26 20.5" fill="none" stroke="url(#g)" stroke-width="2.6" stroke-linecap="round"/>
+</svg>

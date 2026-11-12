@@ -4,29 +4,40 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Support · Aforeday</title>
-  <meta name="description" content="Help with Aforeday: getting started, managing or cancelling your subscription, stopping the agent, and exporting or deleting your data.">
+  <meta name="description" content="Help with Aforeday: talking to the app, calendar and reminders, location, Pro Monthly and Pro Annual, and exporting or deleting your data.">
+  <meta name="theme-color" content="#070B16">
+  <meta property="og:title" content="Support · Aforeday">
+  <meta property="og:url" content="https://aforeday.com/support.html">
+  <meta property="og:image" content="https://aforeday.com/assets/og.jpg">
   <link rel="canonical" href="https://aforeday.com/support.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="preload" href="assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/instrument-sans-variable-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+  <svg class="defs" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="horizon-arc" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#E06A3C"/>
+        <stop offset="0.5" stop-color="#FFC48A"/>
+        <stop offset="1" stop-color="#E06A3C"/>
+      </linearGradient>
+    </defs>
+  </svg>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="./" aria-label="Aforeday home">
-        <img class="brand-icon" src="assets/favicon.svg" alt="" width="32" height="32">
-        <span>Aforeday</span>
+      <a class="brand" href="./" aria-label="aforeday home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 21Q16 8 27 21" fill="none" stroke="url(#horizon-arc)" stroke-width="2.6" stroke-linecap="round"/></svg>
+        <span>aforeday</span>
       </a>
       <nav class="nav" aria-label="Main">
-        <a href="./#how" data-anchor>What it does</a>
-        <a href="./#approval" data-anchor>Approval</a>
+        <a href="./#features" data-quiet>Features</a>
         <a href="privacy.html">Privacy</a>
-        <a href="support.html" aria-current="page" data-secondary>Support</a>
-        <a class="nav-cta" href="https://apps.apple.com/app/id6804468993">Get the app</a>
+        <a href="./#pricing" data-quiet>Pricing</a>
+        <a class="nav-cta" href="https://apps.apple.com/app/id6804468993">App Store</a>
       </nav>
     </div>
   </header>
@@ -34,74 +45,75 @@
   <main id="main" class="doc">
     <div class="wrap">
       <div class="doc-body">
-      <h1>Support</h1>
-      <p class="lede">Write to <a href="mailto:contact@aforeday.com?subject=Aforeday%20support">contact@aforeday.com</a> and a person will answer, usually within one working day. Include your iPhone model and iOS version if something is not working.</p>
+        <h1>Support</h1>
+        <p class="lede">Write to <a href="mailto:contact@aforeday.com?subject=Aforeday%20support">contact@aforeday.com</a> and a person will answer. Include your iPhone model and iOS version if something is not working.</p>
 
-      <ul class="toc-inline" aria-label="Contents">
-        <li><a href="#start">Getting started</a></li>
-        <li><a href="#agent">The agent</a></li>
-        <li><a href="#subscription">Subscription</a></li>
-        <li><a href="#data">Your data</a></li>
-        <li><a href="#security">Security</a></li>
-      </ul>
+        <ul class="toc-inline" aria-label="Contents">
+          <li><a href="#start">Getting started</a></li>
+          <li><a href="#voice">Voice</a></li>
+          <li><a href="#subscription">Subscription</a></li>
+          <li><a href="#data">Your data</a></li>
+          <li><a href="#security">Security</a></li>
+        </ul>
 
-      <h2 id="start">Getting started</h2>
-      <dl class="faq">
-        <dt>What do I need?</dt>
-        <dd>An iPhone, an Apple ID to install the app and subscribe on the App Store, and a calendar. Sign in to Aforeday with Apple or Google, then allow calendar access; Aforeday imports the calendars on your phone and your first briefing is ready within one refresh. Signing in with Google does not connect Gmail or Google Calendar. No other account is needed, and none can be connected today.</dd>
+        <h2 id="start">Getting started</h2>
+        <dl class="faq">
+          <dt>What do I need?</dt>
+          <dd>An iPhone. You install Aforeday from the App Store and subscribe with your Apple ID. In the app, sign in with Apple or with Google, then allow the calendars and reminders you want. Google sign-in asks only for openid, email, and profile. It does not connect Gmail or Google Calendar. You can talk, or you can type.</dd>
 
-        <dt>Why does it ask for calendar and reminder access?</dt>
-        <dd>Aforeday works from your calendar: without it there is nothing to plan. Reminders let your open to-dos appear alongside your day, and let Aforeday add one when you approve a proposal. You choose which calendars and lists count, in the app or in your iPhone’s Settings. The <a href="privacy.html#sources">privacy policy</a> lists exactly what is read and what stays on your phone.</dd>
+          <dt>Why does it ask for calendar and reminders?</dt>
+          <dd>Aforeday reads them through Apple EventKit, from the calendars and lists you allow. You can change that in the app or in your iPhone’s Settings. The <a href="privacy.html#sources">privacy policy</a> says what is still to be confirmed about which fields leave the phone.</dd>
 
-        <dt>Does Aforeday use my location?</dt>
-        <dd>Only if you turn on “Use my location for leave-by” in Settings › Travel. The app then asks to use your location while you use it. It does not ask for “Always” access. Your position is used on your iPhone, in the three hours before a meeting that has a place, to work out when to leave, and is sent from the phone only to Apple Maps for the travel time. It is not uploaded to Aforeday, and it is not sent to Apple Weather. If you leave the setting off, or decline the permission, leave-by times use the addresses you saved and your previous meeting. The <a href="privacy.html#sources">privacy policy</a> describes what is kept and for how long.</dd>
+          <dt>Does it use my location?</dt>
+          <dd>Yes, for place-based reminders and suggestions, such as a reminder when you arrive or leave, and a suggestion of when to leave. The place screen says your position stays on the iPhone. What is processed on the phone and what, if anything, is sent to our servers is described in the <a href="privacy.html#sources">privacy policy</a>, including a note of what still needs to be checked in the app.</dd>
 
-        <dt>Can Aforeday work without AI?</dt>
-        <dd>Yes. In Settings › Privacy &amp; data › AI data controls you can switch AI off entirely, or switch off one source at a time. What needs your attention is decided by fixed rules rather than a model, so that keeps working either way; briefs then show facts without a written narrative.</dd>
-      </dl>
+          <dt>What are focus, the evening close-out, and Share?</dt>
+          <dd>A focus session is a block of time. The evening close-out is the end of the day. Share is the iOS share sheet, so another app can hand something to Aforeday. Dynamic Island and Live Activities can keep something time-sensitive on the Lock Screen.</dd>
+        </dl>
+        <p class="review-todo"><strong>TODO for review (Ash):</strong> Confirm the current names of these controls in the app so this page can point at the right screens.</p>
 
-      <h2 id="agent">The agent</h2>
-      <dl class="faq">
-        <dt>How do I stop Aforeday acting on its own?</dt>
-        <dd>Open Settings › Aforeday’s agent. Pause stops everything the agent starts on its own at once. Under “What Aforeday may do on its own” you can set each kind of action back to “Ask me first”, which is the default. Turning the agent off stops it proposing anything new.</dd>
+        <h2 id="voice">Voice</h2>
+        <dl class="faq">
+          <dt>Where does my voice go?</dt>
+          <dd>The recording and the speech recognition stay on the iPhone. The audio is not uploaded. The words are sent so Aforeday can answer. To speak a reply, the reply text is sent to Amazon Polly in Frankfurt. Neither Polly nor we store that audio. If Polly fails, the iPhone speaks with its own voice.</dd>
 
-        <dt>Something was done that I did not want.</dt>
-        <dd>Open the item on the Now screen or in Activity; what the agent did, and how it was approved, is shown there. A reminder it added can be deleted from your phone. If you had chosen “Act and tell me”, the notification it sent had an Undo button, and anything that would leave your phone is held for five minutes before it goes. Write to us if something still looks wrong; include the time and what the item said.</dd>
-      </dl>
+          <dt>A draft appeared that I did not want to send.</dt>
+          <dd>Aforeday prepares drafts for you to approve. Nothing is sent until you approve it. If something still looks wrong, write to us with the time and what was on the screen.</dd>
+        </dl>
 
-      <h2 id="subscription">Subscription</h2>
-      <dl class="faq">
-        <dt>How do I cancel my subscription?</dt>
-        <dd>Subscriptions are managed by Apple. On your iPhone, open Settings, tap your name, then Subscriptions, and choose Aforeday. You can also get there from Aforeday’s own Settings › Subscription. Cancelling stops the next renewal; you keep access until the end of the period you paid for.</dd>
+        <h2 id="subscription">Subscription</h2>
+        <dl class="faq">
+          <dt>What are the plans?</dt>
+          <dd>Aforeday Pro Monthly and Aforeday Pro Annual. There is no free trial. The price is shown in the app and on the App Store before you subscribe. Apple charges your Apple ID. We never see your card.</dd>
 
-        <dt>How do I get a refund?</dt>
-        <dd>Apple handles payments and refunds for App Store purchases. Request one at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</dd>
+          <dt>How do I cancel?</dt>
+          <dd>On your iPhone, open Settings, tap your name, then Subscriptions, and choose Aforeday. Cancel at least 24 hours before the period ends. You keep access until the period you paid for is over.</dd>
 
-        <dt>I subscribed on another iPhone.</dt>
-        <dd>Sign in with the same Apple ID and tap Restore purchases on the subscription screen, or in Settings › Subscription.</dd>
-      </dl>
+          <dt>How do I get a refund?</dt>
+          <dd>Apple handles refunds for App Store purchases. Request one at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</dd>
 
-      <h2 id="data">Your data</h2>
-      <dl class="faq">
-        <dt>How do I export my data?</dt>
-        <dd>In the app, open Settings › Privacy &amp; data › Export my data. You get one JSON file with your profile, settings, sign-in methods, devices, subscription, consent history, events, cards, feedback, assistant conversations, briefings, drafts, meeting reminders, the agent’s proposals with your decisions, and sign-in history. It never contains tokens or anything else you sign in with.</dd>
+          <dt>I already subscribed on another iPhone.</dt>
+          <dd>Sign in on this iPhone with the same Apple ID and use Restore Purchases.</dd>
+        </dl>
 
-        <dt>How do I delete my account, and what does it erase?</dt>
-        <dd>In the app, open Settings › Privacy &amp; data › Delete account and type DELETE. If you signed in with Apple, the app asks you to confirm with Sign in with Apple once more, so that Aforeday’s access to your Apple ID is withdrawn too. If you signed in with Google, Aforeday holds no Google token to withdraw; you can remove Aforeday from your Google Account, under its list of third-party connections. Deletion signs you out everywhere and permanently erases your profile, devices, events and reminders, cards, briefings, conversations, drafts, the agent’s records and settings, then checks that nothing of yours is left. A few records survive without any link to you, and backups age out within about two weeks; the <a href="privacy.html#deletion">privacy policy</a> lists every one of them. Deleting your account does not cancel your App Store subscription; do that in your iPhone’s Settings.</dd>
-      </dl>
+        <h2 id="data">Your data</h2>
+        <dl class="faq">
+          <dt>How do I export or delete my data?</dt>
+          <dd>Both are in the app. Deleting your Aforeday account does not cancel the App Store subscription. The <a href="privacy.html#deletion">privacy policy</a> describes export and deletion, and marks the screen names that still need to be confirmed. If you signed in with Google, you can also remove Aforeday from your Google Account’s third-party connections. We hold the sign-in confirmation Google sends us, not a standing right to your Google account.</dd>
+        </dl>
 
-      <h2 id="security">Security</h2>
-      <p>If you believe you have found a security problem in Aforeday, please write to <a href="mailto:contact@aforeday.com?subject=Security%20report">contact@aforeday.com</a> with “Security report” in the subject, and do not share it publicly until we have had a chance to fix it.</p>
+        <h2 id="security">Security</h2>
+        <p>If you believe you have found a security problem in Aforeday, write to <a href="mailto:contact@aforeday.com?subject=Security%20report">contact@aforeday.com</a> with “Security report” in the subject, and do not share it publicly until we have had a chance to fix it.</p>
       </div>
       <aside class="doc-aside">
         <nav aria-label="On this page">
           <h2>On this page</h2>
           <ol>
-          <li><a href="#start">Getting started</a></li>
-          <li><a href="#agent">The agent</a></li>
-          <li><a href="#subscription">Subscription</a></li>
-          <li><a href="#data">Your data</a></li>
-          <li><a href="#security">Security</a></li>
+            <li><a href="#start">Getting started</a></li>
+            <li><a href="#voice">Voice</a></li>
+            <li><a href="#subscription">Subscription</a></li>
+            <li><a href="#data">Your data</a></li>
+            <li><a href="#security">Security</a></li>
           </ol>
         </nav>
       </aside>
@@ -111,10 +123,13 @@
   <footer class="site-footer">
     <div class="wrap">
       <div>
-        <a class="brand" href="./" aria-label="Aforeday home"><img class="brand-icon" src="assets/favicon.svg" alt="" width="32" height="32"><span>Aforeday</span></a>
-        <p>Your day, thought through before it starts. Made in Berlin by Neurotech AI Solutions GmbH.</p>
-        <p>This site sets no cookies, runs no analytics and loads nothing from anyone else.</p>
-        <p>© 2026 Neurotech AI Solutions GmbH</p>
+        <a class="brand" href="./" aria-label="aforeday home">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 21Q16 8 27 21" fill="none" stroke="url(#horizon-arc)" stroke-width="2.6" stroke-linecap="round"/></svg>
+          <span>aforeday</span>
+        </a>
+        <p>A voice-first daily assistant for iPhone.</p>
+        <p>This site sets no cookies, runs no analytics, and loads nothing from anyone else.</p>
+        <p>© 2026 Aforeday</p>
       </div>
       <nav aria-label="Legal">
         <a href="privacy.html">Privacy policy</a>

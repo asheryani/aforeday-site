@@ -4,29 +4,41 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy policy · Aforeday</title>
-  <meta name="description" content="How the Aforeday app handles your data: what it reads from your iPhone and the accounts you connect, what it stores, how long it keeps it, how AI and the agent work, and how to disconnect, export or delete everything.">
+  <meta name="description" content="How Aforeday handles your data: voice on your iPhone, Amazon Bedrock and Amazon Polly in Frankfurt, calendar and reminders, location, and subscriptions through Apple.">
+  <meta name="theme-color" content="#070B16">
+  <meta property="og:title" content="Privacy policy · Aforeday">
+  <meta property="og:description" content="How the Aforeday iPhone app handles your data. Last updated 12 November 2026.">
+  <meta property="og:url" content="https://aforeday.com/privacy.html">
+  <meta property="og:image" content="https://aforeday.com/assets/og.jpg">
   <link rel="canonical" href="https://aforeday.com/privacy.html">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="preload" href="assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/instrument-sans-variable-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+  <svg class="defs" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="horizon-arc" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#E06A3C"/>
+        <stop offset="0.5" stop-color="#FFC48A"/>
+        <stop offset="1" stop-color="#E06A3C"/>
+      </linearGradient>
+    </defs>
+  </svg>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="./" aria-label="Aforeday home">
-        <img class="brand-icon" src="assets/favicon.svg" alt="" width="32" height="32">
-        <span>Aforeday</span>
+      <a class="brand" href="./" aria-label="aforeday home">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 21Q16 8 27 21" fill="none" stroke="url(#horizon-arc)" stroke-width="2.6" stroke-linecap="round"/></svg>
+        <span>aforeday</span>
       </a>
       <nav class="nav" aria-label="Main">
-        <a href="./#how" data-anchor>What it does</a>
-        <a href="./#approval" data-anchor>Approval</a>
+        <a href="./#features" data-quiet>Features</a>
         <a href="privacy.html" aria-current="page">Privacy</a>
-        <a href="support.html" data-secondary>Support</a>
-        <a class="nav-cta" href="https://apps.apple.com/app/id6804468993">Get the app</a>
+        <a href="./#pricing" data-quiet>Pricing</a>
+        <a class="nav-cta" href="https://apps.apple.com/app/id6804468993">App Store</a>
       </nav>
     </div>
   </header>
@@ -34,227 +46,160 @@
   <main id="main" class="doc">
     <div class="wrap">
       <div class="doc-body">
-      <h1>Privacy policy</h1>
-      <p class="meta">For the Aforeday iPhone app and this website. Effective 3 November 2026, version 3.1. It describes the app as it actually works today, not as we intend it to work, except where a section says so.</p>
+        <h1>Privacy policy</h1>
+        <p class="meta">For the Aforeday iPhone app and this website. <time datetime="2026-11-12">Last updated 12 November 2026</time>, version 3.2. It replaces version 3.1 of 3 November 2026. It describes the app as it works on that date. A passage marked “TODO for review” is not yet confirmed against the current source and should be settled before this version is published.</p>
 
-      <div class="summary">
-        <h2>The short version</h2>
-        <ul>
-          <li>You sign in with Apple or Google. Aforeday reads the calendars and reminder lists you choose on your iPhone. Accounts with other services cannot be connected yet (section 5).</li>
-          <li>What reaches us is bounded. From your iPhone: event titles, times and attendee names; reminder titles and due dates. Notes, links and addresses stay on your phone. If you turn location on for leave-by, your position is used on your phone and is not uploaded to us. Aforeday never reads your email, and it does not send email.</li>
-          <li>Aforeday proposes; you approve. Letting it act on its own for a kind of action needs Face ID or your passcode, and anything that would leave your phone is held for an undo window first.</li>
-          <li>AI runs in the European Union on Amazon Bedrock (Amazon Nova 2 Lite, via Amazon’s EU cross-region inference profile), called from our servers in Frankfurt. We do not use it to train models. You can switch AI off.</li>
-          <li>Aforeday is a paid subscription through Apple. Apple handles payment; we never see your card.</li>
-          <li>No advertising, no tracking, no data brokers, no third-party analytics.</li>
-          <li>You can export your data or delete your account from inside the app.</li>
-        </ul>
-      </div>
+        <div class="summary">
+          <h2>The short version</h2>
+          <ul>
+            <li>Aforeday is a voice-first assistant. The microphone recording and the speech recognition stay on your iPhone. The audio is not uploaded.</li>
+            <li>To speak a reply, the reply text is sent to Amazon Polly in Frankfurt. Neither Polly nor we store that audio. If that fails, the iPhone speaks with its own voice.</li>
+            <li>You sign in with Apple or Google. Google is asked only for <code>openid</code>, <code>email</code>, and <code>profile</code>.</li>
+            <li>Calendar and reminders are read through Apple EventKit, from the calendars and lists you allow.</li>
+            <li>Location is used for place-based reminders and suggestions. Section 2 marks what we could not re-check in the code.</li>
+            <li>Aforeday prepares drafts for your approval.</li>
+            <li>The backend and the AI run on Amazon Web Services in Frankfurt (<code>eu-central-1</code>). AI uses Amazon Bedrock.</li>
+            <li>Aforeday Pro is Pro Monthly or Pro Annual, billed by Apple. There is no free trial. We never see your card.</li>
+            <li>This website sets no cookies, runs no analytics, and loads nothing from anyone else.</li>
+          </ul>
+        </div>
 
-      <ul class="toc-inline" aria-label="Contents">
-        <li><a href="#controller">1. Who is responsible</a></li>
-        <li><a href="#sources">2. What Aforeday processes</a></li>
-        <li><a href="#agent">3. The agent and your approvals</a></li>
-        <li><a href="#ai">4. AI processing</a></li>
-        <li><a href="#not-yet">5. Not available yet</a></li>
-        <li><a href="#purposes">6. Why, and on what legal basis</a></li>
-        <li><a href="#recipients">7. Who else sees it</a></li>
-        <li><a href="#location">8. Where it is processed</a></li>
-        <li><a href="#retention">9. How long it is kept</a></li>
-        <li><a href="#deletion">10. Disconnecting, exporting and deleting</a></li>
-        <li><a href="#security">11. Security</a></li>
-        <li><a href="#rights">12. Your rights</a></li>
-        <li><a href="#children">13. Children</a></li>
-        <li><a href="#website">14. This website</a></li>
-        <li><a href="#changes">15. Changes</a></li>
-      </ul>
-
-      <h2 id="controller">1. Who is responsible</h2>
-      <p>The controller for the data described here is Neurotech AI Solutions GmbH, Lückstraße 24, 10317 Berlin, Germany, registered at the Amtsgericht Charlottenburg under HRB 270776 B, represented by its Managing Director, Ashraf Al-Eryani. For anything about your data, write to <a href="mailto:contact@aforeday.com?subject=Privacy%20request">contact@aforeday.com</a>. We have not appointed a data protection officer, as we are not required to.</p>
-
-      <h2 id="sources">2. What Aforeday processes</h2>
-
-      <h3>Your account</h3>
-      <p>You sign in with Sign in with Apple or with Google. With Apple, we store the email address Apple gives us (this may be a private relay address if you choose to hide yours), your name if Apple provides it on your first sign-in, and Apple’s account identifier for Aforeday.</p>
-      
-      <p>With Google, the app asks Google only for your basic profile (the permissions <code>openid</code>, <code>email</code> and <code>profile</code>). Your phone completes the sign-in with Google itself and sends us only Google’s signed confirmation of who you are. From it we store your Google account identifier, your email address and your name. We never receive or keep a Google token, so signing in with Google gives Aforeday no access to your Gmail, your calendar or anything else in your Google account. If Google confirms your address and it matches an Aforeday account you already have, the Google sign-in is added to that account instead of creating a second one.</p>
-      
-      <p>For every sign-in we keep a record of the device: model, iOS version, app version and when it was last seen. Sign-in sessions are stored as a random token, kept only as a hash, valid 30 days, replaced each time it is used, and bound to the device it was issued to.</p>
-
-      <h3>Your iPhone’s calendars and reminders</h3>
-      <p>With your permission, the app reads the calendars and reminder lists you include — on first run, all visible ones — and uploads, for each event, its title, start and end, time zone, all-day flag and the display names of its attendees, and for each reminder its title and due date. Events from 90 days back to 60 days ahead are included, along with reminders that are open or were completed in the last 7 days.</p>
-      <p>Notes, event links and addresses are not uploaded. Organiser and attendee email addresses are reduced on the device to three yes/no facts: whether you organised the meeting, whether the organiser is outside your organisation, and whether your invitation is still unanswered. Short phrases derived from those facts, such as “booked by someone outside your organisation”, are uploaded as part of the cards Aforeday shows you.</p>
-      <p>Addresses you enter for travel planning, and the locations of your events, stay on your iPhone. They are sent from your phone to Apple Maps to work out when to leave; only the resulting “leave by” time and the meeting it belongs to reach us. The app never asks for your contacts, photos, camera or health data, and it asks for your location only if you turn on the setting described below. Voice input is transcribed on your device; the audio is never uploaded, and the text is sent only if you send it. If you turn on “Speak answers aloud”, the answer to a question you dictated is read aloud by your iPhone’s own speech voice, on the phone; nothing more is sent to us.</p>
-
-      <h3>Your location, only if you allow it</h3>
-      <p>If you turn on “Use my location for leave-by” in Settings › Travel, the app first explains what it will do and then asks iOS for permission to use your location while you use the app. It never asks for “Always” access. With that permission, the app reads where you are, on your iPhone, only in the three hours before a meeting that has a place, to work out when you need to leave. Your position is used on the phone and sent from it only to Apple Maps, to work out the travel time. It never reaches our servers, our logs or any analytics: only the resulting leave-by time and travel duration do. When you are within about 150 metres of the meeting’s place, the app treats you as arrived and marks the leave-by card done. A weather-delay check is built and is not running, so your location is not sent to Apple Weather.</p>
-      <p>The app keeps no location history: it holds only the last position, on the phone, and discards it within 24 hours, when you turn the setting off or tap Forget now, when you sign out, and when you delete your account. Each time you turn the setting on or off, the app sends us a record of that choice (which version of the explanation you saw, and when), never a position. If you decline the iOS permission, nothing asks you again; leave-by times then come from your saved addresses and your previous meeting, as before.</p>
-
-      <h3>Trips in your calendar</h3>
-      <p>If one of your calendar events names a flight — an airline code, a flight number and a date, such as “LH 123 BER–MUC” — Aforeday recognises it as a trip. It does this on our servers with fixed patterns, not with AI, from the event’s title and, where a calendar provides one, its description; events from your iPhone reach our servers without a description, so in practice it is the title.</p>
-      <p>For each trip we store the airline and flight number, the departure date, the airports and scheduled times where the event gives them, how confident the detection is, where it came from, and your answer if you told Aforeday whether it is your flight. In the three days before departure, Aforeday may show you a card about the trip; when it is less sure, the card asks whether the flight is yours. If you tap “Not my flight”, we keep the airline and flight number so that the same flight is not suggested again. You can see detected trips, or switch the feature off, under Settings › Travel › Flight alerts; it is on by default, and switching it off erases your trips at the next daily run.</p>
-      <p>Aforeday does not look up flight status today (section 5): it does not know about gate changes, delays or cancellations, and no airline or flight-data service is told about your trip.</p>
-
-      <h3>Accounts you connect</h3>
-      <p>No account with another service can be connected yet (section 5). This is how connecting will work: in Settings › Connected accounts you will be able to connect accounts you hold with other services. Connecting is always your choice. Before you are handed to the service, the app shows what Aforeday will ask it for and why. You then sign in at the service itself, never in Aforeday, and the service gives our servers an access token. Those tokens stay on our servers, encrypted (section 11); they never reach your phone. For each connected account we keep which service it is, the name or address it shows, the permissions it granted, its status and when it was connected, and we record every permission granted or withdrawn in your consent history. You can disconnect at any time (section 10).</p>
-
-      <h3>Google Calendar, once Google has reviewed it</h3>
-      <p>Connecting Google Calendar is not switched on yet (section 5). Google reviews every app that asks to read Google calendars before that app may offer it to everyone, and we switch it on once that review is complete. This is how it will work. Aforeday asks Google for two read-only calendar permissions: <code>calendar.calendarlist.readonly</code>, to list your calendars so that you can choose which ones count, and <code>calendar.events.readonly</code>, to read the events on the calendars you choose. It also asks for <code>openid</code>, <code>email</code> and <code>profile</code>, which tell us which Google account you connected and show its address and name in Settings. Neither calendar permission can write: Aforeday cannot create, change or delete events, answer invitations or change your calendars or their settings. Only your primary calendar is included until you add others in Settings › Connected accounts. From the calendars you include, it reads events from 30 days back to 60 days ahead and stores, for each, its title, the first 500 characters of its description, start and end, time zone, all-day flag, the email addresses of its organiser and attendees (not of rooms or other resources), and its link in Google Calendar. Unlike events from your iPhone, Google Calendar events reach our servers with their attendees’ addresses and the start of their description, because the reading happens on our servers. When an event also appears in another calendar you use, Aforeday shows it once. Google Calendar events are used like your other calendar events: in your timeline, reminders, meeting briefs, trip recognition and the assistant (section 4).</p>
-      <p>Aforeday’s use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements. In practice, what Aforeday reads from your Google Calendar is used only to provide the features described here, which you see in the app; it is shared only with the service providers in section 7 that run those features for us; it is never sold, never used for advertising, and never used to train or improve AI models, ours or anyone else’s; and nobody at Aforeday reads it, except in the narrow cases section 11 lists. Disconnecting Google Calendar asks Google to withdraw Aforeday’s access and erases the events Aforeday kept (section 10). You can also remove Aforeday from your Google Account, under its list of third-party connections.</p>
-      <p>Each service below is a separate company’s service, under its own terms and privacy policy; Aforeday reads from it on your instruction and changes nothing there unless this section says so.</p>
-
-      <h3>What you create in Aforeday</h3>
-      <p>The cards Aforeday shows you and what you do with them (shown, done, dismissed, snoozed, and when); your conversations with the assistant, including the replies and the items they cite; drafts you ask for, such as a note declining or moving a meeting, including any edits you make; meeting briefs and daily briefings; what the agent proposed and your decision on each (section 3); and your settings, including how Aforeday may act, what a notification may reveal, and your AI choices.</p>
-
-      <h3>Face ID and your passcode</h3>
-      <p>Before Aforeday widens what it may do on its own (section 3), the app asks iOS to confirm it is you, with Face ID, Touch ID or your passcode. That check is made by iOS on your device. Aforeday receives only whether it succeeded; no biometric data exists in the app or reaches our servers.</p>
-
-      <h3>Notifications</h3>
-      <p>If you allow notifications, we store your device’s push tokens. Every notification and Lock Screen activity we send follows the preview mode you choose in Settings — full details, a discreet summary, or only that Aforeday has something for you — which the app sends to us so our servers can honour it. We keep a record of each push we send — its type, status and time, never its text — and, for the reminders before a meeting, the meeting’s title and time. We also send empty background pushes with no text and no identifiers, so a change you make on one device reaches your other devices sooner.</p>
-
-      <h3>Your subscription</h3>
-      <p>Aforeday requires a subscription, bought through Apple’s App Store. Apple processes the payment; we never see your card, billing address or Apple ID password. From Apple we receive signed transaction information and store the subscription’s product, status, expiry, whether it renews, and Apple’s transaction identifier. Apple also sends us notifications when a subscription changes; we keep a content-free record of each: its type, Apple’s identifiers and when it was processed.</p>
-
-      <h3>Diagnostics</h3>
-      <p>When the app crashes, or dictation fails, it writes a technical note — the kind of failure, the exception or signal, a reason, up to 64 lines of the app’s own call stack, the build number, and for a dictation failure the kind of audio input in use, such as a Bluetooth headset — and sends it the next time you open the app. Never your events, your messages or your transcript, and never a device’s name. This is on by default, is disclosed on the first screen of the app, and can be switched off under Settings › Diagnostics › Send crash reports; switched off, nothing is sent and a note already waiting is deleted. These notes go into our server logs, not our database. Our logs otherwise hold internal identifiers, counts, error descriptions and, for requests we throttle, IP addresses. Aforeday’s code does not write the content of your calendar, your conversations or your connected accounts to its logs. The app contains no analytics or crash-reporting service and no third-party code.</p>
-
-      <h2 id="agent">3. The agent and your approvals</h2>
-      <p>Aforeday can work on what it shows you. It is off until you turn it on in Settings › Aforeday’s agent. Once on, it proposes drafts and small actions from your calendar, reminders, the accounts you connected and the cards it has built from them, either on its own or when you tap a card. Every proposal waits on the Now screen until you approve, edit or skip it.</p>
-      <ul>
-        <li><strong>Ask me first is the default.</strong> Each kind of action has its own setting, “Ask me first” or “Act and tell me”, under Settings › Aforeday’s agent › What Aforeday may do on its own. Choosing “Act and tell me” for a kind of action that can leave your phone asks for Face ID or your passcode first. The setting is yours: the AI never sees or changes it.</li>
-        <li><strong>Reversible things run at once, with undo.</strong> Under “Act and tell me”, an action you can undo inside the app, such as adding a reminder to your iPhone, runs and tells you.</li>
-        <li><strong>Anything that leaves your phone is held first.</strong> Under “Act and tell me”, a message to someone else is announced by a notification with an Undo button and sent only after a five-minute window. A first message to someone you have never written to from that account always asks you in the app, with Face ID or your passcode, whatever the setting. Today Aforeday cannot send a message to anyone for you: a draft leaves Aforeday only when you copy it or open it in your own mail app and send it. These rules govern sending from the day a connected account can send.</li>
-        <li><strong>What is kept.</strong> For each proposal: what kind of action it was, the reminder title or the draft it referred to, your decision, how you approved it, and the result. We also keep a record of each time the agent worked for you — when, which card, how many steps, the cost and why it stopped, with no text — linked to your account for 30 days.</li>
-        
-        <li><strong>Pause.</strong> Settings › Aforeday’s agent › Pause stops everything the agent starts on its own: reading, drafting and proposing. Turning the agent off does the same.</li>
-      </ul>
-
-      <h2 id="ai">4. AI processing</h2>
-      <p>Aforeday uses Amazon Nova 2 Lite through Amazon Bedrock. Our servers in Frankfurt (<code>eu-central-1</code>) call Amazon’s EU cross-region inference profile (<code>eu.amazon.nova-2-lite-v1:0</code>). As of this policy, that profile routes a request from Frankfurt only among these EU regions: Frankfurt, Stockholm, Milan, Spain, Ireland and Paris. It is used for: writing your meeting briefs and daily briefings, answering you in the assistant, writing the meeting decline or reschedule notes you ask for, and, if you turn the agent on, deciding what to propose and drafting it.</p>
-      <p>What is sent is limited to what the feature needs: a meeting with up to ten earlier meetings involving the same people and your open items; the titles of your open items, your top cards and your upcoming events; or your own question. Card titles can name a person who is waiting on you, a repository, an issue key, a task or a deal. Never your whole calendar. Before anything is sent, the length is capped and pattern filters replace common secret formats — labelled passwords and tokens, API keys, one-time codes, card- and IBAN-shaped numbers — with placeholders. Requests that exceed the limits are refused rather than trimmed.</p>
-      <p>Prompts and responses are not written to our logs. We keep a technical record of each AI call — the task, the model and prompt versions, token counts, cost, how long it took and whether it succeeded — with no content and no link to you.</p>
-      <!-- TODO(counsel): Review Amazon Bedrock’s data-processing terms before this page states that AWS does not use prompts or responses to train models, how long Bedrock may retain them, which AWS contracting entity is the processor, or which transfer tool applies. Do not add that language to the visible page until counsel signs off. -->
-      <p>We do not use what is sent to the model to train any model of our own, and no part of our code trains or fine-tunes a model.</p>
-      <p>You can switch AI off entirely in Settings › Privacy &amp; data › AI data controls, or switch off individual sources: calendar content, assistant conversations, and email content. With AI off, Aforeday falls back to its fixed rules, which is how it decides what needs your attention in any case; briefs show facts without a written narrative, and the agent drafts nothing.</p>
-
-      <h2 id="not-yet">5. Not available yet</h2>
-      <p>Aforeday is built to do more than it does today. These are switched off on our servers, cannot be connected or turned on in the app, and no data from any of them is read, received or stored: Gmail, by any route, including sending mail from the app; Google Calendar, until Google has reviewed it (section 2 describes how it will work); Outlook Calendar; Outlook mail; GitHub; Linear; Jira; Asana; Notion; HubSpot; Salesforce; Slack; Telegram; WhatsApp; looking things up on the web, sending check-ins and holding restaurant tables for you; and flight status from a flight-data provider, so trips are recognised from your calendar but their gates, delays and cancellations are not looked up. Google sign-in (section 2) is separate and is available: it does not connect Gmail or Google Calendar, and the app does not use it to read or send mail. Before any switched-off service is turned on, this policy will be updated to describe exactly what it reads and keeps, and you will see a notice in the app (section 15).</p>
-
-      <h2 id="purposes">6. Why, and on what legal basis</h2>
-      <ul>
-        <li><strong>To provide the app</strong> — everything in sections 2 to 4, including the accounts you connect. Legal basis: performance of our contract with you, Article 6(1)(b) GDPR.</li>
-        <li><strong>Other people in your data</strong> — the names of people who attend your meetings, and, once a connected account is switched on, the names and addresses of people who write to you, appear in your messages or are your CRM contacts. We process them only as sections 2 to 4 describe, so that Aforeday can show you who is waiting on you and what matters, and we keep only what those features need. Aforeday does not write to them today. If sending through a connected account is switched on, it would write only as you, with a reply you approved or told it to send (section 3). Legal basis: the legitimate interest, yours and ours, in providing the service you asked for, Article 6(1)(f) GDPR.</li>
-        <li><strong>To keep the service secure and working</strong> — logs, crash notes, request throttling, abuse prevention. Legal basis: our legitimate interest in a secure, functioning service, Article 6(1)(f) GDPR.</li>
-        <li><strong>To prove we honoured your choices</strong> — the consent and audit records described in section 9. Legal basis: our legal obligation to demonstrate compliance, Article 6(1)(c) with Article 5(2) GDPR.</li>
-        <li><strong>To sell and service subscriptions</strong> — the subscription and App Store notification records. Legal basis: performance of our contract, and our legal obligations in accounting.</li>
-      </ul>
-      <p>We do not use your data for advertising or profiling, we do not sell it, and we do not make automated decisions about you with legal or similarly significant effects.</p>
-
-      <h2 id="recipients">7. Who else sees it</h2>
-      <ul>
-        <li><strong>Amazon Web Services</strong> — as our processor, in the EU as section 8 describes: the application on Amazon ECS, the database on Amazon RDS for PostgreSQL, the cache on Amazon ElastiCache, secrets in AWS Secrets Manager, application logs kept with that hosting in Frankfurt, and AI processing on Amazon Bedrock.</li>
-        <li><strong>Apple</strong> — for Sign in with Apple, push notifications and Live Activities, and the App Store when you subscribe. From your phone only: Apple Maps for travel planning, on-device speech recognition and speech, and the Face ID or passcode check. Your location is not sent to Apple Weather today (section 2).</li>
-        
-        <li><strong>Google, for sign-in</strong> — if you sign in with Google, your phone talks to Google to sign you in, and Google confirms to us who you are. Google keeps its own record of that sign-in under its own privacy policy.</li>
-        
-        <li><strong>The services you connect</strong> — when Aforeday reads from an account you connected (section 2), that service sees which of its users connected Aforeday and what Aforeday asks it for. Each remains responsible for your data there, under its own terms.</li>
-        
-        <li><strong>Where you send it yourself</strong> — apart from what section 3 describes, a draft leaves Aforeday only when you copy it or open it in your own mail app, and you send it.</li>
-      </ul>
-      <p>There is no advertising network, no analytics provider, no crash-reporting service and no data broker in Aforeday. The app contains no third-party code at all.</p>
-
-      <h2 id="location">8. Where it is processed</h2>
-      <p>The app’s servers, database, cache and secrets run on Amazon Web Services in Frankfurt, Germany (<code>eu-central-1</code>): Amazon ECS for the application, Amazon RDS for PostgreSQL for the database, Amazon ElastiCache for the cache, and AWS Secrets Manager for secrets. That is where what Aforeday stores is kept, including application logs. AI requests are made from Frankfurt through Amazon Bedrock, as section 4 describes, and can be processed in the other EU regions that profile uses. Apple’s push, sign-in and App Store services, and the Maps requests made from your phone, are operated by Apple under its own terms and may involve processing outside the EU. The same is true of Google’s sign-in and of any service you connect: each is operated by its provider under its own terms, and several of them process data in the United States. Where Apple, Google or a service you connected processes data outside the EU, that transfer takes place on the transfer mechanisms in that provider’s terms, such as the European Commission’s standard contractual clauses, or, for a service you connected yourself, on that service’s own.</p>
-
-      <h2 id="retention">9. How long it is kept</h2>
-      <p class="table-note">This is what our code actually enforces today. Where a row says “until you delete your account”, section 10 explains what deletion does. Disconnecting an account erases what Aforeday read from it at once (section 10).</p>
-      <table class="data-table" aria-label="How long each kind of data is kept">
-        <thead><tr><th scope="col">Data</th><th scope="col">How long</th></tr></thead>
-        <tbody>
-          <tr><td data-label="Data">Your profile, settings and sign-in links</td><td data-label="How long">Until you delete your account.</td></tr>
-          <tr><td data-label="Data">Sign-in sessions and device records</td><td data-label="How long">Sessions expire after 30 days; the records stay until you delete your account.</td></tr>
-          <tr><td data-label="Data">Calendar events and reminders from your iPhone</td><td data-label="How long">Hidden immediately when the event disappears or you deselect its calendar; erased by a daily job once both the event and its last change are more than 90 days in the past; all erased when you delete your account.</td></tr>
-          <tr><td data-label="Data">Google Calendar events, once Google Calendar can be connected</td><td data-label="How long">As calendar events from your iPhone: erased by a daily job once both the event and its last change are more than 90 days in the past. All erased at once when you disconnect Google Calendar, and when you delete your account.</td></tr>
-          
-          <tr><td data-label="Data">Your last position (on your iPhone only; never on our servers)</td><td data-label="How long">Discarded within 24 hours, and at once when you turn the setting off, tap Forget now, sign out or delete your account. The record of each time you turned the setting on or off is kept with your consent history.</td></tr>
-
-          <tr><td data-label="Data">Trips detected in your calendar</td><td data-label="How long">Erased by a daily job 6 hours after the flight’s scheduled arrival; all erased at the next daily run when you switch Flight alerts off, and when you delete your account.</td></tr>
-          <tr><td data-label="Data">Flights you marked “Not my flight” (airline and number)</td><td data-label="How long">Until you delete your account.</td></tr>
-          
-          <tr><td data-label="Data">Connected accounts: which service, the name or address it shows, the permissions granted, when connected and disconnected</td><td data-label="How long">Until you delete your account. The access tokens are destroyed when you disconnect.</td></tr>
-
-          <tr><td data-label="Data">Cards (the items Aforeday shows you) and what you did with them</td><td data-label="How long">Marked deleted 30 days after they are done, dismissed or expired. A daily job then erases the title and the reasons 30 days later, leaving only the marker that tells your other devices the card is gone; that marker is erased when you delete your account.</td></tr>
-          <tr><td data-label="Data">Things the agent proposed or did for you, your decision on each, and the result</td><td data-label="How long">Marked deleted 30 days after they are finished, declined, expired or cancelled. A daily job then erases the details 30 days later (the reminder text, the draft reference, the result’s details), leaving a marker that keeps what kind of action it was, how it ended, and when and how you approved it; the marker is erased when you delete your account.</td></tr>
-          <tr><td data-label="Data">Records of each time the agent worked for you (when, which card, how many steps, the cost, why it stopped — no text)</td><td data-label="How long">Erased after 30 days, and when you delete your account.</td></tr>
-          <tr><td data-label="Data">Assistant conversations</td><td data-label="How long">Erased 30 days after the last message, or when you delete the conversation.</td></tr>
-          
-          <tr><td data-label="Data">Drafts</td><td data-label="How long">Erased 30 days after they are created, or when you delete them.</td></tr>
-          <tr><td data-label="Data">Meeting briefs and daily briefings</td><td data-label="How long">Meeting briefs erased 48 hours after the meeting ends, and as soon as the meeting itself is gone from your calendar; daily briefings erased after 30 days. Both are erased when you delete your account.</td></tr>
-          <tr><td data-label="Data">Meeting reminder records (the meeting’s title and time)</td><td data-label="How long">Erased 30 days after the reminder has fired, and when you delete your account.</td></tr>
-          <tr><td data-label="Data">Push records (type, status, time — no text)</td><td data-label="How long">30 days.</td></tr>
-          <tr><td data-label="Data">Subscription record</td><td data-label="How long">Until you delete your account.</td></tr>
-          <tr><td data-label="Data">App Store notification records (type, Apple’s identifiers, no payment data)</td><td data-label="How long">Kept, also after account deletion, for financial records.</td></tr>
-          <tr><td data-label="Data">Consent history and audit records</td><td data-label="How long">Kept to show we honoured your choices. At account deletion every identifier in them is replaced with a random one — including in the records of the deletion itself and of any data export you requested.</td></tr>
-          <tr><td data-label="Data">Your data export file on our servers</td><td data-label="How long">15 minutes, then deleted. The copy you save stays on your phone until you remove it.</td></tr>
-          <tr><td data-label="Data">Application logs, including crash notes</td><td data-label="How long">30 days.</td></tr>
-          <tr><td data-label="Data">Database backups</td><td data-label="How long">The last 14 daily backups, so deleted data leaves our backups within about two weeks.</td></tr>
-          <tr><td data-label="Data">Technical AI call records (no content, no link to you)</td><td data-label="How long">Kept.</td></tr>
-        </tbody>
-      </table>
-
-      <h2 id="deletion">10. Disconnecting, exporting and deleting</h2>
-
-      <h3>Disconnecting an account</h3>
-      <p>In Settings › Connected accounts. Disconnecting stops every read at once, destroys our copy of the account’s access tokens, cancels anything the agent was waiting to do with that account (an action already under way is allowed to finish), and erases what Aforeday kept from the account — the events, facts, items, tasks, deals, contacts or promises section 2 describes — and the cards built from it, on every device. We keep the record that the account was connected (section 9) until you delete your account.</p>
-
-      <h3>Exporting your data</h3>
-      <p>In Settings › Privacy &amp; data › Export my data, after a recent sign-in. You get a single JSON file containing your profile, your settings, your sign-in methods, your devices, your subscription, your consent history, your events, your cards, your feedback, your assistant conversations, your briefings, your drafts, your meeting reminders, the actions the agent proposed or took for you with your decisions and their outcomes, a record of each agent run, your sign-in history, and the accounts you connected with the permissions each granted. It also contains, where they apply:</p>
-      <ul>
-        
-        <li>the trips Aforeday detected, and the flights you marked as not yours;</li>
-
-      </ul>
-      <p>What it leaves out is credentials: no token, and nothing that stands in for one, is ever included (section 11).</p>
-
-      <h3>Deleting your account</h3>
-      <p>In Settings › Privacy &amp; data › Delete account, after a recent sign-in, by typing DELETE. If you signed in with Apple, the app asks you to confirm with Sign in with Apple once more, so that we can tell Apple to withdraw Aforeday’s access to your Apple ID: the code Apple gives us is exchanged and revoked at once and never stored. Deletion then revokes every session immediately, cancels anything the agent was waiting to do, disconnects every connected account as described above, and permanently deletes your profile, sign-in links, devices and push tokens, calendar events and reminders, everything Aforeday kept from your connected accounts, cards, feedback, briefings, meeting reminders, assistant conversations, drafts, the agent’s records and settings, your trips — then checks that those tables hold nothing of yours. Your phone erases its local copy once the server confirms.</p>
-      <p>What survives, and why: your consent history and audit records, and the records of the deletion job and of any export you requested — all of them under random identifiers, with nothing left in them that links them to you (see section 9); Apple’s transaction identifiers in our App Store notification records; and anything in a backup, for about two weeks. If you signed in with Google, we hold no Google token to withdraw; you can remove Aforeday from your Google Account, under its list of third-party connections. Deleting your Aforeday account does not cancel your App Store subscription — do that in your iPhone’s Settings, under your name › Subscriptions.</p>
-
-      <h2 id="security">11. Security</h2>
-      <p>Traffic between the app and our servers uses TLS. Our secrets are held in AWS Secrets Manager; no sign-in token is ever included in an export. On your phone, your sign-in tokens are held in the iOS Keychain, available only after you unlock the device and never synced to iCloud. The access tokens of the accounts you connect exist only on our servers, encrypted with a key held in AWS Secrets Manager; they are never sent to your phone or included in an export. Messages that connected services send to our servers to say something changed are checked against that service’s signature or a secret we set before anything is done with them. Our logs pass through a filter that removes addresses, tokens, keys and draft text.</p>
-      <p>We do not read your calendar, your conversations, what Aforeday reads from your connected accounts, or the data Aforeday derives from them. The exceptions are narrow: investigating a problem you report to us, investigating a security incident, or where the law requires it — and in those cases we work from identifiers and counts wherever that is enough. No part of the app or our API lets anyone see another person’s data, and there is no administrative interface that shows your content.</p>
-
-      <h2 id="rights">12. Your rights</h2>
-      <p>You have the right to access your data (Article 15 GDPR), to correct it (16), to have it erased (17), to restrict its processing (18), to receive it in a portable form (20), and to object to processing based on our legitimate interests (21). The export, disconnect and deletion tools in the app cover access, portability and erasure directly; for anything else, or if the export does not include what you need, write to <a href="mailto:contact@aforeday.com?subject=Privacy%20request">contact@aforeday.com</a> with “Privacy request” in the subject. We answer within one month. If you are not an Aforeday user but appear in an Aforeday user’s data — for example as someone who emailed them — you can write to the same address.</p>
-      <p>You can also complain to a supervisory authority. Ours is the Berliner Beauftragte für Datenschutz und Informationsfreiheit, Alt-Moabit 59-61, 10555 Berlin.</p>
-
-      <h2 id="children">13. Children</h2>
-      <p>Aforeday is made for working adults and is not directed at children. You must be at least 18 to use it, and we do not knowingly process the data of anyone younger.</p>
-
-      <h2 id="website">14. This website</h2>
-      <p>This site sets no cookies, runs no analytics, embeds no third-party fonts or scripts, and stores nothing about you. It is served by GitHub Pages, which receives your IP address and request details in its server logs in order to deliver the pages, under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub’s privacy statement</a>.</p>
-
-      <h2 id="changes">15. Changes</h2>
-      <p>If Aforeday starts collecting something new, or uses what it has for a new purpose, we update this policy first. The app then shows everyone whose account predates the new version a notice once, and records when you have seen it. This page shows its effective date and version at the top.</p>
-      </div>
-      <aside class="doc-aside">
-        <nav aria-label="On this page">
-          <h2>On this page</h2>
-          <ol>
+        <ul class="toc-inline" aria-label="Contents">
           <li><a href="#controller">1. Who is responsible</a></li>
           <li><a href="#sources">2. What Aforeday processes</a></li>
-          <li><a href="#agent">3. The agent and your approvals</a></li>
-          <li><a href="#ai">4. AI processing</a></li>
-          <li><a href="#not-yet">5. Not available yet</a></li>
+          <li><a href="#drafts">3. Drafts and approval</a></li>
+          <li><a href="#ai">4. AI and spoken replies</a></li>
+          <li><a href="#not-connected">5. What is not connected</a></li>
           <li><a href="#purposes">6. Why, and on what legal basis</a></li>
           <li><a href="#recipients">7. Who else sees it</a></li>
-          <li><a href="#location">8. Where it is processed</a></li>
+          <li><a href="#where">8. Where it is processed</a></li>
           <li><a href="#retention">9. How long it is kept</a></li>
-          <li><a href="#deletion">10. Disconnecting, exporting and deleting</a></li>
+          <li><a href="#deletion">10. Exporting and deleting</a></li>
           <li><a href="#security">11. Security</a></li>
           <li><a href="#rights">12. Your rights</a></li>
           <li><a href="#children">13. Children</a></li>
           <li><a href="#website">14. This website</a></li>
           <li><a href="#changes">15. Changes</a></li>
+        </ul>
+
+        <h2 id="controller">1. Who is responsible</h2>
+        <p>The controller for the data described here is Neurotech AI Solutions GmbH, Lückstraße 24, 10317 Berlin, Germany, registered at the Amtsgericht Charlottenburg under HRB 270776 B, represented by its Managing Director, Ashraf Al-Eryani. For anything about your data, write to <a href="mailto:contact@aforeday.com?subject=Privacy%20request">contact@aforeday.com</a>. We have not appointed a data protection officer, as we are not required to.</p>
+
+        <h2 id="sources">2. What Aforeday processes</h2>
+
+        <h3>Your account</h3>
+        <p>You sign in with Sign in with Apple or with Google. With Apple, we receive the account identifier Apple issues for Aforeday, the email address Apple gives us (this may be a private relay address if you hide yours), and your name if Apple provides it.</p>
+        <p>With Google, the app asks only for <code>openid</code>, <code>email</code>, and <code>profile</code>. Your phone completes the sign-in with Google and sends us Google’s signed confirmation of who you are. From that confirmation we store your Google account identifier, your email address, and your name. Those three permissions do not include Gmail, Google Calendar, or any other Google product. If Google confirms an address that matches an Aforeday account you already have, the Google sign-in is added to that account.</p>
+        <p class="review-todo"><strong>TODO for review (Ash):</strong> Version 3.1 said we never receive or keep a Google token, that sign-in sessions last 30 days and are stored only as a hash, and that we keep the device model, iOS version, app version, and last-seen time. Confirm that still matches <code>apps/api</code> and the iOS sign-in code, or replace this note with the current fields.</p>
+
+        <h3>Your voice</h3>
+        <p>Aforeday is voice-first. Text is optional. The microphone recording and the speech recognition stay on your iPhone. The audio itself is not uploaded. The words speech recognition produces are sent to our servers in Frankfurt so Aforeday can answer and prepare a draft. You can also type. What you type is sent in the same way.</p>
+
+        <h3>Calendar and reminders</h3>
+        <p>With your permission, the app reads the calendars and reminder lists you choose through Apple EventKit. You can change that choice in the app or in your iPhone’s Settings.</p>
+        <p class="review-todo"><strong>TODO for review (Ash):</strong> The exact fields, and what is uploaded rather than kept on the phone, were not re-checked. The iOS and API source was not readable for this update. Version 3.1 said the upload was, for each event, title, start, end, time zone, all-day flag, and attendee display names, and for each reminder the title and due date; events from 90 days back to 60 days ahead; reminders that are open or were completed in the last 7 days; and that notes, links, addresses, and attendee email addresses were not uploaded (email addresses reduced on the device to three yes/no facts). Confirm or replace that list from <code>apps/ios</code> and <code>apps/api</code>.</p>
+
+        <h3>Your location</h3>
+        <p>Location is used for place-based reminders and suggestions. That includes reminding you when you arrive at or leave a place, and suggestions that depend on where you are, such as when to leave for something on your calendar. The place-reminder screen in the app says “Your position stays on this iPhone.”</p>
+        <p class="review-todo"><strong>TODO for review (Ash):</strong> Do not treat that on-screen sentence as a server-side guarantee until the code confirms it. Please replace this note with the actual split: which coordinates, place names, or travel results are processed only on the iPhone (including by EventKit and Core Location); which, if any, are sent to the servers in Frankfurt; whether a position is sent to Apple Maps or Apple Weather; the iOS permission (When In Use, Always, or both); and what is retained, for how long, and whether there is a location history. Version 3.1 described an optional “Use my location for leave-by” setting, When In Use only, position used on the phone and sent only to Apple Maps, with only the leave-by time and travel duration uploaded, and no Apple Weather lookup. That description is withdrawn here because the product now includes place-based reminders and the source was not re-read.</p>
+
+        <h3>Focus, the evening, Live Activities, and Share</h3>
+        <p>The app includes focus sessions, an evening close-out, Dynamic Island and Live Activities, and a share extension. Live Activities and Dynamic Island are shown by iOS. Apple delivers the push that updates them.</p>
+        <p class="review-todo"><strong>TODO for review (Ash):</strong> Confirm what a focus session, the evening close-out, and the share extension store on the device versus send to Frankfurt (titles, timers, shared text, URLs, and anything else), and how long each is kept. This policy does not list those fields until <code>apps/ios</code> and <code>apps/api</code> are checked.</p>
+
+        <h3>Your subscription</h3>
+        <p>Aforeday Pro is a subscription bought through Apple’s App Store, as Pro Monthly or Pro Annual. There is no free trial. Apple processes the payment. We never see your card, billing address, or Apple ID password. From Apple we receive signed transaction information so we can tell whether the subscription is active.</p>
+        <p class="review-todo"><strong>TODO for review (Ash):</strong> Confirm the StoreKit product identifiers and which transaction fields are stored (version 3.1 stored product, status, expiry, renewal flag, and Apple’s transaction identifier).</p>
+
+        <h2 id="drafts">3. Drafts and approval</h2>
+        <p>Aforeday prepares drafts for your approval. The app shows a draft, such as a change to a meeting or a note, and waits. The draft screen says that nothing is sent until you approve, and that approving a message opens Mail for you to send.</p>
+        <p class="review-todo"><strong>TODO for review (Ash):</strong> Confirm that the app still does not send mail or other messages from our servers, and describe exactly what an approval does (for example, an EventKit calendar write on the phone, and opening Mail with a draft). Version 3.1 also described a standing “Act and tell me” mode, Face ID or passcode before that mode, and a five-minute undo window for anything that would leave the phone. Say whether that mode still exists. Also confirm whether a draft can be based on the contents of a mailbox. The current screens mention an email in the draft’s source line. Version 3.1 said Aforeday does not read email. If that is still true, say so in place of this note. If mail is read, name the fields, where they are stored, and for how long.</p>
+
+        <h2 id="ai">4. AI and spoken replies</h2>
+        <p>The assistant, including drafts and the help it prepares for your day, uses Amazon Bedrock. Requests are made from our servers in Frankfurt (<code>eu-central-1</code>).</p>
+        <p>When Aforeday speaks a reply, the reply text is sent to Amazon Polly, using generative voices, in Frankfurt, to be turned into audio. Neither Amazon Polly nor we store that audio. If Polly cannot produce it, the iPhone speaks the reply with its own on-device voice, and the reply text is not sent to Polly for that attempt.</p>
+        <!-- TODO(counsel): Review Amazon Bedrock’s and Amazon Polly’s data-processing terms before this page states that AWS does not use prompts, reply text, or generated audio to train models, how long AWS may retain them, which AWS contracting entity is the processor, or which transfer tool applies. The statement that neither Polly nor we store the spoken-reply audio is the product behaviour the owner asked this page to describe. Do not add a broader “AWS does not train” claim to the visible page until counsel signs off. -->
+        <p>We do not use what is sent to the model to train any model of our own, and no part of our code trains or fine-tunes a model.</p>
+        <p class="review-todo"><strong>TODO for review (Ash):</strong> Version 3.1 named the model Amazon Nova 2 Lite and the EU cross-region inference profile <code>eu.amazon.nova-2-lite-v1:0</code> (Frankfurt, Stockholm, Milan, Spain, Ireland, Paris). This version says only Amazon Bedrock, called from Frankfurt, because that profile was not re-read in <code>apps/api</code>. Confirm the model id, whether calls stay in <code>eu-central-1</code> only, and the prompt limits version 3.1 described (length caps, secret redaction, and that prompts and responses are not written to our logs). Also confirm whether AI can still be switched off, and under which Settings name.</p>
+
+        <h2 id="not-connected">5. What is not connected</h2>
+        <p>Signing in with Google does not connect Gmail or Google Calendar. Calendar and reminders come from the iPhone through EventKit, not from a Google account.</p>
+        <p class="review-todo"><strong>TODO for review (Ash):</strong> Version 3.1 listed these as built and switched off, with no data read or stored: Gmail, Google Calendar, Outlook Calendar, Outlook mail, GitHub, Linear, Jira, Asana, Notion, HubSpot, Salesforce, Slack, Telegram, WhatsApp, web lookup, and flight-status lookup. Confirm that list is still accurate. If any of them is on, this policy has to name what it reads before publication. Version 3.1 also described trip detection from calendar titles. Confirm whether that still runs.</p>
+
+        <h2 id="purposes">6. Why, and on what legal basis</h2>
+        <ul>
+          <li><strong>To provide the app</strong> — the processing in sections 2 to 4. Legal basis: performance of our contract with you, Article 6(1)(b) GDPR.</li>
+          <li><strong>Other people in your data</strong> — names of people on the calendars and reminders you allow, and names in drafts you ask for. We process them only so Aforeday can show your day and prepare a draft for you. Legal basis: the legitimate interest, yours and ours, in providing the service you asked for, Article 6(1)(f) GDPR.</li>
+          <li><strong>To keep the service secure and working</strong> — logs, abuse prevention, and request limits. Legal basis: our legitimate interest in a secure, functioning service, Article 6(1)(f) GDPR.</li>
+          <li><strong>To prove we honoured your choices</strong> — records of consent and of deletion, where we keep them. Legal basis: our legal obligation to demonstrate compliance, Article 6(1)(c) with Article 5(2) GDPR.</li>
+          <li><strong>To sell and service subscriptions</strong> — the subscription records Apple’s notifications allow us to keep. Legal basis: performance of our contract, and our legal obligations in accounting.</li>
+        </ul>
+        <p>We do not use your data for advertising, we do not sell it, and we do not make automated decisions about you that have legal or similarly significant effects. Suggestions and drafts can be wrong. They do not decide anything for you.</p>
+
+        <h2 id="recipients">7. Who else sees it</h2>
+        <ul>
+          <li><strong>Amazon Web Services</strong>, as our processor, in Frankfurt as section 8 describes: the application, the database, the cache, secrets, application logs, Amazon Bedrock for AI, and Amazon Polly for spoken replies.</li>
+          <li><strong>Apple</strong> — for Sign in with Apple, push notifications, Live Activities, and the App Store when you subscribe. On the iPhone: speech recognition, the on-device voice used when Polly fails, and the Face ID, Touch ID, or passcode check when the app asks iOS to confirm it is you. iOS performs that check. We receive only whether it succeeded.</li>
+          <li><strong>Google, for sign-in</strong> — if you sign in with Google, your phone talks to Google, and Google confirms to us who you are. Google keeps its own record of that sign-in under its own privacy policy. The permissions are only those in section 2.</li>
+        </ul>
+        <p class="review-todo"><strong>TODO for review (Ash):</strong> Version 3.1 named the AWS services as Amazon ECS, Amazon RDS for PostgreSQL, Amazon ElastiCache, and AWS Secrets Manager, with logs kept in Frankfurt. Confirm that list and add anything new (for example object storage). Also confirm whether any location or address is sent from the phone to Apple Maps or Apple Weather. There is no advertising network and no third-party analytics in the description above. Confirm the app still ships none.</p>
+
+        <h2 id="where">8. Where it is processed</h2>
+        <p>The app’s servers and its AI run on Amazon Web Services in Frankfurt, Germany (<code>eu-central-1</code>). That is where Aforeday stores what it keeps, and where Amazon Bedrock is called from. Spoken-reply text is sent to Amazon Polly in the same region. The resulting audio is not stored by Polly or by us.</p>
+        <p>Apple’s push, sign-in, Live Activities, and App Store services are operated by Apple under its own terms and may involve processing outside the EU. Google sign-in is operated by Google under its own terms and may involve processing outside the EU. Where that happens, the transfer takes place on the transfer mechanisms in that provider’s terms, such as the European Commission’s standard contractual clauses.</p>
+        <p class="review-todo"><strong>TODO for review (Ash):</strong> If Bedrock uses an EU cross-region profile, name the regions here, as version 3.1 did. If any processing of customer content leaves the EU, say so before publication.</p>
+
+        <h2 id="retention">9. How long it is kept</h2>
+        <table class="data-table" aria-label="Retention we can state">
+          <thead><tr><th scope="col">Data</th><th scope="col">How long</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Data">Microphone recording</td><td data-label="How long">Not uploaded. Recognition stays on the iPhone.</td></tr>
+            <tr><td data-label="Data">Spoken-reply audio</td><td data-label="How long">Not stored by us or by Amazon Polly. If Polly fails, the iPhone speaks on the device and that audio is not sent to Polly.</td></tr>
+            <tr><td data-label="Data">Payment card and billing address</td><td data-label="How long">Not received. Apple processes the payment.</td></tr>
+          </tbody>
+        </table>
+        <p class="review-todo"><strong>TODO for review (Ash):</strong> Every other retention period below is carried from version 3.1 and was not re-checked against the current API. Confirm or replace before publication: sign-in sessions 30 days; calendar events hidden when they disappear and erased by a daily job once the event and its last change are more than 90 days in the past; cards and drafts on the order of 30 days; assistant conversations erased 30 days after the last message; meeting briefs 48 hours after the meeting; push records 30 days; application logs 30 days; the last 14 daily database backups; a data-export file kept 15 minutes on the server; consent and audit records kept after account deletion only under random identifiers; App Store notification records kept for financial records. Also set the periods for transcripts, place data, focus sessions, the evening close-out, and anything the share extension uploads.</p>
+
+        <h2 id="deletion">10. Exporting and deleting</h2>
+        <p>You can export a copy of your data and delete your account from the app. Deleting your Aforeday account does not cancel an App Store subscription. Cancel that in your iPhone’s Settings, under your name, then Subscriptions. If you signed in with Google, you can also remove Aforeday from your Google Account’s list of third-party connections.</p>
+        <p class="review-todo"><strong>TODO for review (Ash):</strong> Version 3.1 named the path Settings › Privacy &amp; data, export as one JSON file after a recent sign-in, and deletion by typing DELETE, with Sign in with Apple asked again so Apple’s token can be revoked. Confirm the current screen names and what the export includes. Do not publish the old path if the app has moved it.</p>
+
+        <h2 id="security">11. Security</h2>
+        <p>Traffic between the app and our servers uses TLS. We do not see your card. Biometric checks stay with iOS.</p>
+        <p class="review-todo"><strong>TODO for review (Ash):</strong> Version 3.1 said sign-in tokens on the phone are in the iOS Keychain, available only after unlock and not synced to iCloud, and that secrets are in AWS Secrets Manager. Confirm that, and confirm there is still no administrative screen that shows one person’s content to another.</p>
+
+        <h2 id="rights">12. Your rights</h2>
+        <p>You have the right to access your data (Article 15 GDPR), to correct it (16), to have it erased (17), to restrict its processing (18), to receive it in a portable form (20), and to object to processing based on our legitimate interests (21). Export and deletion in the app are how you use access, portability, and erasure directly. For anything else, write to <a href="mailto:contact@aforeday.com?subject=Privacy%20request">contact@aforeday.com</a> with “Privacy request” in the subject. We answer within one month.</p>
+        <p>You can also complain to a supervisory authority. Ours is the Berliner Beauftragte für Datenschutz und Informationsfreiheit, Alt-Moabit 59-61, 10555 Berlin, Germany.</p>
+
+        <h2 id="children">13. Children</h2>
+        <p>Aforeday is not directed at children. You must be at least 18 to use it, and we do not knowingly process the data of anyone younger.</p>
+
+        <h2 id="website">14. This website</h2>
+        <p>This site sets no cookies, runs no analytics, embeds no third-party fonts or scripts, and stores nothing about you. Fonts are the Apple system font or Inter files served from this site. It is hosted on GitHub Pages, which receives your IP address and the request in its logs in order to deliver the pages, under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub’s privacy statement</a>.</p>
+
+        <h2 id="changes">15. Changes</h2>
+        <p>If Aforeday starts collecting something new, or uses what it has for a new purpose, we update this policy first and change the date at the top. Where the app shows a notice of a new version, it records that you have seen it.</p>
+      </div>
+      <aside class="doc-aside">
+        <nav aria-label="On this page">
+          <h2>On this page</h2>
+          <ol>
+            <li><a href="#controller">1. Who is responsible</a></li>
+            <li><a href="#sources">2. What Aforeday processes</a></li>
+            <li><a href="#drafts">3. Drafts and approval</a></li>
+            <li><a href="#ai">4. AI and spoken replies</a></li>
+            <li><a href="#not-connected">5. What is not connected</a></li>
+            <li><a href="#purposes">6. Why, and on what legal basis</a></li>
+            <li><a href="#recipients">7. Who else sees it</a></li>
+            <li><a href="#where">8. Where it is processed</a></li>
+            <li><a href="#retention">9. How long it is kept</a></li>
+            <li><a href="#deletion">10. Exporting and deleting</a></li>
+            <li><a href="#security">11. Security</a></li>
+            <li><a href="#rights">12. Your rights</a></li>
+            <li><a href="#children">13. Children</a></li>
+            <li><a href="#website">14. This website</a></li>
+            <li><a href="#changes">15. Changes</a></li>
           </ol>
         </nav>
       </aside>
@@ -264,9 +209,12 @@
   <footer class="site-footer">
     <div class="wrap">
       <div>
-        <a class="brand" href="./" aria-label="Aforeday home"><img class="brand-icon" src="assets/favicon.svg" alt="" width="32" height="32"><span>Aforeday</span></a>
-        <p>Your day, thought through before it starts. Made in Berlin by Neurotech AI Solutions GmbH.</p>
-        <p>This site sets no cookies, runs no analytics and loads nothing from anyone else.</p>
+        <a class="brand" href="./" aria-label="aforeday home">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 21Q16 8 27 21" fill="none" stroke="url(#horizon-arc)" stroke-width="2.6" stroke-linecap="round"/></svg>
+          <span>aforeday</span>
+        </a>
+        <p>Neurotech AI Solutions GmbH, Berlin.</p>
+        <p>This site sets no cookies, runs no analytics, and loads nothing from anyone else.</p>
         <p>© 2026 Neurotech AI Solutions GmbH</p>
       </div>
       <nav aria-label="Legal">
