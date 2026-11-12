@@ -31,10 +31,12 @@ The privacy policy is **version 3.2, last updated 12 November 2026**. It
 replaces version 3.1 (3 November 2026). Text AI is Amazon Nova 2 Lite
 (`amazon.nova-2-lite-v1:0`) through the EU inference profile
 `eu.amazon.nova-2-lite-v1:0`, called from `eu-central-1`. Spoken replies use
-Amazon Polly in Frankfurt. Talk mode, evening close-out, Share capture, and
-the connectors are described as switched off. Passages marked **TODO for
-review** are the points the verified notes do not determine. Do not publish
-version 3.2 until those notes are replaced.
+Amazon Polly in Frankfurt. A request from Frankfurt under the EU inference
+profile may be served in Frankfurt, Stockholm, Milan, Spain, Ireland, or
+Paris. Talk mode, evening close-out, Share capture, and the connectors are
+described as switched off. There is no visible TODO. An HTML comment still
+asks counsel about Amazon’s own training and retention terms before any
+such sentence is added to the page.
 
 A source comment in `privacy.html` asks counsel to review Amazon Bedrock’s and
 Amazon Polly’s data-processing terms before the page claims that AWS does not
@@ -47,9 +49,10 @@ after that change is deployed.
 
 Two things to settle before this version goes public:
 
-1. **Clear the TODOs**, then set the policy version on the service so accounts
-   created before this date see the in-app notice once. Set that after the site
-   is live, not before.
+1. **Counsel**, on the HTML comment in `privacy.html`, if the page is to say
+   anything about Amazon training on prompts or how long Amazon retains them.
+   Then set the policy version on the service so accounts created before this
+   date see the in-app notice once. Set that after the site is live, not before.
 2. **Screenshots.** `assets/screens/*.webp` are the pre-dawn app screens, at
    660 and 1206 pixels wide. When the captures change, regenerate both sizes
    from the same source files.
@@ -85,5 +88,4 @@ in place.
    `https://aforeday.com/terms.html`.
 2. **The app**: the privacy-policy link, the paywall’s terms link, and the
    feedback mail link should match this site.
-3. **Production**: the privacy-policy version and effective time, after the
-   TODOs are cleared and the site is live.
+3. **Production**:    the privacy-policy version and effective time, after the site is live.
