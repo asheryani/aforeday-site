@@ -30,7 +30,7 @@
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="./" aria-label="aforeday home">
-        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 21Q16 8 27 21" fill="none" stroke="url(#horizon-arc)" stroke-width="2.6" stroke-linecap="round"/></svg>
+        <svg class="brand-mark" viewBox="0 0 1000 200" aria-hidden="true"><path d="M 36 132 Q 500 4 964 132" fill="none" stroke="url(#horizon-arc)" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span>aforeday</span>
       </a>
       <nav class="nav" aria-label="Main">
@@ -65,17 +65,16 @@
           <dd>Aforeday reads them through Apple EventKit, from the calendars and lists you allow. You can change that in the app or in your iPhone’s Settings. The <a href="privacy.html#sources">privacy policy</a> says what is still to be confirmed about which fields leave the phone.</dd>
 
           <dt>Does it use my location?</dt>
-          <dd>Yes, for place-based reminders and suggestions, such as a reminder when you arrive or leave, and a suggestion of when to leave. The place screen says your position stays on the iPhone. What is processed on the phone and what, if anything, is sent to our servers is described in the <a href="privacy.html#sources">privacy policy</a>, including a note of what still needs to be checked in the app.</dd>
+          <dd>Yes, while you are using the app, for place-based reminders and for when to leave. It asks for When In Use, not Always. Coordinates stay on the iPhone. What we receive is a leave-by time, not a position. The <a href="privacy.html#sources">privacy policy</a> describes the rest.</dd>
 
-          <dt>What are focus, the evening close-out, and Share?</dt>
-          <dd>A focus session is a block of time. The evening close-out is the end of the day. Share is the iOS share sheet, so another app can hand something to Aforeday. Dynamic Island and Live Activities can keep something time-sensitive on the Lock Screen.</dd>
+          <dt>What about focus, the evening, and Share?</dt>
+          <dd>A focus session is kept on the iPhone. Evening close-out and Share capture are switched off. Live Activities can show a meeting that is starting or that it is time to leave.</dd>
         </dl>
-        <p class="review-todo"><strong>TODO for review (Ash):</strong> Confirm the current names of these controls in the app so this page can point at the right screens.</p>
 
         <h2 id="voice">Voice</h2>
         <dl class="faq">
           <dt>Where does my voice go?</dt>
-          <dd>The recording and the speech recognition stay on the iPhone. The audio is not uploaded. The words are sent so Aforeday can answer. To speak a reply, the reply text is sent to Amazon Polly in Frankfurt. Neither Polly nor we store that audio. If Polly fails, the iPhone speaks with its own voice.</dd>
+          <dd>A spoken reply’s text is sent to Amazon Polly in Frankfurt. We do not keep that audio. Talk mode, the live voice session, is switched off, so it is not sent to Stockholm. The <a href="privacy.html#sources">privacy policy</a> says what is still open about ordinary dictation.</dd>
 
           <dt>A draft appeared that I did not want to send.</dt>
           <dd>Aforeday prepares drafts for you to approve. Nothing is sent until you approve it. If something still looks wrong, write to us with the time and what was on the screen.</dd>
@@ -99,7 +98,7 @@
         <h2 id="data">Your data</h2>
         <dl class="faq">
           <dt>How do I export or delete my data?</dt>
-          <dd>Both are in the app. Deleting your Aforeday account does not cancel the App Store subscription. The <a href="privacy.html#deletion">privacy policy</a> describes export and deletion, and marks the screen names that still need to be confirmed. If you signed in with Google, you can also remove Aforeday from your Google Account’s third-party connections. We hold the sign-in confirmation Google sends us, not a standing right to your Google account.</dd>
+          <dd>Open Settings › Privacy › Privacy &amp; data. “Export my data” saves a JSON file on the iPhone. “Delete account” asks you to type DELETE, then “Delete everything”. “Keep my account” cancels. You need to have signed in recently. Deleting the account does not cancel the App Store subscription. The <a href="privacy.html#deletion">privacy policy</a> describes this, including what is still open about the file’s contents.</dd>
         </dl>
 
         <h2 id="security">Security</h2>
@@ -124,10 +123,10 @@
     <div class="wrap">
       <div>
         <a class="brand" href="./" aria-label="aforeday home">
-          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 21Q16 8 27 21" fill="none" stroke="url(#horizon-arc)" stroke-width="2.6" stroke-linecap="round"/></svg>
+          <svg class="brand-mark" viewBox="0 0 1000 200" aria-hidden="true"><path d="M 36 132 Q 500 4 964 132" fill="none" stroke="url(#horizon-arc)" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span>aforeday</span>
         </a>
-        <p>A voice-first daily assistant for iPhone.</p>
+        <p>A daily assistant for iPhone.</p>
         <p>This site sets no cookies, runs no analytics, and loads nothing from anyone else.</p>
         <p>© 2026 Aforeday</p>
       </div>

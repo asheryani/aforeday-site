@@ -30,7 +30,7 @@
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="./" aria-label="aforeday home">
-        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 21Q16 8 27 21" fill="none" stroke="url(#horizon-arc)" stroke-width="2.6" stroke-linecap="round"/></svg>
+        <svg class="brand-mark" viewBox="0 0 1000 200" aria-hidden="true"><path d="M 36 132 Q 500 4 964 132" fill="none" stroke="url(#horizon-arc)" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span>aforeday</span>
       </a>
       <nav class="nav" aria-label="Main">
@@ -51,7 +51,7 @@
         <div class="summary">
           <h2>In short</h2>
           <ul>
-            <li>Aforeday is a voice-first daily assistant. You talk to it. Text is optional. It does not make decisions for you, and what it suggests can be wrong.</li>
+            <li>Aforeday is a daily assistant for iPhone. It can speak a reply. It does not make decisions for you, and what it suggests can be wrong.</li>
             <li>It prepares drafts for your approval. You remain responsible for anything you send.</li>
             <li>Aforeday Pro is Pro Monthly or Pro Annual, sold through Apple. There is no free trial. Apple handles billing, renewal, cancellation, and refunds.</li>
             <li>You choose which calendars and reminders Aforeday may read, and you can change that.</li>
@@ -81,16 +81,14 @@
         <p>You get Aforeday from Apple’s App Store. Your licence to use the app is governed by Apple’s <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed Application End User License Agreement</a>. These terms add to that agreement. Where they conflict on the licence itself, Apple’s agreement applies. Apple is not responsible for Aforeday or its content, and has no obligation to provide maintenance or support for it.</p>
 
         <h2 id="service">3. What Aforeday does, and what it does not</h2>
-        <p>Aforeday is a voice-first daily assistant for iPhone. You talk to it, and you can type instead. With your permission it reads calendars and reminders through Apple EventKit, uses location for place-based reminders and suggestions, and can show time-sensitive information in the Dynamic Island and in Live Activities. It includes focus sessions, an evening close-out, and a share extension. Some answers and drafts are written with AI on Amazon Bedrock. A spoken reply’s text may be sent to Amazon Polly so it can be spoken. The <a href="privacy.html">privacy policy</a> describes what stays on the iPhone, what is sent, and what is still marked for review.</p>
-        <p>Aforeday is an aid to your own judgement. Its suggestions, drafts, and spoken replies can be incomplete or wrong. You remain responsible for your decisions and for anything you send. Aforeday prepares drafts for your approval. The app tells you when nothing is sent until you approve.</p>
-        <p class="review-todo"><strong>TODO for review (Ash):</strong> The privacy policy’s draft section asks you to confirm that the app does not send messages itself, and whether a standing approval mode still exists. Adjust this section to match that answer before publication.</p>
+        <p>Aforeday reads the calendars and reminder lists you allow through Apple EventKit, uses location while you use the app for place-based reminders and for when to leave, and can show a meeting or a leave-by on a Live Activity. A focus session stays on the iPhone. Some answers and drafts are written with Amazon Nova 2 Lite on Amazon Bedrock, model <code>amazon.nova-2-lite-v1:0</code>, through the EU inference profile <code>eu.amazon.nova-2-lite-v1:0</code>, from Frankfurt (<code>eu-central-1</code>). A spoken reply’s text may be sent to Amazon Polly in Frankfurt. Talk mode, evening close-out, and Share capture are switched off. The <a href="privacy.html">privacy policy</a> describes what stays on the iPhone, what is sent, and what is still marked for review.</p>
+        <p>Aforeday is an aid to your own judgement. Its suggestions, drafts, and spoken replies can be incomplete or wrong. You remain responsible for your decisions and for anything you send. The phone does not send a draft as mail. It can open the Gmail app, a mail link, or a message link, or copy the text. Under “What Aforeday may do on its own” you can choose “Ask me first” or “Act and tell me”. Choosing “Act and tell me” asks for Face ID or the passcode. Mail and Slack connectors are switched off, so the app does not deliver mail or Slack messages.</p>
 
         <h2 id="account">4. Your account</h2>
         <p>You need to be at least 18 years old to use Aforeday. You sign in with Apple or Google. Google is asked only for openid, email, and profile. You are responsible for keeping access to your device, and to the account you sign in with, secure. Tell us promptly if you believe someone else has used your account.</p>
 
         <h2 id="sources">5. What you let Aforeday read</h2>
-        <p>You choose which calendars and reminder lists Aforeday may read, and you can change that in the app or in your iPhone’s Settings. Location is used for place-based reminders and suggestions, as the privacy policy describes. Signing in with Google does not grant access to Gmail or Google Calendar.</p>
-        <p class="review-todo"><strong>TODO for review (Ash):</strong> If any other account can be connected, describe that choice here. Version 3.1 said no other account could be connected.</p>
+        <p>You choose which calendars and reminder lists Aforeday may read, and you can change that in the app or in your iPhone’s Settings. Location is When In Use only. Coordinates do not leave the iPhone. Signing in with Google asks only for openid, email, and profile, and does not connect Gmail or Google Calendar. No other account (mail, chat, or calendar service) can be connected in this launch. They are switched off, as the <a href="privacy.html#not-connected">privacy policy</a> lists.</p>
 
         <h2 id="acceptable-use">6. Acceptable use</h2>
         <p>Do not use Aforeday to break the law or anyone’s rights, to access data you are not allowed to use, to interfere with or overload the service, or to attempt to reverse-engineer, copy, or resell it except where the law allows.</p>
@@ -139,7 +137,7 @@
     <div class="wrap">
       <div>
         <a class="brand" href="./" aria-label="aforeday home">
-          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 21Q16 8 27 21" fill="none" stroke="url(#horizon-arc)" stroke-width="2.6" stroke-linecap="round"/></svg>
+          <svg class="brand-mark" viewBox="0 0 1000 200" aria-hidden="true"><path d="M 36 132 Q 500 4 964 132" fill="none" stroke="url(#horizon-arc)" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span>aforeday</span>
         </a>
         <p>Neurotech AI Solutions GmbH, Berlin.</p>

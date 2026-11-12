@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aforeday — a voice-first daily assistant</title>
-  <meta name="description" content="Aforeday is a voice-first daily assistant for iPhone. You talk to it. It works from your calendar and reminders, notices places, and prepares drafts for you to approve.">
+  <title>Aforeday — a daily assistant for iPhone</title>
+  <meta name="description" content="Aforeday works from the calendar and reminders on your iPhone, keeps places in view, can speak a reply, and prepares drafts for you to approve.">
   <meta name="theme-color" content="#070B16">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Aforeday — a voice-first daily assistant">
-  <meta property="og:description" content="Talk through the day ahead. Calendar and reminders on your iPhone, place-aware suggestions, and drafts that wait for you.">
+  <meta property="og:title" content="Aforeday — a daily assistant for iPhone">
+  <meta property="og:description" content="Calendar and reminders on your iPhone, place-aware suggestions, spoken replies, and drafts for you to approve.">
   <meta property="og:url" content="https://aforeday.com/">
   <meta property="og:image" content="https://aforeday.com/assets/og.jpg">
   <meta property="og:image:width" content="1200">
@@ -29,9 +29,7 @@
     <defs>
       <linearGradient id="horizon-arc" x1="0" y1="0" x2="1" y2="0">
         <stop offset="0" stop-color="#E06A3C"/>
-        <stop offset="0.35" stop-color="#FF8A5B"/>
         <stop offset="0.5" stop-color="#FFC48A"/>
-        <stop offset="0.65" stop-color="#FF8A5B"/>
         <stop offset="1" stop-color="#E06A3C"/>
       </linearGradient>
     </defs>
@@ -40,7 +38,7 @@
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="./" aria-label="aforeday home">
-        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 21Q16 8 27 21" fill="none" stroke="url(#horizon-arc)" stroke-width="2.6" stroke-linecap="round"/></svg>
+        <svg class="brand-mark" viewBox="0 0 1000 200" aria-hidden="true"><path d="M 36 132 Q 500 4 964 132" fill="none" stroke="url(#horizon-arc)" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span>aforeday</span>
       </a>
       <nav class="nav" aria-label="Main">
@@ -57,9 +55,9 @@
       <div class="hero-sky" aria-hidden="true"></div>
       <div class="wrap">
         <div class="hero-copy">
-          <p class="eyebrow">Voice first · iPhone</p>
-          <h1 id="hero-title">Talk through the day ahead.</h1>
-          <p class="lede">Aforeday is a voice-first daily assistant. You talk to it. Text is there when you want it. It works from the calendar and reminders on your iPhone, notices places, and prepares drafts for you to approve.</p>
+          <p class="eyebrow">Daily assistant · iPhone</p>
+          <h1 id="hero-title">The day, already in view.</h1>
+          <p class="lede">Aforeday is a daily assistant for iPhone. It works from the calendar and reminders on your phone, keeps places in view, can speak a reply, and prepares drafts for you to approve.</p>
           <div class="actions">
             <a class="store-badge" href="https://apps.apple.com/app/id6804468993">
               <svg viewBox="0 0 18 18" aria-hidden="true" fill="currentColor"><path d="M13.2 9.4c0-1.8 1.5-2.7 1.6-2.8-0.9-1.3-2.2-1.4-2.7-1.5-1.1-0.1-2.2.7-2.8.7s-1.5-.7-2.4-.6c-1.2 0-2.4.7-3 1.9-1.3 2.2-.3 5.5.9 7.3.6.9 1.3 1.9 2.3 1.8.9 0 1.3-.6 2.4-.6s1.4.6 2.4.6 1.6-.9 2.2-1.8c.7-1 1-2 1-2.1-.1 0-1.9-.7-1.9-2.9zM11.5 4.2c.5-.6.8-1.4.7-2.2-.7 0-1.5.5-2 .1-.5.6-.9 1.5-.8 2.3.8.1 1.6-.4 2.1-1z"/></svg>
@@ -71,10 +69,8 @@
         </div>
 
         <div class="stage">
-          <!-- TODO(Ash): arc geometry is approximate. Replace with the path in Horizon.swift (apps/ios/Packages/DesignSystem) when that file can be read. -->
-          <svg class="horizon" viewBox="0 0 640 150" role="img" aria-label="A coral arc rising over the horizon">
-            <path class="horizon-arc" d="M36 118Q320 18 604 118" fill="none" stroke="url(#horizon-arc)" stroke-width="14" stroke-linecap="round"/>
-            <path d="M8 128H632" fill="none" stroke="#2A3144" stroke-width="1"/>
+          <svg class="horizon" viewBox="0 0 1000 200" role="img" aria-label="A coral arc rising over the horizon">
+            <path class="horizon-arc" d="M 36 132 Q 500 4 964 132" fill="none" stroke="url(#horizon-arc)" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           <div class="device">
             <div class="screen" data-cycle>
@@ -110,8 +106,8 @@
         <div class="cards">
           <article class="card reveal">
             <span class="index">01</span>
-            <h3>You talk. Text can wait.</h3>
-            <p>Tap to talk. Typing is optional. The recording and the speech recognition stay on your iPhone, and the audio is not uploaded.</p>
+            <h3>A reply, spoken.</h3>
+            <p>Aforeday can speak a reply. The reply text is turned into audio in Frankfurt, and we do not keep that audio. The live Talk session is not on.</p>
           </article>
           <article class="card reveal" style="--delay: 40ms">
             <span class="index">02</span>
@@ -121,22 +117,22 @@
           <article class="card reveal" style="--delay: 80ms">
             <span class="index">03</span>
             <h3>Places, when they matter.</h3>
-            <p>Location-aware reminders and suggestions: a nudge when you arrive or leave, and when it is time to go.</p>
+            <p>Location is used while you are using the app. Coordinates stay on the iPhone. A leave-by time can be suggested without sending your position.</p>
           </article>
           <article class="card reveal">
             <span class="index">04</span>
             <h3>On the Lock Screen.</h3>
-            <p>Dynamic Island and Live Activities keep something time-sensitive in view, such as when to leave or a focus session that is running.</p>
+            <p>Live Activities can show a meeting that is about to start, or that it is time to leave. A focus session stays on the iPhone.</p>
           </article>
           <article class="card reveal" style="--delay: 40ms">
             <span class="index">05</span>
             <h3>Drafts, for your approval.</h3>
-            <p>Aforeday prepares a draft and stops there. You approve it. The screen says nothing is sent until you do.</p>
+            <p>Aforeday prepares a draft. The phone does not send it: it can open the Gmail app, Mail, or Messages, or copy the text. Mail and chat accounts are not connected.</p>
           </article>
           <article class="card reveal" style="--delay: 80ms">
             <span class="index">06</span>
-            <h3>Focus, then the evening.</h3>
-            <p>A focus session for a block of time, and an evening close-out when the day is done. The share extension lets another app hand something to Aforeday.</p>
+            <h3>A focus session.</h3>
+            <p>Starting a focus session keeps that record on the iPhone, with a local notification when it ends. Evening close-out and Share capture are not on.</p>
           </article>
         </div>
       </div>
@@ -165,7 +161,7 @@
                    sizes="(min-width: 64rem) 16rem, 72vw" width="660" height="1435" loading="lazy"
                    alt="A spoken request to move a four o’clock meeting, Aforeday’s spoken reply, and a draft offered for review.">
             </div></div>
-            <figcaption><strong>A reply</strong> You speak. Aforeday answers, and offers a draft.</figcaption>
+            <figcaption><strong>A reply</strong> A request, an answer, and a draft to review.</figcaption>
           </figure>
           <figure>
             <div class="device"><div class="screen">
@@ -195,20 +191,20 @@
           <div class="section-head reveal">
             <p class="eyebrow">Privacy</p>
             <h2 id="privacy-title">In Frankfurt, and on the phone.</h2>
-            <p class="lede">The backend and the AI run on Amazon Web Services in Frankfurt, eu-central-1. The microphone recording does not.</p>
+            <p class="lede">The backend and the AI run on Amazon Web Services in Frankfurt, eu-central-1. Coordinates stay on the iPhone.</p>
           </div>
           <div class="principles">
             <article class="card reveal">
               <h3>European Union</h3>
-              <p>Servers and AI run in Frankfurt. AI uses Amazon Bedrock. A spoken reply’s text is sent to Amazon Polly there, to be turned into audio. Neither Polly nor we store that audio. If Polly fails, the iPhone speaks with its own voice.</p>
+              <p>Text uses Amazon Nova 2 Lite, model <code>amazon.nova-2-lite-v1:0</code>, through the EU inference profile <code>eu.amazon.nova-2-lite-v1:0</code>, called from Frankfurt (<code>eu-central-1</code>). A spoken reply’s text is sent to Amazon Polly in Frankfurt. We do not keep that audio.</p>
             </article>
             <article class="card reveal" style="--delay: 60ms">
               <h3>Your voice</h3>
-              <p>Speech recognition stays on the iPhone. The audio itself is not uploaded. You sign in with Apple or with Google. Google is asked only for openid, email, and profile.</p>
+              <p>Talk mode is not on, so a live voice session is not sent to Stockholm. You sign in with Apple or with Google. Google is asked only for openid, email, and profile.</p>
             </article>
             <article class="card reveal" style="--delay: 120ms">
               <h3>Your places</h3>
-              <p>Location is used for place-based reminders and suggestions. The privacy policy says what we could confirm, and what still needs a check against the app.</p>
+              <p>Location is When In Use only. Coordinates do not leave the iPhone. The privacy policy lists what is still open.</p>
               <p><a href="privacy.html">Read the privacy policy</a></p>
             </article>
           </div>
@@ -238,8 +234,8 @@
 
     <section class="section close" aria-labelledby="close-title">
       <div class="wrap">
-        <svg class="horizon" viewBox="0 0 640 150" aria-hidden="true">
-          <path class="horizon-arc" d="M36 118Q320 18 604 118" fill="none" stroke="url(#horizon-arc)" stroke-width="14" stroke-linecap="round"/>
+        <svg class="horizon" viewBox="0 0 1000 200" aria-hidden="true">
+          <path class="horizon-arc" d="M 36 132 Q 500 4 964 132" fill="none" stroke="url(#horizon-arc)" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <div class="reveal">
           <p class="eyebrow">On the App Store</p>
@@ -261,10 +257,10 @@
     <div class="wrap">
       <div>
         <a class="brand" href="./" aria-label="aforeday home">
-          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 21Q16 8 27 21" fill="none" stroke="url(#horizon-arc)" stroke-width="2.6" stroke-linecap="round"/></svg>
+          <svg class="brand-mark" viewBox="0 0 1000 200" aria-hidden="true"><path d="M 36 132 Q 500 4 964 132" fill="none" stroke="url(#horizon-arc)" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span>aforeday</span>
         </a>
-        <p>A voice-first daily assistant for iPhone.</p>
+        <p>A daily assistant for iPhone.</p>
         <p>This site sets no cookies, runs no analytics, and loads nothing from anyone else.</p>
         <p>© 2026 Aforeday</p>
       </div>

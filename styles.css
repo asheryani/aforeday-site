@@ -184,7 +184,7 @@ p { margin: 0; }
   font-size: 1.2rem;
 }
 .brand:hover { color: var(--text); }
-.brand-mark { width: 1.7rem; height: 1.7rem; flex: none; }
+.brand-mark { width: 2.35rem; height: auto; flex: none; }
 
 .nav {
   display: flex;
@@ -496,12 +496,13 @@ body:has(#pause-motion:checked) .horizon-arc { animation: none; opacity: 1; }
 .doc li { margin: 0.35rem 0; }
 .doc li::marker { color: var(--accent-2); }
 .doc .meta { color: var(--text-2); font-size: 0.98rem; }
-.doc code {
+.doc code, .card code {
   font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-  font-size: 0.9em;
+  font-size: 0.86em;
   background: var(--bg-2);
   padding: 0.1em 0.35em;
   border-radius: 0.3em;
+  overflow-wrap: anywhere;
 }
 
 .summary {

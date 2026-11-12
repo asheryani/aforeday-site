@@ -10,9 +10,8 @@ marker. Every page reads with JavaScript off. No cookies, no storage, no
 analytics.
 
 The visual identity is Horizon, pre-dawn: indigo night `#070B16`, coral arc
-`#E06A3C` / `#FF8A5B` / `#FFC48A`. The arc path on the site is approximate.
-The exact geometry is in the iOS design system (`Horizon.swift`) and was not
-readable when this version was written.
+`#E06A3C` to `#FFC48A` and back. The arc path is the Horizon mark at
+viewBox `0 0 1000 200`: `M 36 132 Q 500 4 964 132`, stroke width 72.
 
 Beyond explaining the product, the site is the **App Store listing**: a privacy
 policy URL, a support URL, and a terms of use URL for the auto-renewable
@@ -29,19 +28,19 @@ Then open http://127.0.0.1:4173.
 ## Before publishing
 
 The privacy policy is **version 3.2, last updated 12 November 2026**. It
-replaces version 3.1 (3 November 2026). It describes a voice-first assistant,
-Amazon Web Services in Frankfurt (`eu-central-1`), Amazon Bedrock, and Amazon
-Polly for spoken replies. Passages marked **TODO for review** were not
-confirmed against the iOS and API source, because that repository was not
-readable from the update that wrote them. Do not publish version 3.2 until
-those notes are replaced with checked text. The same notes are listed in the
-pull request that introduced this version.
+replaces version 3.1 (3 November 2026). Text AI is Amazon Nova 2 Lite
+(`amazon.nova-2-lite-v1:0`) through the EU inference profile
+`eu.amazon.nova-2-lite-v1:0`, called from `eu-central-1`. Spoken replies use
+Amazon Polly in Frankfurt. Talk mode, evening close-out, Share capture, and
+the connectors are described as switched off. Passages marked **TODO for
+review** are the points the verified notes do not determine. Do not publish
+version 3.2 until those notes are replaced.
 
-A source comment in `privacy.html` still asks counsel to review Amazon
-Bedrock’s and Amazon Polly’s data-processing terms before the page claims that
-AWS does not train on prompts or reply text. That comment is not shown on the
-page. The page does say that neither Polly nor we store the spoken-reply audio,
-which is the product behaviour this version was asked to state.
+A source comment in `privacy.html` asks counsel to review Amazon Bedrock’s and
+Amazon Polly’s data-processing terms before the page claims that AWS does not
+train on prompts or reply text, or how long AWS may retain them. That comment
+is not shown on the page. The visible page says we do not keep the spoken-reply
+audio and do not write it to our storage. It does not claim what AWS retains.
 
 The usual rule stays: a site edit that describes an API change goes live only
 after that change is deployed.
