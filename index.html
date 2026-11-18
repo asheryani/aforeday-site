@@ -3,426 +3,266 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aforeday — your day, thought through before it starts</title>
-  <meta name="description" content="Aforeday is a chief of staff for your working day, on iPhone. It reads the calendar and reminders already on your phone, tells you the few things that need you, and proposes what to do about them. Nothing happens until you approve it.">
-  <meta name="theme-color" content="#F6F2EB" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0E182B" media="(prefers-color-scheme: dark)">
+  <title>Aforeday — a daily assistant for iPhone</title>
+  <meta name="description" content="Aforeday works from the calendar and reminders on your iPhone, keeps places in view, can speak a reply, and prepares drafts for you to approve.">
+  <meta name="theme-color" content="#070B16">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Aforeday — your chief of staff">
-  <meta property="og:description" content="Your day, thought through before it starts. Aforeday proposes, you approve, it acts — with undo.">
+  <meta property="og:title" content="Aforeday — a daily assistant for iPhone">
+  <meta property="og:description" content="Calendar and reminders on your iPhone, place-aware suggestions, spoken replies, and drafts for you to approve.">
   <meta property="og:url" content="https://aforeday.com/">
+  <meta property="og:image" content="https://aforeday.com/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Aforeday wordmark under a coral horizon arc, on an indigo night.">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://aforeday.com/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="preload" href="assets/fonts/instrument-serif-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/instrument-sans-variable-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
+  <svg class="defs" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="horizon-arc" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#E06A3C"/>
+        <stop offset="0.5" stop-color="#FFC48A"/>
+        <stop offset="1" stop-color="#E06A3C"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="./" aria-label="Aforeday home">
-        <img class="brand-icon" src="assets/favicon.svg" alt="" width="32" height="32">
-        <span>Aforeday</span>
+      <a class="brand" href="./" aria-label="aforeday home">
+        <svg class="brand-mark" viewBox="0 0 1000 200" aria-hidden="true"><path d="M 36 132 Q 500 4 964 132" fill="none" stroke="url(#horizon-arc)" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>aforeday</span>
       </a>
       <nav class="nav" aria-label="Main">
-        <a href="#how" data-anchor>What it does</a>
-        <a href="#approval" data-anchor>Approval</a>
+        <a href="#features" data-quiet>Features</a>
         <a href="privacy.html">Privacy</a>
-        <a href="support.html" data-secondary>Support</a>
-        <a class="nav-cta" href="https://apps.apple.com/app/id6804468993">Get the app</a>
+        <a href="#pricing" data-quiet>Pricing</a>
+        <a class="nav-cta" href="https://apps.apple.com/app/id6804468993">App Store</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
-
-    <!-- ============================================================ -->
-    <!-- Hero                                                           -->
-    <!-- ============================================================ -->
     <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-sky" aria-hidden="true"></div>
       <div class="wrap">
         <div class="hero-copy">
-          <span class="eyebrow"><svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="3.4"/><rect x="3" y="12.4" width="18" height="1.6"/><rect x="3" y="15.8" width="18" height="1.6"/></svg>A chief of staff for your working day · iPhone</span>
-          <h1 id="hero-title">Your day, thought through <em>before</em> it starts.</h1>
-          <p class="lede">Aforeday reads the calendar and reminders already on your iPhone, tells you the few things that need you, and proposes what to do about them. Nothing happens until you approve it, and what it does can be undone.</p>
+          <p class="eyebrow">Daily assistant · iPhone</p>
+          <h1 id="hero-title">The day, already in view.</h1>
+          <p class="lede">Aforeday is a daily assistant for iPhone. It works from the calendar and reminders on your phone, keeps places in view, can speak a reply, and prepares drafts for you to approve.</p>
           <div class="actions">
-            <a class="btn btn-store" href="https://apps.apple.com/app/id6804468993">
-              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/><g class="tray-arrow"><path d="M12 3v11"/><path d="M8 10l4 4 4-4"/></g></svg>
-              <span class="store-text"><small>Download on the</small><span>App Store</span></span>
+            <a class="store-badge" href="https://apps.apple.com/app/id6804468993">
+              <svg viewBox="0 0 18 18" aria-hidden="true" fill="currentColor"><path d="M13.2 9.4c0-1.8 1.5-2.7 1.6-2.8-0.9-1.3-2.2-1.4-2.7-1.5-1.1-0.1-2.2.7-2.8.7s-1.5-.7-2.4-.6c-1.2 0-2.4.7-3 1.9-1.3 2.2-.3 5.5.9 7.3.6.9 1.3 1.9 2.3 1.8.9 0 1.3-.6 2.4-.6s1.4.6 2.4.6 1.6-.9 2.2-1.8c.7-1 1-2 1-2.1-.1 0-1.9-.7-1.9-2.9zM11.5 4.2c.5-.6.8-1.4.7-2.2-.7 0-1.5.5-2 .1-.5.6-.9 1.5-.8 2.3.8.1 1.6-.4 2.1-1z"/></svg>
+              <span class="store-copy"><small>Download on the</small><strong>App Store</strong></span>
             </a>
-            <a class="btn btn-quiet" href="#approval">How approval works</a>
+            <a class="btn" href="#features">See what it does</a>
           </div>
-          <p class="status">Available worldwide on the App Store. A subscription is required; the price is shown in the app and on the App Store before you subscribe.</p>
+          <p class="fine">Pro Monthly and Pro Annual. No free trial. The price is shown in the app and on the App Store before you subscribe.</p>
         </div>
 
-        <div class="stage" aria-label="Aforeday on an iPhone, with a proposal, a meeting brief and an undoable reminder beside it">
-          <svg class="dayline" viewBox="0 0 480 544" aria-hidden="true" focusable="false">
-            <line class="axis" x1="462" y1="40" x2="462" y2="530" pathLength="600"/>
-            <line class="tick" x1="456" y1="70" x2="468" y2="70"/>
-            <line class="tick" x1="456" y1="160" x2="468" y2="160"/>
-            <line class="tick" x1="456" y1="345" x2="468" y2="345"/>
-            <line class="tick" x1="456" y1="430" x2="468" y2="430"/>
-            <line class="tick" x1="456" y1="510" x2="468" y2="510"/>
-            <text x="448" y="74" text-anchor="end">07:00</text>
-            <text x="448" y="164" text-anchor="end">09:30</text>
-            <text x="448" y="349" text-anchor="end">12:00</text>
-            <text x="448" y="434" text-anchor="end">15:20</text>
-            <text x="448" y="514" text-anchor="end">18:20</text>
-            <circle class="dot" cx="462" cy="160" r="4.5"/>
-            <circle class="dot" cx="462" cy="430" r="4.5"/>
-            <circle class="dot" cx="462" cy="510" r="4.5"/>
+        <div class="stage">
+          <svg class="horizon" viewBox="0 0 1000 200" role="img" aria-label="A coral arc rising over the horizon">
+            <path class="horizon-arc" d="M 36 132 Q 500 4 964 132" fill="none" stroke="url(#horizon-arc)" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-
-          <figure class="phone phone-fade">
-            <img src="assets/screens/01-now-promises-and-shortlist-660.webp"
-                 srcset="assets/screens/01-now-promises-and-shortlist-660.webp 660w, assets/screens/01-now-promises-and-shortlist-1320.webp 1320w"
-                 sizes="17.5rem" width="660" height="1434" fetchpriority="high"
-                 alt="The Now screen in Aforeday: an evening brief, a card asking whether to add a possible promise as a commitment, and an item due today with Done, Tomorrow and Dismiss actions.">
-            <img src="assets/screens/02-timeline-660.webp"
-                 srcset="assets/screens/02-timeline-660.webp 660w, assets/screens/02-timeline-1320.webp 1320w"
-                 sizes="17.5rem" width="660" height="1434" loading="lazy"
-                 alt="The Timeline screen: an item due today, an overdue follow-up, a team standup, and meetings on the following days.">
-            <img src="assets/screens/03-assistant-grounded-answer-660.webp"
-                 srcset="assets/screens/03-assistant-grounded-answer-660.webp 660w, assets/screens/03-assistant-grounded-answer-1320.webp 1320w"
-                 sizes="17.5rem" width="660" height="1434" loading="lazy"
-                 alt="The Assistant screen: asked “What needs my attention?”, Aforeday answers with one item and a link to it.">
-          </figure>
-
-          <div class="float float-1" aria-hidden="true">
-            <strong>Pricing review</strong>
-            <span class="meta">Thursday 19:20 · brief ready</span>
-            <div class="chips"><span class="chip">Who is in the room</span></div>
+          <div class="device">
+            <div class="screen" data-cycle>
+              <img class="is-on" src="assets/screens/01-home-idle-660.webp"
+                   srcset="assets/screens/01-home-idle-660.webp 660w, assets/screens/01-home-idle-1206.webp 1206w"
+                   sizes="280px" width="660" height="1435" fetchpriority="high"
+                   alt="Aforeday in the morning: a leave-by card, items waiting, and a button labelled Tap to talk."
+                   data-alt="Aforeday in the morning: a leave-by card, items waiting, and a button labelled Tap to talk.">
+              <img src="assets/screens/02-voice-reply-660.webp"
+                   srcset="assets/screens/02-voice-reply-660.webp 660w, assets/screens/02-voice-reply-1206.webp 1206w"
+                   sizes="280px" width="660" height="1435" alt="" aria-hidden="true"
+                   data-alt="A spoken request to move a meeting, Aforeday’s reply, and a draft waiting to be reviewed. The control reads Speaking, tap to stop.">
+            </div>
           </div>
-          <div class="float float-2" aria-hidden="true">
-            <strong>Follow up with Anna</strong>
-            <span class="meta">Overdue by 2 h · proposed: a reminder for tomorrow, 09:00</span>
-            <div class="chips"><span class="chip chip-brass">Approve</span><span class="chip">Edit</span><span class="chip">Skip</span></div>
-          </div>
-          <div class="float float-3" aria-hidden="true">
-            <strong>Reminder added</strong>
-            <span class="meta">Call Jonas · tomorrow 09:00</span>
-            <div class="chips"><span class="chip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 14l-4-4 4-4"/><path d="M5 10h8a6 6 0 0 1 0 12h-1"/></svg>Undo</span></div>
-            <div class="undo-bar"><i></i></div>
+          <div class="motion-control">
+            <input type="checkbox" id="pause-motion">
+            <label class="motion-toggle" for="pause-motion">
+              <span class="when-playing">Pause motion</span>
+              <span class="when-paused">Play motion</span>
+            </label>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================ -->
-    <!-- What it does                                                   -->
-    <!-- ============================================================ -->
-    <section class="section" id="how" aria-labelledby="how-title">
+    <section class="section" id="features" aria-labelledby="features-title">
       <div class="wrap">
         <div class="section-head reveal">
-          <span class="eyebrow"><svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="3.4"/><rect x="3" y="12.4" width="18" height="1.6"/><rect x="3" y="15.8" width="18" height="1.6"/></svg>What it does</span>
-          <h2 id="how-title">Three jobs a good chief of staff does, <em>and nothing else.</em></h2>
-          <p class="lede">Not a summary of your day, and not another inbox. A short list of what needs you, the context before each meeting, and a calendar that pushes back.</p>
+          <p class="eyebrow">What it does</p>
+          <h2 id="features-title">A few jobs, done quietly.</h2>
+          <p class="lede">You talk. Aforeday keeps the day in view and waits when a decision is yours.</p>
         </div>
-
-        <ol class="jobs">
-          <li class="job reveal" style="--delay: 0ms">
-            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16h18"/><path d="M6.5 16a5.5 5.5 0 0 1 11 0"/><path d="M12 4v3"/><path d="M5 8l2 2"/><path d="M19 8l-2 2"/><path d="M7 20h10"/></svg></div>
-            <h3>Your day, before it starts.</h3>
-            <p>Each morning Aforeday gives you a short list of what needs you today and what happens if you skip it. Before each meeting it prepares a brief from your own calendar: who is in the room, when you last met them, and what you have outstanding. When nothing needs you, it says so and stays quiet.</p>
-          </li>
-          <li class="job reveal" style="--delay: 90ms">
-            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18"/><path d="M8 3v4"/><path d="M16 3v4"/><path d="M14.5 13.5l-3 3 3 3"/></svg></div>
-            <h3>A calendar that pushes back.</h3>
-            <p>Aforeday tells the meetings you chose apart from the meetings booked onto you, and drafts the decline or the request to move it. You read the draft, and you send it.</p>
-          </li>
-          <li class="job reveal" style="--delay: 180ms">
-            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.4-5.7"/><path d="M20 4v4.5h-4.5"/><path d="M9 12.5l2 2 4-4.5"/></svg></div>
-            <h3>Propose. Approve. Act, with undo.</h3>
-            <p>Aforeday can work on what it shows you: it proposes an action, such as a reminder on your phone or a reply to review. Every proposal waits for you. If you choose “Act and tell me” for a kind of action, it tells you first and holds anything that leaves your phone for five minutes, with Undo in the notification. Turning that on needs Face ID or your passcode.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ============================================================ -->
-    <!-- How approval works                                             -->
-    <!-- ============================================================ -->
-    <section class="section section-tint" id="approval" aria-labelledby="approval-title">
-      <div class="wrap">
-        <div class="approval">
-          <div>
-            <div class="section-head reveal">
-              <span class="eyebrow"><svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="3.4"/><rect x="3" y="12.4" width="18" height="1.6"/><rect x="3" y="15.8" width="18" height="1.6"/></svg>How approval works</span>
-              <h2 id="approval-title">It proposes. <em>You</em> approve. Then it acts.</h2>
-              <p class="lede">Ask-first is the default for every kind of action. You can widen that, one kind of action at a time, and narrow it again whenever you like.</p>
-            </div>
-            <p class="fine reveal">Try the switch. “Ask me first” is how Aforeday starts. Choosing “Act and tell me” for a kind of action that can leave your phone asks for Face ID or your passcode first, and Pause stops the agent reading, drafting and proposing at any time.</p>
-          </div>
-
-          <div class="posture reveal" id="posture" data-posture="ask">
-            <fieldset class="seg">
-              <legend>How Aforeday acts</legend>
-              <div class="seg-track">
-                <input type="radio" name="posture" id="posture-ask" value="ask" checked>
-                <label for="posture-ask">Ask me first</label>
-                <input type="radio" name="posture" id="posture-act" value="act">
-                <label for="posture-act">Act and tell me</label>
-              </div>
-            </fieldset>
-
-            <ol class="steps" id="steps">
-              <li class="step is-active">
-                <button type="button" aria-pressed="true">
-                  <span class="step-dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5l-4-4L4 16v4z"/><path d="M12.5 7.5l4 4"/></svg></span>
-                  <div>
-                    <h4>Propose</h4>
-                    <p>From your calendar, reminders and the cards it has built from them, Aforeday proposes a draft or a small action.</p>
-                  </div>
-                </button>
-              </li>
-              <li class="step">
-                <button type="button" aria-pressed="false">
-                  <span class="step-dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span>
-                  <div>
-                    <h4><span class="for-ask">Approve</span><span class="for-act">Tell you</span></h4>
-                    <p class="for-ask">The proposal waits on the Now screen until you approve, edit or skip it.</p>
-                    <p class="for-act">Something reversible, like adding a reminder to your iPhone, runs at once and tells you.</p>
-                  </div>
-                </button>
-              </li>
-              <li class="step">
-                <button type="button" aria-pressed="false">
-                  <span class="step-dot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
-                  <div>
-                    <h4><span class="for-ask">Act</span><span class="for-act">Act, with undo</span></h4>
-                    <p class="for-ask">Only then does it act. Nothing leaves your phone without your approval.</p>
-                    <p class="for-act">Anything that would leave your phone is announced with an Undo button and held for five minutes first.</p>
-                    <span class="undo-chip for-act"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 14l-4-4 4-4"/><path d="M5 10h8a6 6 0 0 1 0 12h-1"/></svg>Undo · 5:00</span>
-                  </div>
-                </button>
-              </li>
-            </ol>
-
-            <p class="posture-note">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8V6a2 2 0 0 1 2-2h2"/><path d="M16 4h2a2 2 0 0 1 2 2v2"/><path d="M4 16v2a2 2 0 0 0 2 2h2"/><path d="M16 20h2a2 2 0 0 0 2-2v-2"/><path d="M9 9.5v1"/><path d="M15 9.5v1"/><path d="M12 9.5v4h-1"/><path d="M9 15.5a4 4 0 0 0 6 0"/></svg>
-              <span class="for-ask">The default. Every kind of action asks you first; the setting is yours, and the AI never sees or changes it.</span>
-              <span class="for-act">Set per kind of action, with Face ID or your passcode. A first message to someone you have never written to always asks you in the app, whatever the setting.</span>
-            </p>
-          </div>
+        <div class="cards">
+          <article class="card reveal">
+            <span class="index">01</span>
+            <h3>A reply, spoken.</h3>
+            <p>Aforeday can speak a reply. The reply text is turned into audio in Frankfurt, and we do not keep that audio. The live Talk session is not on.</p>
+          </article>
+          <article class="card reveal" style="--delay: 40ms">
+            <span class="index">02</span>
+            <h3>Calendar and reminders.</h3>
+            <p>Both come from your iPhone through Apple EventKit, from the calendars and lists you allow.</p>
+          </article>
+          <article class="card reveal" style="--delay: 80ms">
+            <span class="index">03</span>
+            <h3>Places, when they matter.</h3>
+            <p>Location is used while you are using the app. Coordinates stay on the iPhone. A leave-by time can be suggested without sending your position.</p>
+          </article>
+          <article class="card reveal">
+            <span class="index">04</span>
+            <h3>On the Lock Screen.</h3>
+            <p>Live Activities can show a meeting that is about to start, or that it is time to leave. A focus session stays on the iPhone.</p>
+          </article>
+          <article class="card reveal" style="--delay: 40ms">
+            <span class="index">05</span>
+            <h3>Drafts, for your approval.</h3>
+            <p>Aforeday prepares a draft. The phone does not send it: it can open the Gmail app, Mail, or Messages, or copy the text. Mail and chat accounts are not connected.</p>
+          </article>
+          <article class="card reveal" style="--delay: 80ms">
+            <span class="index">06</span>
+            <h3>A focus session.</h3>
+            <p>Starting a focus session keeps that record on the iPhone, with a local notification when it ends. Evening close-out and Share capture are not on.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================ -->
-    <!-- Screens                                                        -->
-    <!-- ============================================================ -->
     <section class="section" id="screens" aria-labelledby="screens-title">
       <div class="wrap">
-        <h2 id="screens-title" class="visually-hidden">Inside the app</h2>
-
-        <div class="feature">
-          <div class="feature-text reveal">
-            <span class="eyebrow"><svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="3.4"/><rect x="3" y="12.4" width="18" height="1.6"/><rect x="3" y="15.8" width="18" height="1.6"/></svg>Timeline</span>
-            <h3>Your day, in one line.</h3>
-            <p>The timeline puts what you have to do and where you need to be side by side, so the day reads in the order it will happen.</p>
-          </div>
-          <figure class="reveal" style="--delay: 120ms">
-            <div class="phone" data-parallax>
-              <img src="assets/screens/02-timeline-660.webp"
-                   srcset="assets/screens/02-timeline-660.webp 660w, assets/screens/02-timeline-1320.webp 1320w"
-                   sizes="16.5rem" width="660" height="1434" loading="lazy"
-                   alt="The Timeline screen: an item due today, an overdue follow-up, a team standup, and meetings on the following days.">
-            </div>
-          </figure>
-        </div>
-
-        <div class="feature flip">
-          <div class="feature-text reveal">
-            <span class="eyebrow"><svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="3.4"/><rect x="3" y="12.4" width="18" height="1.6"/><rect x="3" y="15.8" width="18" height="1.6"/></svg>Assistant</span>
-            <h3>Ask what needs you.</h3>
-            <p>The assistant answers from your own calendar and reminders, and its answers link back to the items they came from, so you can check them rather than trust them.</p>
-          </div>
-          <figure class="reveal" style="--delay: 120ms">
-            <div class="phone" data-parallax>
-              <img src="assets/screens/04-assistant-prompts-660.webp"
-                   srcset="assets/screens/04-assistant-prompts-660.webp 660w, assets/screens/04-assistant-prompts-1320.webp 1320w"
-                   sizes="16.5rem" width="660" height="1434" loading="lazy"
-                   alt="The Assistant screen before a question, with suggested prompts such as “What needs my attention?”, “Prepare me for my next meeting” and “What am I waiting on?”.">
-            </div>
-          </figure>
-        </div>
-
-        <div class="feature">
-          <div class="feature-text reveal">
-            <span class="eyebrow"><svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="3.4"/><rect x="3" y="12.4" width="18" height="1.6"/><rect x="3" y="15.8" width="18" height="1.6"/></svg>Privacy &amp; data</span>
-            <h3>Quiet by default, and under your control.</h3>
-            <p>Choose how much a notification reveals on your Lock Screen, switch AI off entirely or one source at a time, and export or delete your data from Settings. Pause stops the agent reading, drafting and proposing at any time.</p>
-          </div>
-          <figure class="reveal" style="--delay: 120ms">
-            <div class="phone" data-parallax>
-              <img src="assets/screens/05-settings-privacy-and-posture-660.webp"
-                   srcset="assets/screens/05-settings-privacy-and-posture-660.webp 660w, assets/screens/05-settings-privacy-and-posture-1320.webp 1320w"
-                   sizes="16.5rem" width="660" height="1434" loading="lazy"
-                   alt="The Privacy &amp; data screen in Settings: AI data controls with switches per source, Export my data, Clear local cache, and Delete account.">
-            </div>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================ -->
-    <!-- What it reads and keeps                                        -->
-    <!-- ============================================================ -->
-    <section class="section section-tint" id="reads" aria-labelledby="reads-title">
-      <div class="wrap">
         <div class="section-head reveal">
-          <span class="eyebrow"><svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="3.4"/><rect x="3" y="12.4" width="18" height="1.6"/><rect x="3" y="15.8" width="18" height="1.6"/></svg>Your data</span>
-          <h2 id="reads-title">What Aforeday reads, <em>and what it keeps.</em></h2>
-          <p class="lede">Aforeday works from what is already on your iPhone. It asks for calendar and reminder access, explains each request before iOS shows it, and you choose which calendars and lists count. There is no account to connect today: mail and chat accounts are not yet available.</p>
+          <p class="eyebrow">In the app</p>
+          <h2 id="screens-title">Morning, a reply, a draft, a place.</h2>
         </div>
-
-        <div class="keeps">
-          <article class="keep-card reveal" style="--delay: 0ms">
-            <header>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18"/><path d="M8 3v4"/><path d="M16 3v4"/></svg>
-              <h3>Your iPhone’s calendars</h3>
-            </header>
-            <dl>
-              <div><dt>What it is for</dt><dd>The timeline, the morning shortlist, meeting briefs, and telling meetings booked onto you from meetings you chose.</dd></div>
-              <div><dt>What Aforeday keeps</dt><dd>For the calendars you include: each event’s title, start and end, time zone, whether it is all-day, and the display names of attendees.</dd></div>
-              <div><dt>Stays on your phone</dt><dd><strong>Notes, links and addresses.</strong></dd></div>
-            </dl>
-          </article>
-          <article class="keep-card reveal" style="--delay: 90ms">
-            <header>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l1.5 1.5L8 5"/><path d="M11 6h9"/><path d="M4 12l1.5 1.5L8 11"/><path d="M11 12h9"/><path d="M4 18l1.5 1.5L8 17"/><path d="M11 18h9"/></svg>
-              <h3>Your iPhone’s reminders</h3>
-            </header>
-            <dl>
-              <div><dt>What it is for</dt><dd>Showing open to-dos alongside your day, and adding one when you approve a proposal.</dd></div>
-              <div><dt>What Aforeday keeps</dt><dd>For the lists you include: each reminder’s title and due date. Reminders that are open, or were completed in the last seven days.</dd></div>
-              <div><dt>Stays on your phone</dt><dd><strong>Everything else.</strong></dd></div>
-            </dl>
-          </article>
-          <article class="keep-card reveal" style="--delay: 180ms">
-            <header>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H9l-5 4V6z"/><path d="M8 9h8"/><path d="M8 13h5"/></svg>
-              <h3>What you tell it</h3>
-            </header>
-            <dl>
-              <div><dt>What it is for</dt><dd>Answering your questions, and writing the drafts and notes you ask for.</dd></div>
-              <div><dt>What Aforeday keeps</dt><dd>Your conversations with the assistant for 30 days, and drafts for 30 days or until you delete them.</dd></div>
-              <div><dt>Stays on your phone</dt><dd><strong>Your voice.</strong> Dictation is transcribed on your iPhone; the audio never leaves it.</dd></div>
-            </dl>
-          </article>
-        </div>
-
-        <div class="never reveal">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
-          <p><strong>What Aforeday never does.</strong> It never sends anything without your approval. It never asks for your location, contacts, photos or health data. Your voice is transcribed on your phone and the audio never leaves it; Face ID is checked by iOS and never leaves it either. It never uses your data for advertising, never sells it, and does not use it to train AI models. The details, including how long each kind of data is kept, are in the <a href="privacy.html">privacy policy</a>.</p>
+        <div class="shot-row reveal" tabindex="0" role="region" aria-label="Screens from the Aforeday app. Swipe sideways, or use the arrow keys.">
+          <figure>
+            <div class="device"><div class="screen">
+              <img class="is-on" src="assets/screens/01-home-idle-660.webp"
+                   srcset="assets/screens/01-home-idle-660.webp 660w, assets/screens/01-home-idle-1206.webp 1206w"
+                   sizes="(min-width: 64rem) 16rem, 72vw" width="660" height="1435" loading="lazy"
+                   alt="Home, morning. A leave-by card with a countdown, three items waiting, and Tap to talk.">
+            </div></div>
+            <figcaption><strong>Morning</strong> What needs you, and when to leave.</figcaption>
+          </figure>
+          <figure>
+            <div class="device"><div class="screen">
+              <img class="is-on" src="assets/screens/02-voice-reply-660.webp"
+                   srcset="assets/screens/02-voice-reply-660.webp 660w, assets/screens/02-voice-reply-1206.webp 1206w"
+                   sizes="(min-width: 64rem) 16rem, 72vw" width="660" height="1435" loading="lazy"
+                   alt="A spoken request to move a four o’clock meeting, Aforeday’s spoken reply, and a draft offered for review.">
+            </div></div>
+            <figcaption><strong>A reply</strong> A request, an answer, and a draft to review.</figcaption>
+          </figure>
+          <figure>
+            <div class="device"><div class="screen">
+              <img class="is-on" src="assets/screens/03-draft-approve-660.webp"
+                   srcset="assets/screens/03-draft-approve-660.webp 660w, assets/screens/03-draft-approve-1206.webp 1206w"
+                   sizes="(min-width: 64rem) 16rem, 72vw" width="660" height="1435" loading="lazy"
+                   alt="A draft to move a meeting and a note to review. The screen says nothing is sent until you approve, and that approving opens Mail for you to send.">
+            </div></div>
+            <figcaption><strong>Your approval</strong> Nothing is sent until you approve.</figcaption>
+          </figure>
+          <figure>
+            <div class="device"><div class="screen">
+              <img class="is-on" src="assets/screens/04-place-reminder-660.webp"
+                   srcset="assets/screens/04-place-reminder-660.webp 660w, assets/screens/04-place-reminder-1206.webp 1206w"
+                   sizes="(min-width: 64rem) 16rem, 72vw" width="660" height="1435" loading="lazy"
+                   alt="A place reminder for arriving at the office, with When I arrive and When I leave. The screen says your position stays on this iPhone.">
+            </div></div>
+            <figcaption><strong>A place</strong> A reminder for when you arrive or leave.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================ -->
-    <!-- Privacy principles                                             -->
-    <!-- ============================================================ -->
-    <section class="section" id="privacy" aria-labelledby="principles-title">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="eyebrow"><svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="3.4"/><rect x="3" y="12.4" width="18" height="1.6"/><rect x="3" y="15.8" width="18" height="1.6"/></svg>Privacy you can check</span>
-          <h2 id="principles-title">Built to be trusted with <em>your working life.</em></h2>
-        </div>
-        <div class="principles">
-          <div class="principle reveal" style="--delay: 0ms">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h9"/><path d="M19 7h1"/><path d="M4 17h3"/><path d="M13 17h7"/><circle cx="16" cy="7" r="2.5"/><circle cx="9" cy="17" r="2.5"/></svg>
-            <h3>Only what the feature needs</h3>
-            <p>Every permission maps to a feature you can see, and the app explains each one before iOS asks.</p>
-          </div>
-          <div class="principle reveal" style="--delay: 60ms">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18h2"/></svg>
-            <h3>Read from your phone, kept within bounds</h3>
-            <p>Addresses, notes and links stay on your iPhone. What reaches us is the title, the time and who is in the room.</p>
-          </div>
-          <div class="principle reveal" style="--delay: 120ms">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.5-8 5.5 5.5 0 0 1 10.6 1.2A3.5 3.5 0 0 1 17 18H7z"/></svg>
-            <h3>AI in the EU, never trained on you</h3>
-            <p>AI runs on Google Cloud in Belgium (europe-west1), is not used to train models, and can be switched off.</p>
-          </div>
-          <div class="principle reveal" style="--delay: 180ms">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v10"/><path d="M8 10l4 4 4-4"/><path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
-            <h3>Export or delete, from the app</h3>
-            <p>Download a copy of your data, or delete your account, from Settings. The policy lists exactly what each covers.</p>
-          </div>
-          <div class="principle reveal" style="--delay: 240ms">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4l2-2z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>
-            <h3>Your Lock Screen, your rules</h3>
-            <p>Notifications show full details, a discreet summary, or only that Aforeday has something.</p>
-          </div>
-          <div class="principle reveal" style="--delay: 300ms">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8V6a2 2 0 0 1 2-2h2"/><path d="M16 4h2a2 2 0 0 1 2 2v2"/><path d="M4 16v2a2 2 0 0 0 2 2h2"/><path d="M16 20h2a2 2 0 0 0 2-2v-2"/><path d="M9 9.5v1"/><path d="M15 9.5v1"/><path d="M12 9.5v4h-1"/><path d="M9 15.5a4 4 0 0 0 6 0"/></svg>
-            <h3>You approve, Aforeday acts</h3>
-            <p>Ask-first is the default for every kind of action. Standing approval needs Face ID, and every send has an undo window.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================ -->
-    <!-- Subscription                                                   -->
-    <!-- ============================================================ -->
-    <section class="section section-tint" id="plan" aria-labelledby="plan-title">
-      <div class="wrap">
-        <div class="plan">
-          <div class="section-head reveal">
-            <span class="eyebrow"><svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="3.4"/><rect x="3" y="12.4" width="18" height="1.6"/><rect x="3" y="15.8" width="18" height="1.6"/></svg>Subscription</span>
-            <h2 id="plan-title">One subscription. <em>No free tier,</em> no advertising.</h2>
-            <p class="lede">Aforeday is paid for by the people who use it, and by no one else. Apple handles payment, renewals, cancellation and refunds; we never see your card.</p>
-          </div>
-          <div class="plan-card reveal" style="--delay: 120ms">
-            <p class="plan-name">Aforeday Pro</p>
-            <p class="plan-price">The price and billing period are shown in the app and on the App Store before you subscribe.</p>
-            <ul>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Sign in with Apple is the only sign-in. No password to make, no account to set up elsewhere.</span></li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Renews automatically unless you cancel at least 24 hours before the end of the current period; cancel in your iPhone’s Settings and keep access until the period ends.</span></li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Restore Purchases brings a subscription you already own to a new iPhone.</span></li>
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Available worldwide on the App Store.</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================ -->
-    <!-- Closing band                                                   -->
-    <!-- ============================================================ -->
-    <div class="band">
-      <section class="section" aria-labelledby="download-title">
+    <div class="band" id="privacy">
+      <section class="section" aria-labelledby="privacy-title">
         <div class="wrap">
-          <svg class="band-mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="3.4"/><rect x="3" y="12.4" width="18" height="1.6"/><rect x="3" y="15.8" width="18" height="1.6"/></svg>
           <div class="section-head reveal">
-            <span class="eyebrow">Tomorrow, before it starts</span>
-            <h2 id="download-title">Start tomorrow <em>with a plan.</em></h2>
-            <p class="lede">Aforeday is on the App Store. Sign in with Apple, allow calendar access, and your first briefing is ready within one refresh.</p>
-            <div class="actions">
-              <a class="btn btn-store" href="https://apps.apple.com/app/id6804468993">
-                <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/><g class="tray-arrow"><path d="M12 3v11"/><path d="M8 10l4 4 4-4"/></g></svg>
-                <span class="store-text"><small>Download on the</small><span>App Store</span></span>
-              </a>
-              <a class="btn btn-quiet" href="support.html">Support</a>
-            </div>
+            <p class="eyebrow">Privacy</p>
+            <h2 id="privacy-title">In Frankfurt, and on the phone.</h2>
+            <p class="lede">The backend and the AI run on Amazon Web Services in Frankfurt, eu-central-1. Coordinates stay on the iPhone.</p>
+          </div>
+          <div class="principles">
+            <article class="card reveal">
+              <h3>European Union</h3>
+              <p>Text uses Amazon Nova 2 Lite, model <code>amazon.nova-2-lite-v1:0</code>, through the EU inference profile <code>eu.amazon.nova-2-lite-v1:0</code>, called from Frankfurt (<code>eu-central-1</code>). A spoken reply’s text is sent to Amazon Polly in Frankfurt. We do not keep that audio.</p>
+            </article>
+            <article class="card reveal" style="--delay: 60ms">
+              <h3>Your voice</h3>
+              <p>Talk mode is not on, so a live voice session is not sent to Stockholm. You sign in with Apple or with Google. Google is asked only for openid, email, and profile.</p>
+            </article>
+            <article class="card reveal" style="--delay: 120ms">
+              <h3>Your places</h3>
+              <p>Location is When In Use only. Coordinates do not leave the iPhone.</p>
+              <p><a href="privacy.html">Read the privacy policy</a></p>
+            </article>
           </div>
         </div>
       </section>
     </div>
+
+    <section class="section" id="pricing" aria-labelledby="pricing-title">
+      <div class="wrap plan">
+        <div class="section-head reveal">
+          <p class="eyebrow">Pricing</p>
+          <h2 id="pricing-title">Pro Monthly. Pro Annual.</h2>
+          <p class="lede">There is no free trial. Apple bills the subscription. We never see your card. The price is shown in the app and on the App Store before you subscribe.</p>
+        </div>
+        <article class="card plan-card reveal">
+          <p class="plan-name">Aforeday Pro</p>
+          <h3>Two billing periods. The same subscription.</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Pro Monthly or Pro Annual. No free trial.</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Renews until you cancel, at least 24 hours before the period ends, in your iPhone’s Settings.</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>You keep access until the period you paid for ends. Refunds are requested from Apple.</span></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Restore Purchases brings a subscription you already have to another iPhone.</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section close" aria-labelledby="close-title">
+      <div class="wrap">
+        <svg class="horizon" viewBox="0 0 1000 200" aria-hidden="true">
+          <path class="horizon-arc" d="M 36 132 Q 500 4 964 132" fill="none" stroke="url(#horizon-arc)" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="reveal">
+          <p class="eyebrow">On the App Store</p>
+          <h2 id="close-title">Start with your voice.</h2>
+          <p class="lede">Sign in with Apple or Google, allow the calendars and reminders you want, and talk.</p>
+          <div class="actions">
+            <a class="store-badge" href="https://apps.apple.com/app/id6804468993">
+              <svg viewBox="0 0 18 18" aria-hidden="true" fill="currentColor"><path d="M13.2 9.4c0-1.8 1.5-2.7 1.6-2.8-0.9-1.3-2.2-1.4-2.7-1.5-1.1-0.1-2.2.7-2.8.7s-1.5-.7-2.4-.6c-1.2 0-2.4.7-3 1.9-1.3 2.2-.3 5.5.9 7.3.6.9 1.3 1.9 2.3 1.8.9 0 1.3-.6 2.4-.6s1.4.6 2.4.6 1.6-.9 2.2-1.8c.7-1 1-2 1-2.1-.1 0-1.9-.7-1.9-2.9zM11.5 4.2c.5-.6.8-1.4.7-2.2-.7 0-1.5.5-2 .1-.5.6-.9 1.5-.8 2.3.8.1 1.6-.4 2.1-1z"/></svg>
+              <span class="store-copy"><small>Download on the</small><strong>App Store</strong></span>
+            </a>
+            <a class="btn" href="support.html">Support</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
       <div>
-        <a class="brand" href="./" aria-label="Aforeday home"><img class="brand-icon" src="assets/favicon.svg" alt="" width="32" height="32"><span>Aforeday</span></a>
-        <p>Your day, thought through before it starts. Made in Berlin by Neurotech AI Solutions GmbH.</p>
-        <p>This site sets no cookies, runs no analytics and loads nothing from anyone else.</p>
-        <p>© 2026 Neurotech AI Solutions GmbH</p>
+        <a class="brand" href="./" aria-label="aforeday home">
+          <svg class="brand-mark" viewBox="0 0 1000 200" aria-hidden="true"><path d="M 36 132 Q 500 4 964 132" fill="none" stroke="url(#horizon-arc)" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>aforeday</span>
+        </a>
+        <p>A daily assistant for iPhone.</p>
+        <p>This site sets no cookies, runs no analytics, and loads nothing from anyone else.</p>
+        <p>© 2026 Aforeday</p>
       </div>
       <nav aria-label="Legal">
         <a href="privacy.html">Privacy policy</a>
@@ -432,7 +272,6 @@
       </nav>
     </div>
   </footer>
-
   <script src="assets/site.js" defer></script>
 </body>
 </html>

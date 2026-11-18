@@ -1,6 +1,8 @@
-Instrument Serif and Instrument Sans are licensed under the SIL Open Font
-License, Version 1.1 (https://openfontlicense.org). Copyright of the
-respective font authors (Instrument Serif: Rodrigo Fuenzalida & Jordan Egstad;
-Instrument Sans: Rodrigo Fuenzalida, Jordan Egstad and contributors).
-The font files in this directory are served from this website solely to
-render its own pages; no font requests are sent to third parties.
+Inter (variable, latin and latin-ext subsets) is self-hosted from this
+directory so the site does not request fonts from any other server.
+On Apple devices the pages use the system font (SF Pro) first.
+Inter is the fallback everywhere else.
+
+Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter)
+
+The full licence is OFL.txt in this directory: SIL Open Font License 1.1.
