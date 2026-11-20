@@ -27,8 +27,9 @@ Then open http://127.0.0.1:4173.
 
 ## Before publishing
 
-The privacy policy is **version 3.2, last updated 12 November 2026**. It
-replaces version 3.1 (3 November 2026). Text AI is Amazon Nova 2 Lite
+The privacy policy is **version 3.3, last updated 20 November 2026**. It
+replaces version 3.2 (12 November 2026), adding photos and files attached in
+the Assistant (app build 83). Text AI is Amazon Nova 2 Lite
 (`amazon.nova-2-lite-v1:0`) through the EU inference profile
 `eu.amazon.nova-2-lite-v1:0`, called from `eu-central-1`. Spoken replies use
 Amazon Polly in Frankfurt. A request from Frankfurt under the EU inference
