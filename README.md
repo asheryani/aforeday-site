@@ -28,7 +28,10 @@ Then open http://127.0.0.1:4173.
 ## Before publishing
 
 The privacy policy is **version 3.5 (draft), last updated 24 November 2026**. It
-replaces version 3.3 (20 November 2026), adding Talk mode: a live voice
+replaces version 3.4 (22 November 2026), adding Gmail (headers only,
+`gmail.metadata`) and Slack (your DMs, user scopes `im:history`, `im:read`,
+`users:read`) for people who choose to connect them, and Google's Limited Use
+statement. Version 3.4 replaced version 3.3 (20 November 2026), adding Talk mode: a live voice
 conversation for subscribers, when Aforeday has turned it on. Audio goes to
 the API in Frankfurt and then, for English, French, Italian, German,
 Spanish, Portuguese and Hindi, to Amazon Nova 2 Sonic
