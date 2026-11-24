@@ -27,7 +27,7 @@ Then open http://127.0.0.1:4173.
 
 ## Before publishing
 
-The privacy policy is **version 3.5 (draft), last updated 24 November 2026**. It
+The privacy policy is **version 3.5, last updated 24 November 2026**. It
 replaces version 3.4 (22 November 2026), adding Gmail (`gmail.metadata` and
 `gmail.readonly`: headers, plus subject and body read to spot replies owed
 and promises in sent mail; bodies are not stored) and Slack (your DMs, user
