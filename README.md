@@ -27,17 +27,25 @@ Then open http://127.0.0.1:4173.
 
 ## Before publishing
 
-The privacy policy is **version 3.3, last updated 20 November 2026**. It
-replaces version 3.2 (12 November 2026), adding photos and files attached in
-the Assistant (app build 83). Text AI is Amazon Nova 2 Lite
+The privacy policy is **version 3.4, last updated 22 November 2026**. It
+replaces version 3.3 (20 November 2026), adding Talk mode: a live voice
+conversation for subscribers, when Aforeday has turned it on. Audio goes to
+the API in Frankfurt and then, for English, French, Italian, German,
+Spanish, Portuguese and Hindi, to Amazon Nova 2 Sonic
+(`amazon.nova-2-sonic-v1:0`) in Stockholm (`eu-north-1`). Other languages
+use Amazon Transcribe, Nova 2 Lite and Amazon Polly in Frankfurt. Aforeday
+does not keep the audio. The words, as text, are kept for 30 days like
+other assistant messages. Version 3.3’s photos and files section is
+unchanged. Text AI remains Amazon Nova 2 Lite
 (`amazon.nova-2-lite-v1:0`) through the EU inference profile
-`eu.amazon.nova-2-lite-v1:0`, called from `eu-central-1`. Spoken replies use
-Amazon Polly in Frankfurt. A request from Frankfurt under the EU inference
-profile may be served in Frankfurt, Stockholm, Milan, Spain, Ireland, or
-Paris. Talk mode, evening close-out, Share capture, and the connectors are
-described as switched off. There is no visible TODO. An HTML comment still
-asks counsel about Amazon’s own training and retention terms before any
-such sentence is added to the page.
+`eu.amazon.nova-2-lite-v1:0`, called from `eu-central-1`. Spoken replies
+outside Talk mode still use Amazon Polly in Frankfurt. A request from
+Frankfurt under the EU inference profile may be served in Frankfurt,
+Stockholm, Milan, Spain, Ireland, or Paris. Evening close-out, Share
+capture, and the connectors stay described as switched off. There is no
+visible TODO. An HTML comment still asks counsel about Amazon’s own
+training and retention terms, including the account’s Bedrock
+data-retention mode, before any such sentence is added to the page.
 
 A source comment in `privacy.html` asks counsel to review Amazon Bedrock’s and
 Amazon Polly’s data-processing terms before the page claims that AWS does not
