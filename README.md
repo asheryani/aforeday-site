@@ -27,8 +27,13 @@ Then open http://127.0.0.1:4173.
 
 ## Before publishing
 
-The privacy policy is **version 3.5, last updated 24 November 2026**. It
-replaces version 3.4 (22 November 2026), adding Gmail (`gmail.metadata` and
+The privacy policy is **version 3.7, last updated 25 November 2026**. It
+replaces version 3.6 (25 November 2026, the Claude expert model for hard
+questions). Version 3.7 turns Talk mode on for every Aforeday Pro subscriber:
+the first-run explanation (stored as a consent record), the 15-minute session
+and 60-minute daily limits, the daily usage count in the cache, the calendar,
+Gmail/Slack and expert look-ups Talk can make, and the user controls. The
+terms (25 November 2026) gain a Talk mode paragraph. Version 3.5 replaced version 3.4 (22 November 2026), adding Gmail (`gmail.metadata` and
 `gmail.readonly`: headers, plus subject and body read to spot replies owed
 and promises in sent mail; bodies are not stored) and Slack (your DMs, user
 scopes `im:history`, `im:read`, `users:read`) for people who choose to
